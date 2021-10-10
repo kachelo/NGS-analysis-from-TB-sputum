@@ -1,0 +1,5 @@
+#!/bin/sh
+find -L data -type f \
+	-name "*.sam" \
+	-empty \
+	-delete

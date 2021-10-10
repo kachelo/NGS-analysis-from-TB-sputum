@@ -1,0 +1,6 @@
+#!/bin/sh
+find -L data/ -name '*.unpaired.bam' \
+| sed -r \
+	-e 's#^data/#results/#g' \
+	-e 's#_R[12]\.unpaired\.fastq\.gz$#.unpaired.bam#g' \
+| sort -Vu

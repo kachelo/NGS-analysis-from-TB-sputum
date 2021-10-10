@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# For each file in `correct` directory:
+#
+#   - report which file is being checked.
+#   - build the result using the mk module.
+#   - compare the result with the correct reference.
+
+bin/targets \
+| grep -iv error \
+| sort \
+| xargs \
+	-I '{}' \
+	sh -c "env SNAP_REFERENCEDIR='/reference/ftp.broadinstitute.org/bundle/hg38/Homo_sapiens_assembly38.snap' mk -a -f ../mkfile '{}' && diff \"$(echo {} | sed -re 's#^results/#correct/#')\" \"{}\"" 2>&1 \
+| tee -a /dev/fd/2 \
+| grep -E '^[<>]|exit status=exit\([0-9]+\)' >/dev/null \
+&& exit 1 \
+|| exit 0

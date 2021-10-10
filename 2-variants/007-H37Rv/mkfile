@@ -1,0 +1,56 @@
+< config.mk
+# snap fails if more than one snap process is active
+NPROC=1
+
+data/%.sam:	data/%.bam
+	set -x
+	mkdir -p `dirname $target`
+	samtools view $prereq > $target'.build' \
+	&& mv $target'.build' $target
+
+results/%.unpaired.bam:        data/%.unpaired.sam
+	set -x
+	mkdir -p `dirname $target`
+	RG=`bin/get_rg $prereq`
+	echo $RG
+	snap-aligner \
+		single \
+		$SNAP_REFERENCEDIR \
+		-R $RG \
+		$prereq \
+		$SNAP_OPTS \
+		-o $target'.build.bam' \
+	&& mv $target'.build.bam' $target \
+	&& rm $prereq
+
+results/%.paired.bam:        data/%.paired.sam
+	set -x
+	mkdir -p `dirname $target`
+	RG=`bin/get_rg $prereq`
+        echo $RG
+	snap-aligner \
+		paired \
+		$SNAP_REFERENCEDIR \
+		-R $RG \
+		$prereq \
+		$SNAP_OPTS \
+		-o $target'.build.bam' \
+	&& mv $target'.build.bam' $target \
+	&& rm $prereq
+
+# Unit tests
+# ==========
+#
+# Verify everything works correctly
+#
+test	tests:QV:
+	#set -x
+	cd test
+	rm -f tests.log
+	./run_tests \
+	|| less tests.log
+
+# Clean up generated files
+#
+clean:V:
+	bin/targets | xargs rm -f

@@ -1,0 +1,13 @@
+#!/bin/sh
+#Extract the @RG from the header of the bam file
+#Remove @RG and insert \t in the spaces
+
+echo $@ \
+| sed -r \
+	-e 's#sam$#bam#'\
+| xargs samtools view -H \
+| grep @RG \
+| sed -r \
+	-e 's#@RG\t##' \
+| awk 'BEGIN{OFS="\\t"}{print $1,$2,$3,$4,$5}'
+

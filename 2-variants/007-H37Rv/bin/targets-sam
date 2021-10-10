@@ -1,0 +1,7 @@
+#!/bin/sh
+bin/targets.old \
+|	sed -r \
+		-e "s#results#data#" \
+		-e "s#bam#sam#"
+ 
+

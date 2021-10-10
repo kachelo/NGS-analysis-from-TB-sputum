@@ -1,0 +1,117 @@
+#!/usr/bin/awk -f
+
+# Assign read groups based on name and first read for a fastq
+# ===========================================================
+#
+# References
+# ----------
+#
+#  - [FASTQ_format](https://en.wikipedia.org/wiki/FASTQ_format )
+#  - [Read Groups (GATK Forum)](https://gatkforums.broadinstitute.org/gatk/discussion/6472/read-groups )
+#  - [Read Groups (Picard)](http://broadinstitute.github.io/picard/command-line-overview.html#AddOrReplaceReadGroups )
+#
+# --
+# Joshua Haase (jihaase at inmegen gob mx) 2017
+
+BEGIN {
+	FS = "[@:#/ 	]+"	
+	OFS = "\\t"
+	# clean up common patterns for names.
+	process_filename(FILENAME)
+	
+}
+
+# Illumina Reads
+# ==============
+#
+#    `@SEQUENCER:LANE:TILE:x:y#INDEX/STRAND`
+#
+/^@[A-z0-9_-]+:[0-8]:[0-9]+:[0-9]+:[0-9]+#[0-9A-z_-]+\/[12]$/ {
+
+	sequencer = $2	
+	lane = $3
+	# tile = $4
+	# x = $5
+	# y = $6
+	idx = $7
+	strand = $8
+
+	print_rg()
+}
+
+# Casava 1.8+ Illumina
+# --------------------
+#
+#    `@SEQUENCER:RUN:FLOWCELL:LANE:TILE:x:y STRAND:FILTERED:CONTROL_BITS:INDEX`
+#
+/^@[A-z0-9_-]+:[0-9]+:[A-z0-9_-]+:[0-8]:[0-9]+:[0-9]+:[0-9]+[ 	]+[12]:[YN]:[0-9]?[02468]:[NATCGnatcg0-9+]+$/ {
+
+	sequencer = $2
+	run = $3
+	flowcell = $4
+	lane = $5
+	# tile = $6
+	# x = $7
+	# y = $8
+	strand = $9
+	# filtered = $10
+	# control = $11
+	idx = $12
+	
+	print_rg()
+}
+
+
+# NCBI SRA
+# ==========
+#
+#    `@SRANUMBER [INDEX]_[SEQUENCER]:[LANE]:[TILE]:[x]:[y] length=36`
+#
+/^@[A-z0-9_-]+[ 	]+[ATCGatcg0-9]+_[]:[0-8]:[0-9]+:[0-9]+:[0-9]+[ 	]+length=[0-9]+/ {
+	
+	id = $2
+	n = split($3, tmp, "_")
+	if (n == 2) {
+		idx = tmp[1]
+		sequencer = tmp[2]
+	} else {
+		print "ERR: could not tell apart index from sequencer" > /dev/fd/2
+		exit 1
+	}
+	lane = $4
+
+	print_rg()
+}
+
+function print_rg() {
+	print "ID:" sample "." library "." treatment \
+		OFS "PU:" flowcell "." lane \
+		OFS "SM:" sample \
+		OFS "LB:" library \
+		OFS "PL:" platform \
+		OFS "CN:" center
+}
+
+# Process filename
+# ================
+#
+# `SAMPLE_LIBRARY_TREATMENT_PLATFORM_CENTER_L00[0-8]_R[12].fastq.gz`
+#
+function process_filename(str) {
+	# get basename
+	n = split(str, arr, "/")
+	str = arr[n]
+
+	# get all other info
+	n = split(str, arr, "_")
+	sample = arr[1]
+	library = arr[2]
+	treatment = arr[3]
+	platform = arr[4]
+	center = arr[5]
+}
+
+# Valid Platform Values
+# =====================
+#
+#  ILLUMINA SOLID LS454 HELICOS PACBIO
