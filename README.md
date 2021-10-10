@@ -56,7 +56,10 @@ Here we will include *Mycobacterium* reference genome and SURPI database.
 
 # 1-PREPROCESSING
 
-## 001-fastqc: Quality Control reports of the sequences.
+## 001-fastqc: Quality Control reports of the sequences
+
+- Initial reads Quality Control 
+
 ## 002-trimmomatic: Clean sequence artifacts using the QC reports
 
 - Include/modify the **adapters.fa** file from previous QC report
@@ -81,5 +84,8 @@ Usefull configurations:
 - Minimun Lenght of 70 bases per read
   `TRIMMOMATIC_ANALYSIS=$TRIMMOMATIC_ANALYSIS' MINLEN:70'`
 
+## 003-fastqc: Reads QC after using trimmomatic
+
+- Posterior reads Quality Control
 
 

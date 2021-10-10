@@ -1,0 +1,6 @@
+#!/bin/sh
+find -L data \
+	-name '*.fastq.gz' \
+| sed -r \
+	-e 's#^data/#results/#g' \
+	-e 's#\.fastq(\.gz)?$#_fastqc.html#g'
