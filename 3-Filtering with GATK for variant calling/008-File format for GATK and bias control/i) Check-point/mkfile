@@ -1,0 +1,15 @@
+#Copy the data into results to have a final clean copy
+#avoiding the infinit symbolic links, in order to clean
+#the previous modules.
+
+results/%.bam: data/%.bam
+	set -x
+	mkdir -p `dirname $target` \\
+	{
+		cp $prereq $target'.build'
+		cp $prereq'.bai' $target.'bai.build'
+	} && { 
+		mv $target'.build' $target
+		mv $target'.bai.build' $target'.bai'		
+	}
+
