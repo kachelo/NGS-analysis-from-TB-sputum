@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Group sam files by sample and turn them into bam.
+
+find -L data \
+        -type f \
+        -name '*.bam' \
+| sed -r \
+        -e 's#data/#results/#g' \
+        -e 's#\.bam$#\.bam\.bai#g' \
+| sort -u
+
