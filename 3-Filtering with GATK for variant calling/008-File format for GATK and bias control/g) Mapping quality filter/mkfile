@@ -1,0 +1,14 @@
+<config.mk
+
+#Filter reads with low mapping quality
+results/%.bam : data/%.bam
+	set -x
+	mkdir -p `dirname $target`
+	samtools view \
+		-h \
+		-q $MAPQ \
+		-b $prereq > $target'.build' \
+	&& mv $target'.build' $target
+
+clean:V:
+	rm -r results\
