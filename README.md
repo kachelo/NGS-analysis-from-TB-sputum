@@ -28,7 +28,7 @@ Remember to add 9base to the **PATH** variable in order to find ```mk``` executa
 
 # Project structure
 
-<img src="plos_one_github1.pdf" alt="A pipeline to remove contaminant NGS reads from TB-sputum samples" width="100"/>
+<img src="plos_one_github1.png" alt="A pipeline to remove contaminant NGS reads from TB-sputum samples" width="200"/>
 
 ## data directory
 
