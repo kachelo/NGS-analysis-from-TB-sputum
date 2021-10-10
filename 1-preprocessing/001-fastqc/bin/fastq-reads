@@ -1,0 +1,17 @@
+#!/usr/bin/awk -f
+
+# Search files with basic statistics and output:
+# filename <tab> sequences <tab> poor_quality
+
+BEGIN {
+	RS=""
+	FS="\n|\t"
+	filename = 4
+	sequences = 10
+	poor_seq = 12
+	OFS="\t"
+	print "Filename", "Total Sequences", "Bad Sequences"
+}
+{
+	print $filename, $sequences, $poor_seq
+}

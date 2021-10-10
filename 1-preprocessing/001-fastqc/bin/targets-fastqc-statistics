@@ -1,0 +1,6 @@
+#!/bin/sh
+find -L data \
+	-name '*.fastq.gz' \
+| sed -r \
+	-e 's#data#results#' \
+	-e 's#.fastq.gz#_fastqc_data.txt.Basic_Statistics#g'

@@ -1,0 +1,18 @@
+#!/usr/bin/awk -f
+
+# Splits a fastqc report data file to
+# store each report on a single file.
+
+BEGIN {
+	FS="\n"
+	RS=">>(END_MODULE)?"
+}
+NR > 1 {
+	file=FILENAME "." $1
+	gsub("\t.*$", "", file)
+	gsub(" ", "_", file)
+	print file
+	for (i=2; i < NF; i++) {
+		print $i >> file
+	}
+}

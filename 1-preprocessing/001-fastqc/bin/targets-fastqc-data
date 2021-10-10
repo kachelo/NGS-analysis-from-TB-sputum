@@ -1,0 +1,5 @@
+#!/bin/sh
+find -L results \
+	-name '*_fastqc.zip' \
+| sed -r \
+	-e 's#_fastqc.zip#_fastqc_data.txt#g'
