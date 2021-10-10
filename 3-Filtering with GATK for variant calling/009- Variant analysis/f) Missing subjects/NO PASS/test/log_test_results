@@ -1,0 +1,14 @@
+LOG_FILE="tests.log"
+
+TEST="$@"
+printf "$TEST..." | tee -a "$LOG_FILE"
+printf "\n" >> "$LOG_FILE"
+eval "$TEST" \
+>> "$LOG_FILE" \
+2>> "$LOG_FILE" \
+&& {
+	printf "[OK]\n" | tee -a tests.log
+} || {
+	printf "[err]\n" | tee -a tests.log
+}
+printf "\n" >> "$LOG_FILE"
