@@ -54,6 +54,46 @@ Illumina reads follow the convention:
 
 Here we will include *Mycobacterium* reference genome and SURPI database.
 
+**Data bases for taxonomic annotation**
+
+- [ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz](ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz)
+- [ftp://ftp.ncbi.nih.gov/pub/taxonomy/gi_taxid_prot.dmp.gz](ftp://ftp.ncbi.nih.gov/pub/taxonomy/gi_taxid_prot.dmp.gz)
+
+**Non-repetitive nucleotidos**
+
+* [ftp://ftp.ncbi.nih.gov/blast/db/FASTA/nt.gz](ftp://ftp.ncbi.nih.gov/blast/db/FASTA/nt.gz)
+
+**Non-repetitive amino acids**
+
+- [ftp://ftp.ncbi.nih.gov/blast/db/FASTA/nr.gz](ftp://ftp.ncbi.nih.gov/blast/db/FASTA/nr.gz)
+
+**Curated references by CHIULAB for SURPI**
+
+http://chiulab.ucsf.edu/SURPI/databases/hg19_rRNA_mito_Hsapiens_rna.fa.gz
+http://chiulab.ucsf.edu/SURPI/databases/Bacterial_Refseq_05172012.CLEAN.LenFiltered.uniq.fa.gz
+http://chiulab.ucsf.edu/SURPI/databases/rapsearch_viral_aa_130628_db_v2.12.fasta.gz
+http://chiulab.ucsf.edu/SURPI/databases/viruses-5-2012_trimmedgi-MOD_addedgi.fa.gz
+http://chiulab.ucsf.edu/SURPI/databases/18s_rRNA_gene_not_partial.fa.gz
+http://chiulab.ucsf.edu/SURPI/databases/23s.fa.gz
+http://chiulab.ucsf.edu/SURPI/databases/28s_rRNA_gene_NOT_partial_18s_spacer_5.8s.fa.gz
+http://chiulab.ucsf.edu/SURPI/databases/rdp_typed_iso_goodq_9210seqs.fa.gz.
+
+**Mycobacterium used reference**
+
+Mycobacterium tuberculosis     ref seq   NC_000962.3
+
+**Note 1**: Review SURPI workflow
+- https://github.com/chiulab/surpi
+- http://chiulab.ucsf.edu/surpi/
+- http://genome.cshlp.org/content/early/2014/05/16/gr.171934.113.full.pdf+html
+- http://snap.cs.berkeley.edu/downloads/snap-1.0beta-manual.pdf
+
+**Note 2**: Keep in mind where databases index are
+- SURPI: references/chiulab.ucsf.edu/SURPI/databases
+
+- Mycobacterium: reference/Mycobacterium
+
+
 # 1-PREPROCESSING
 
 ## 001-fastqc: Quality Control reports of the sequences
@@ -88,4 +128,11 @@ Usefull configurations:
 
 - Posterior reads Quality Control
 
+# 2-VARIANTS
+
+- Idea: use SURPI (Sequence-based Ultra-Rapid Pathogen Identification) to filter out reads that are not related to *Mycobacterium* from clinical samples: Remove Human, then Virus, after that organisms that are not the one desired. Finally, use *Mycobacterium* genome, H37RV, with a stringent Edit Distance (ED=3) in the alignment.
+
+## 004-surpi-human: Remove Human reads from the clinical sample
+
+**Note**: To filter out human reads SURPI uses [hg19 mitocondrial](hg19_rRNA_mito_Hsapiens_rna.snap). In this work we used as reference th complete hg38 genome.
 

@@ -1,0 +1,37 @@
+< config.mk
+# load global variables
+
+
+# snap fails if more than one snap process is active
+NPROC=1
+
+#SURPI for Single End reads
+results/%.unpaired.bam:        data/%_R1.unpaired.fastq.gz     data/%_R2.unpaired.fastq.gz
+	set -x
+	mkdir -p `dirname $target`
+	snap-aligner \
+		single \
+		$SNAP_REFERENCEDIR \
+		$prereq \
+		-R "$(bin/rg-from-fastq.gz $prereq)" \
+		$SNAP_OPTS \
+		-o -bam $target'.build' \
+	&& mv $target'.build' $target
+
+#SURPI for Pair End reads
+results/%.paired.bam:        data/%_R1.paired.fastq.gz     data/%_R2.paired.fastq.gz
+	set -x
+	mkdir -p `dirname $target`
+	snap-aligner \
+		paired \
+		$SNAP_REFERENCEDIR \
+		$prereq \
+		-R "$(bin/rg-from-fastq.gz $prereq)" \
+		$SNAP_OPTS \
+		-o -bam $target'.build' \
+	&& mv $target'.build' $target
+
+# Clean up generated files
+#
+clean:V:
+	bin/targets | xargs rm -f

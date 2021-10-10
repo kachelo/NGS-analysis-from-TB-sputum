@@ -1,0 +1,6 @@
+#!/bin/sh
+find -L data/ -name '*.paired.fastq.gz' \
+| sed -r \
+	-e 's#^data/#results/#g' \
+	-e 's#_R[12]\.paired\.fastq\.gz$#.paired.bam#g' \
+| sort -Vu
