@@ -1,0 +1,7 @@
+#!/bin/bash
+
+find -L ../results/ \
+	-type f \
+	-name "*.recal2.bam" \
+| sed -e 's#../results/#QC-results/#' \
+	-e 's#.recal2.bam#.bam.QC#'

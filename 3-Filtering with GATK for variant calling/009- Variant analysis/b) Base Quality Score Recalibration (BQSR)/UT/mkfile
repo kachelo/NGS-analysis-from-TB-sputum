@@ -1,0 +1,25 @@
+TEST:V:
+	set -x
+	bin/targets | xargs mk
+
+Log/%.log: ../data/%.markdup.ir.rtc.bam ../results/%.recal2.bam
+	set -x
+	mkdir -p `dirname $target`
+	echo "[UT0-results] picard-tools ValidateSamFile Summary Mode" > $target.build
+	{
+	picard-tools ValidateSamFile \
+		I=../results/$stem.recal2.bam \
+		MODE=SUMMARY \
+	|| true
+	} >> $target.build \
+	&& INPUT_READS=$(samtools view ../data/$stem.markdup.ir.rtc.bam | wc -l) \
+	&& OUTPUT_READS=$(samtools view ../results/$stem.recal2.bam | wc -l) \
+	&& if [ "$INPUT_READS" != "$OUTPUT_READS" ]
+	then
+		echo "[UT1-ERROR] check log in $target"
+		echo "[!!!ERROR] different number of input reads and output reads in files $prereq \nINPUT_READS: $INPUT_READS\nOUTPUT_READS: $OUTPUT_READS" >> $target.build
+	else
+		echo "[UT1-OK] check log in $target"
+		echo "[UT1-results]\n[UT1-SUCCESSFUL] Same number of input and output reads in files $prereq \nINPUT_READS: $INPUT_READS\nOUTPUT_READS: $OUTPUT_READS" >> $target.build
+	fi \
+	&& mv $target.build $target

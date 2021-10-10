@@ -1,0 +1,40 @@
+< ../../config.mk
+
+QC:V:
+	bin/targets | xargs mk
+
+QC-results/%.bam.QC:V: QC-results/%.recal2.bam.flagstat_comparison.tsv
+	set -x
+	echo "QC report generated at $prereq"
+
+QC-results/%.recal2.bam.flagstat_comparison.tsv: QC-results/%.markdup.ir.rtc.bam.flagstat QC-results/%.recal2.bam.flagstat
+	set -x
+	echo "Number_of_reads\tRead_category\tFile" | cat - $prereq > $target.build \
+	&& mv $target.build $target \
+	&& rm $prereq
+
+QC-results/%.markdup.ir.rtc.bam.flagstat: ../data/%.markdup.ir.rtc.bam
+	set -x
+	mkdir -p `dirname $target`
+	java -jar $GATK \
+		-T FlagStat \
+		-R $REF \
+		-I $prereq \
+	| sed -e 's# #\t#' \
+			-e 's# #_#g' \
+	| awk -v BAMFILE=`basename $prereq` ' BEGIN {FS="\t"; OFS="\t"} {print $0,BAMFILE}' \
+	> $target.build \
+	&& mv $target.build $target
+
+QC-results/%.recal2.bam.flagstat: ../results/%.recal2.bam
+	set -x
+	mkdir -p `dirname $target`
+	java -jar $GATK \
+		-T FlagStat \
+		-R $REF \
+		-I $prereq \
+	| sed -e 's# #\t#' \
+			-e 's# #_#g' \
+	| awk -v BAMFILE=`basename $prereq` ' BEGIN {FS="\t"; OFS="\t"} {print $0,BAMFILE}' \
+	> $target.build \
+	&& mv $target.build $target

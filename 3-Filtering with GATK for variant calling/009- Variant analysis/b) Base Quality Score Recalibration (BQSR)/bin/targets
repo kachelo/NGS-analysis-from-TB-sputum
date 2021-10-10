@@ -1,0 +1,8 @@
+#!/bin/sh
+
+find -L data/ \
+        -name '*.bam'\
+| sed \
+	-e "s/data/results/g" \
+	-e 's#.ir.rtc.bam#.recal2.bam#'
+
