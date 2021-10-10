@@ -95,6 +95,7 @@ Mycobacterium tuberculosis     ref seq   NC_000962.3
 
 
 
+
 # 1) Filtering input sequences with high-quality base calls
 
 ## 001-fastqc: Quality Control reports of the sequences
@@ -133,6 +134,7 @@ Usefull configurations:
 
 
 
+
 # 2) Microorganism identification and filtering by alignment with SURPI
 
 - Idea: use SURPI (Sequence-based Ultra-Rapid Pathogen Identification) to filter out reads that are not related to Mycobacterium from clinical samples: Remove Human, then Virus, after that identify the undesired bacteria.  Performe the Mapping with Mycobacterium genome H37RV using a stringent Edit Distance (ED = 3) and veriffy the elimination of contaminant sequences.
@@ -141,16 +143,15 @@ Usefull configurations:
 
 **Note**: To filter out human reads SURPI uses [hg19 mitocondrial](hg19_rRNA_mito_Hsapiens_rna.snap). In this work we used as reference th complete GRCh38 genome.
 
+
 ## 005-virus: Remove Virus reads from clinical sample
 
 **Note**: To filter out virus reads we aligned all high-quality reads of FASTA files with the SURPI virus database, obtaining BAM filtered files . 
 
 
-
 ## 006-Bacteria: Taxonomic classification of the sequenced microbiota
 
 **Note**: The BAM files were aligned with the SURPI bacterial reference database to obtain the taxonomic classification of the sequenced microbiota . 
-
 
 
 ## 007-*H37Rv* : Mapping with the reference genome 
