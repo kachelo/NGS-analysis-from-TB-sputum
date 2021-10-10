@@ -1,0 +1,10 @@
+#!/bin/bash
+
+find -L data/original/ \
+	-type f \
+	-name "*.bam" \
+| sed -r \
+	-e 's#data/original#results#' \
+	-e 's#\.bam$#\.stats#'
+
+

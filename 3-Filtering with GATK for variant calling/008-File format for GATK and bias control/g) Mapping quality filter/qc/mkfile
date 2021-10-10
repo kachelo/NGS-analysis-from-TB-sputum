@@ -1,0 +1,30 @@
+#Join available stats
+results/%.joined:
+	set -x 
+	mkdir -p `dirname $target`
+	find -L `dirname $target` \
+		-type f \
+		-name "*.stats" \
+	| xargs cat  > $target'.build' \
+	&& mv $target'.build' $target \
+	&& find -L `dirname $target` \
+		-type f \
+		-name "*stats" \
+		-delete 
+
+# Check how many reads were lost
+results/%.stats: data/original/%.bam data/results/%.bam
+	set -x
+	mkdir -p `dirname $target`
+	IN=`samtools view 'data/original/'$stem'.bam' \
+	| grep -v "^@" \
+	| wc -l`
+	OUT=`samtools view 'data/results/'$stem'.bam' \
+        | grep -v "^@" \
+        | wc -l`
+	echo $target	$IN	$OUT	$((IN-OUT)) > $target'.build' \
+	&& mv $target'.build' $target
+
+clean:V:
+	rm -r results/
+	
