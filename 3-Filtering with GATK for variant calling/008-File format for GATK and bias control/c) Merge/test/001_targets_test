@@ -1,0 +1,28 @@
+#!/bin/sh
+
+VALID_INPUT=(
+	''
+)
+
+CORRECT_OUTPUT=(
+'results/28.bam
+results/CA6-1-S3.bam'
+)
+
+test_function() {
+	bash -x bin/targets
+}
+
+test_valid() {
+	rv=0
+	for i in `seq 0 $(( ${#VALID_INPUT[@]} - 1 ))`; do
+		TEST_OUTPUT=`test_function ${VALID_INPUT[$i]}`
+		[ "$TEST_OUTPUT" == "${CORRECT_OUTPUT[$i]}" ] || {
+			echo "\"${TEST_OUTPUT}\" != \"${CORRECT_OUTPUT[$i]}\""
+			rv=1
+		}
+	done
+	exit "$rv"
+}
+
+test_valid >&2

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+VALID_INPUT=(
+'results/28.bam
+results/CA6-1-S3.bam'
+)
+
+CORRECT_OUTPUT=(
+'results/28.bam:	data/28_CA-25_test_ILLUMINA_unknown_L001_R1_001.bam	data/28_TSO-13_default_ILLUMINA_USEC-INMEGEN_L004_R1_001.bam	data/28_TSO-13_reseq_ILLUMINA_USEC-INMEGEN_L001_R2_001.bam	
+results/CA6-1-S3.bam:	data/CA6-1-S3_exoma-MT6_transport_ILLUMINA_IBT-UNAM_L001.bam	data/CA6-1-S3_exoma-MT6_transport_ILLUMINA_IBT-UNAM_L002.bam	data/CA6-1-S3_exoma-MT6_transport_ILLUMINA_IBT-UNAM_L003.bam	data/CA6-1-S3_exoma-MT6_transport_ILLUMINA_IBT-UNAM_L004.bam	'
+)
+
+test_function() {
+	bash -x bin/prereqs "$@"
+}
+
+test_valid() {
+	rv=0
+	for i in `seq 0 $(( ${#VALID_INPUT[@]} - 1 ))`; do
+		TEST_OUTPUT=`test_function ${VALID_INPUT[$i]}`
+		[ "$TEST_OUTPUT" == "${CORRECT_OUTPUT[$i]}" ] || {
+			echo "\"${TEST_OUTPUT}\" != \"${CORRECT_OUTPUT[$i]}\""
+			rv=1
+		}
+	done
+	exit "$rv"
+}
+
+test_valid >&2

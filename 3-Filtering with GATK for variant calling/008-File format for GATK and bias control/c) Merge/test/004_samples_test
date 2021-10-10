@@ -1,0 +1,28 @@
+#!/bin/sh
+
+VALID_INPUT=(
+	''
+)
+
+CORRECT_OUTPUT=(
+'28
+CA6-1-S3'
+)
+
+test_function() {
+	bash -x bin/samples
+}
+
+test_valid() {
+	rv=0
+	for i in `seq 0 $(( ${#VALID_INPUT[@]} - 1 ))`; do
+		TEST_OUTPUT=`test_function ${VALID_INPUT[$i]}`
+		[ "$TEST_OUTPUT" == "${CORRECT_OUTPUT[$i]}" ] || {
+			echo "\"${TEST_OUTPUT}\" != \"${CORRECT_OUTPUT[$i]}\""
+			rv=1
+		}
+	done
+	exit "$rv"
+}
+
+test_valid >&2
