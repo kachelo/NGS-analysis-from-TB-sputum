@@ -1,0 +1,37 @@
+<config.mk
+
+#Compute the classical qualimap report for a single bam file
+results/%/qualimap_report.html:	data/%.bam
+	DIR=`dirname $target`
+	mkdir -p "$DIR"
+	qualimap bamqc \
+		-bam $prereq \
+		-outdir "$DIR"
+
+#Generate the individul reports from bam files and make the multibam-qc
+results/%/multi-bamqc/complete_report.pdf : %_design.tab
+	OUTDIR=`dirname $target`
+	mkdir -p $OUTDIR
+	FILE=`basename $target`
+	qualimap multi-bamqc \
+		-d $prereq \
+		-r \
+		-outformat PDF:HTML \
+		-outfile $FILE".build" \
+		-outdir $OUTDIR \
+		--java-mem-size=$RAM \
+	&& mv $target".build.pdf" $target
+
+#Generate the multibam-qc assuming that individual reports are already created 
+results/%/multi-bamqc/report.pdf : %_qc.tab
+	OUTDIR=`dirname $target`
+	mkdir -p $OUTDIR
+	FILE=`basename $target`
+	qualimap multi-bamqc \
+	    -d $prereq \
+	    -outformat PDF:HTML \
+	    -outfile $FILE".build" \
+	    -outdir $OUTDIR \
+	    --java-mem-size=$RAM \
+	&& mv $target".build.pdf" $target
+

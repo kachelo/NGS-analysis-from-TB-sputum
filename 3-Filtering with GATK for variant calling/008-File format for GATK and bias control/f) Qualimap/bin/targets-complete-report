@@ -1,0 +1,7 @@
+#!/bin/sh
+find -L results \
+    -mindepth 1 \
+    -type d \
+| sed -r \
+    -e 's#$#/multi-bamqc/complete_report.pdf#'
+

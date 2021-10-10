@@ -1,0 +1,20 @@
+#!/bin/bash
+find -L $@ -name *.bam \
+| awk 'BEGIN{
+	FS="."
+	OFS="\t"
+}
+{
+	SAMPLE=$1
+	DIRECTORY=substr(SAMPLE, 1, index(SAMPLE, "/"))
+	sub(DIRECTORY, "", SAMPLE)
+	print SAMPLE, $0, SAMPLE
+}' \
+| sed -r \
+	-e 's#data#results#g' \
+ 	-e 's#[0|1]/[0-9]*\_unknown\_dup\_ILLUMINA\_unknown$#Duplicated#g' \
+	-e 's#[0|1]/[0-9]*\_[0-9|unknown]*\_default\_ILLUMINA\_[USEC|unknown]+$#Original#g' \
+        -e 's#[0|1]/[0-9]*\_[0-9]*\_reseq1\_ILLUMINA\_USEC$#Resequencing#g' \
+	-e 's#^([0|1])/([0-9]*)\_unknown\_dup\_ILLUMINA\_unknown#\2#g' \
+	-e 's#^([0|1])/([0-9]*)\_[0-9|unknown]*\_default\_ILLUMINA\_[USEC|unknown]+#\2#g' \
+	-e 's#^([0|1])/([0-9]*)\_[0-9]*\_reseq1\_ILLUMINA\_USEC#\2#g'

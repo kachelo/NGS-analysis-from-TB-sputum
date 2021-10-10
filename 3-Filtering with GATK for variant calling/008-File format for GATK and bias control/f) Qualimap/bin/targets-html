@@ -1,0 +1,6 @@
+#!/bin/sh
+find -L data \
+	-name '*.bam' \
+| sed -r \
+	-e 's#^data/#results/#' \
+	-e 's#\.bam$#/qualimap_report.html#'

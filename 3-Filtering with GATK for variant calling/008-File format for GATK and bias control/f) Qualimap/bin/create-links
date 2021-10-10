@@ -1,0 +1,16 @@
+#!/bin/sh
+# Create the directory in results acording to the last directory passed as argument "#@" in results/<last>/
+# Then, generate a symbolic links to the *.bam and *.bai files
+
+#Get the directory to create
+DATA_DIRECTORY=`basename $@`
+
+#Create the directory
+mkdir -p "results/"$DATA_DIRECTORY
+
+#Create the symbolic links
+find -L $@ \
+	-type f \
+	-name "*.bam*" \
+| xargs -I "{}" ln -s ../../"{}" results/$DATA_DIRECTORY
+
