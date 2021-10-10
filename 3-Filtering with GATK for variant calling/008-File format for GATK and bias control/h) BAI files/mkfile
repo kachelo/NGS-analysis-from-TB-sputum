@@ -1,0 +1,13 @@
+<config.mk
+##Generate index for bam
+results/%.bam.bai: data/%.bam
+        set -x
+        bin/sambamba_v0.6.6 index \
+                --nthreads=$SAMBAMBA_THREADS \
+                $prereq $target.build \
+        && mv $target.build $target \
+	&& ln -s "$(realpath $prereq)" "$(echo $target | sed -r -e 's#\.bai$##')"
+
+clean:V:
+        rm -r results
+
