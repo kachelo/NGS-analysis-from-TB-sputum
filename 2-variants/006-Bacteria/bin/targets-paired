@@ -1,0 +1,8 @@
+#!/bin/sh
+find -L data/ \
+	-type f \
+	-name '*.paired.bam' \
+| sed -r \
+	-e 's#^data/#results/#g' \
+	-e 's#\.bam$#.sam#g' \
+| sort -u

@@ -1,0 +1,7 @@
+#!/bin/sh
+find -L data/ \
+	-name '*.sam' \
+	-o -name '*.bam' \
+| sed -r \
+	-e 's#^data/#results/#g' \
+	-e 's#\.bam$#.sam#'

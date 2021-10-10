@@ -1,0 +1,8 @@
+#!/bin/sh
+# sort by family (22), genus (23), species (24), linage (25), gi (3), read (1)
+sort \
+	-V \
+	-k 25 \
+	-k 3,3 \
+	-k 1,1 \
+	"$@"

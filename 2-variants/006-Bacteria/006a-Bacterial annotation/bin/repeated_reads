@@ -1,0 +1,22 @@
+xargs sort -V \
+| awk \
+'{
+	id = $1
+	line = $1 OFS $2 OFS $6 OFS $3 OFS $22 OFS $23 OFS $24 OFS $25
+	if (oldid == id) {
+		print oldline
+		print line
+		count += 1
+	} else {
+		if (count > 1) {
+			print count ORS
+		}
+		count = 1
+	}
+	oldid = id
+	oldline = line
+}
+END{
+	print count
+}' \
+| uniq

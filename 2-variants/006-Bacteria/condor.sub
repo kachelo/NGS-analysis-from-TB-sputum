@@ -1,0 +1,2517 @@
+# Opciones generales de HTCondor.
+universe = vanilla
+#
+initialdir = /labs/lf/tb/3-taxonomia/edit-distance/001-surpi-bacteria
+should_transfer_files = NO
+getenv = True
+#
+# Recursos necesarios para ejecutar el trabajo.
+request_cpus = 1
+request_memory = 48GB
+request_disk = 1GB
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/12_unknown_default_ILLUMINA_unknown_L000.paired.sam
+output = results/bacteria-dv/12_unknown_default_ILLUMINA_unknown_L000.paired.sam.condor_out
+log = results/bacteria-dv/12_unknown_default_ILLUMINA_unknown_L000.paired.sam.condor_log
+error = results/bacteria-dv/12_unknown_default_ILLUMINA_unknown_L000.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/13_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/13_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/13_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/21_unknown_default_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/21_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/21_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/21_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/22_unknown_default_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/22_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/22_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/22_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/23_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/23_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/23_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/24_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/24_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/24_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/25_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/25_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/25_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/27_unknown_default_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/27_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/27_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/27_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/28_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/28_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/28_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/29_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/29_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/29_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/30_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/30_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/30_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/31_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/31_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/31_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_unknown_dup_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/32_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/32_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/32_unknown_dup_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/33_unknown_default_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/33_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/33_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/33_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/35_unknown_default_ILLUMINA_unknown_L001.paired.sam
+output = results/bacteria-dv/35_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_out
+log = results/bacteria-dv/35_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_log
+error = results/bacteria-dv/35_unknown_default_ILLUMINA_unknown_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam
+output = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_out
+log = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_log
+error = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L001.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam
+output = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_out
+log = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_log
+error = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L002.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam
+output = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_out
+log = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_log
+error = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L003.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam
+output = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_out
+log = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_log
+error = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L004.paired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/36_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/47_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/13_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/54_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/50_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/25_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/49_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/32_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/42_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/30_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/30_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/30_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/23_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/23_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/23_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/24_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/24_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/24_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/24_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/24_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/43_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/05_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/48_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/29_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/29_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/29_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/45_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/51_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/45_20150708_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/55_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/39_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/21_unknown_default_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/21_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/21_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/21_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/35_unknown_default_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/35_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/35_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/35_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/22_unknown_default_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/22_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/22_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/22_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/33_unknown_default_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/33_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/33_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/33_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/13_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/13_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/13_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/13_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/27_unknown_default_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/27_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/27_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/27_unknown_default_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/31_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/28_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/57_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/12_unknown_default_ILLUMINA_unknown_L000.unpaired.sam
+output = results/bacteria-dv/12_unknown_default_ILLUMINA_unknown_L000.unpaired.sam.condor_out
+log = results/bacteria-dv/12_unknown_default_ILLUMINA_unknown_L000.unpaired.sam.condor_log
+error = results/bacteria-dv/12_unknown_default_ILLUMINA_unknown_L000.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/02_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/32_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/32_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/32_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/32_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/26_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/41_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/36_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/02_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/46_20150708_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/05_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/53_20150810_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/42_20150803_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/23_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/28_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/28_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/28_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/25_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/25_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/25_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/25_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/53_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/52_20150803_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/46_20150708_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam
+output = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_out
+log = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_log
+error = results/bacteria-dv/58_20150810_default_ILLUMINA_USEC.INMEGEN_L004.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/34_20150803_default_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/30_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/31_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam
+output = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/28_20150728_reseq1_ILLUMINA_USEC.INMEGEN_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam
+output = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_out
+log = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_log
+error = results/bacteria-dv/56_20150810_default_ILLUMINA_USEC.INMEGEN_L003.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/31_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam
+output = results/bacteria-dv/31_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_out
+log = results/bacteria-dv/31_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_log
+error = results/bacteria-dv/31_unknown_dup_ILLUMINA_unknown_L001.unpaired.sam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam
+output = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_out
+log = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_log
+error = results/bacteria-dv/29_20150728_default_ILLUMINA_USEC.INMEGEN_L002.unpaired.sam.condor_err
+queue

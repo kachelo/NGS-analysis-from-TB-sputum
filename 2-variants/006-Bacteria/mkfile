@@ -1,0 +1,28 @@
+<snap.mk
+# snap fails if more than one snap process is active
+NPROC=1
+
+# snap can filter a set of files and it's more efficient to align them all on the same run
+# rather than running surpi once for each file
+
+results/%.unpaired.sam:	data/%.unpaired.bam
+	set -x
+	mkdir -p `dirname $target`
+	snap-aligner \
+		single \
+		$SNAP_REFERENCEDIR \
+		$prereq \
+		$SNAP_OPTS \
+		-o -sam $target'.build' \
+	&& mv $target'.build' $target
+
+results/%.paired.sam:	data/%.paired.bam
+	set -x
+	mkdir -p `dirname $target`
+	snap-aligner \
+		paired \
+		$SNAP_REFERENCEDIR \
+		$prereq \
+		$SNAP_OPTS \
+		-o -sam $target'.build' \
+	&& mv $target'.build' $target

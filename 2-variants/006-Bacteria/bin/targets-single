@@ -1,0 +1,7 @@
+#!/bin/sh
+find -L data/ \
+	-type f \
+	-name '*.unpaired.bam' \
+| sed -r \
+	-e 's#^data/#results/#g' \
+	-e 's#\.bam$#.sam#g'

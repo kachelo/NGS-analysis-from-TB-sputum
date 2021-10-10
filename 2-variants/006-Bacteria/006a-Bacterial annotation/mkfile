@@ -1,0 +1,66 @@
+< config.mk
+
+# Do not fail when no target is given
+#
+no-target:QV:
+	echo "$(pwd): nothing to be done."
+
+# Annotate using taxonomy_lookup
+# ==============================
+#
+results/%.sam:	tmp/%.sam
+	set -x
+	mkdir -p "$(dirname "${target}")"
+	cores=1
+	TMPFILE="results/${stem}.build"
+	bin/taxonomy_lookup.pl \
+		"$prereq" \
+		sam \
+		nucl \
+		"$cores" \
+		"$TAXONOMY_DB_DIR" \
+	&& bin/sort-by-organism 'tmp/'"$stem"'.all.annotated' > "${TMPFILE}" \
+	&& mv "${TMPFILE}" $target ;
+	rm 'tmp/'"$stem"'.all.annotated'
+
+# Extract the temporary file
+# ==========================
+#
+tmp/%.sam:Q:	data/%.sam
+	mk check-db
+	set -x
+	mkdir -p "$(dirname "${target}")"
+	TMPFILE="tmp/${stem}.build"
+	awk '$1 !~ /^@/' \
+		$prereq \
+	> "${TMPFILE}" \
+	&& mv "${TMPFILE}" "${target}"
+
+check-db:V:
+	bin/validate-taxonomy-db-dir
+
+# Quality Control
+# ===============
+#
+# Here you should describe why you choose this qc.
+#
+qc:VQ:
+	cd qc
+	bin/targets | xargs mk
+
+# Unit tests
+# ==========
+#
+# Verify everything works correctly.
+#
+test	tests:QV:
+	cd test
+	rm -f tests.log
+	./run_tests \
+	|| less tests.log
+
+# Clean up generated files
+# ========================
+#
+clean:V:
+	bin/targets | xargs rm -f

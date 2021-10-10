@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Assert that the directory exists and contains the taxonomy database.
+
+# Fail in case of error.
+set -e
+
+# Variable set.
+test -n "$TAXONOMY_DB_DIR"
+
+# The directory exists and contains the required files
+test -d "$TAXONOMY_DB_DIR"
+test -e "$TAXONOMY_DB_DIR"'/gi_taxid_nucl.db'
+test -e "$TAXONOMY_DB_DIR"'/gi_taxid_prot.db'
+test -e "$TAXONOMY_DB_DIR"'/names_nodes_scientific.db'
