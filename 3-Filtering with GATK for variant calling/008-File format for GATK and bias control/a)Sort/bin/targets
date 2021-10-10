@@ -1,0 +1,7 @@
+#!/bin/bash
+find -L data \
+	-type f \
+	-name '*[formato]' \
+| sed -r \
+	-e 's#^data/#results/#' \
+	-e 's#\.[formato]$#.[formato-de-salida]#'

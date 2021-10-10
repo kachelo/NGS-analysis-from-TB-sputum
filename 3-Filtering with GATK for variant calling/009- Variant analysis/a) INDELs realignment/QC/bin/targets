@@ -1,0 +1,7 @@
+#!/bin/bash
+
+find -L ../results/ \
+	-type f \
+	-name "*.ir.rtc.bam" \
+| sed -e 's#../results/#QC-results/#' \
+	-e 's#.bam#.bam.QC#'

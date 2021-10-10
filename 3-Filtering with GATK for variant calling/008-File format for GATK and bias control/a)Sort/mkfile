@@ -1,0 +1,41 @@
+# Sort BAM files
+# ==============
+#
+results/%.bam:	data/%.bam
+	set -x
+	mkdir -p "$(dirname "$target")"
+	BAM="results/${stem}.build.bam"
+	bin/sambamba_v0.6.6 \
+		sort \
+		"$prereq" \
+		-o "$BAM" \
+	&& {
+		mv "${BAM}" "$target"
+		mv "${BAM}.bai" "${target}.bai"
+	}
+
+# Quality Control
+# ===============
+#
+# Here you should describe why you choose this qc.
+#
+qc:V:
+	cd qc
+	bin/targets | xargs mk
+
+# Unit tests
+# ==========
+#
+# Verify everything works correctly.
+#
+test	tests:QV:
+	cd test
+	rm -f tests.log
+	./run_tests \
+	|| less tests.log
+
+# Clean up generated files
+# ========================
+#
+clean:V:
+	bin/targets | xargs rm -f

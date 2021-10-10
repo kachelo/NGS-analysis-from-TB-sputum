@@ -1,0 +1,25 @@
+< ../config.mk
+
+results/%.ir.rtc.bam:	data/%.bam results/%.intervals
+	set -x
+	java -jar $GATK \
+		-T IndelRealigner \
+		-R $REF \
+		-I "data/"$stem".bam" \
+		-L $coordenadas \
+		-targetIntervals "results/"$stem".intervals" \
+		-o $target".build" \
+	&& mv $target".build" $target \
+	&& mv $target".build.bai" $target".bai"
+
+results/%.intervals: data/%.bam 
+	set -x
+	mkdir -p `dirname $target`
+	java -jar $GATK \
+		-T RealignerTargetCreator \
+		-R $REF \
+		-I "data/"$stem".bam" \
+		-o $target".build" \
+		-nt $NT \
+		-L $coordenadas \
+	&& mv $target".build" $target
