@@ -1,0 +1,72 @@
+< ../config.mk
+
+results/%.snp.vcf:Q: data/%.vcf
+	echo "[DEBUGGING] extracting SNP for $target"
+	set -x
+        mkdir -p $(dirname $target)
+        java -jar $GATK \
+		-T SelectVariants \
+		-R $REF \
+		-V $prereq \
+		-selectType SNP \
+		-nt $NT \
+		-o $target.build \
+	&& mv $target.build $target \
+	&& mv $target.build.idx $target.idx
+
+results/%.filtered_snp.vcf:Q: results/%.snp.vcf
+	echo "[DEBUGGING_HERE] filtering SNP for $target"
+	java -jar $GATK \
+		-T VariantFiltration \
+		-R $REF \
+		-V $prereq \
+		--filterExpression "QD < 2.0 || FS > 60.0 || MQ < 30.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
+		--filterName "hard_filter" \
+		-o $target.build \
+	&& mv $target.build $target \
+	&& mv $target.build.idx $target.idx
+
+results/%.indel.vcf:Q: data/%.vcf
+	echo "[DEBUGGING] extracting INDEL for $target"
+	set -x
+        mkdir -p $(dirname $target)
+        java -jar $GATK \
+                -T SelectVariants \
+                -R $REF \
+                -V $prereq \
+                -selectType INDEL \
+                -nt $NT \
+                -o $target.build \
+        && mv $target.build $target \
+        && mv $target.build.idx $target.idx
+
+results/%.filtered_indel.vcf:Q: results/%.indel.vcf
+	echo "[DEBUGGING] filtering INDEL for $target"
+	java -jar $GATK \
+		-T VariantFiltration \
+		-R $REF \
+		-V $prereq \
+		--filterExpression "QD < 2.0 || FS > 200.0 || ReadPosRankSum < -20.0" \
+		--filterName "hard_filter" \
+		-o $target.build \
+	&& mv $target.build $target \
+        && mv $target.build.idx $target.idx
+
+results/%.filtered.vcf:Q: results/%.filtered_snp.vcf results/%.filtered_indel.vcf
+	echo "[DEBUGGING] creating $target"
+	java -jar $GATK \
+		-T CombineVariants \
+		-R $REF \
+		-V results/$stem.filtered_snp.vcf \
+		-V results/$stem.filtered_indel.vcf \
+		-nt $NT \
+		--genotypemergeoption UNSORTED \
+		-o $target.build \
+	&& mv $target.build $target \
+        && mv $target.build.idx $target.idx
+
+results/%.hard_filtered.vcf:Q: results/%.filtered.vcf
+	echo "[DEBUGGING] removing variants that did not pass hard filter"
+	grep -v "100MX_hard_filter" $prereq > $target.build \
+	&& mv $target.build $target
+	

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+find -L data \
+-type f \
+-name "*.vcf" \
+| sed -e "s#data/#results/#g" \
+-e "s#.vcf#.hard_filtered.vcf#g"
