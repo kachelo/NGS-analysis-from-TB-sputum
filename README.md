@@ -18,5 +18,45 @@ b Current Address:  Instituto de Biotecnología, Universidad Nacional Autónoma 
 
 # The git repository includes the recomended pipeline of the paper
 
+The workflow uses [`mk`](http://doc.cat-v.org/bell_labs/mk/mk.pdf "A successor for `make`."), which can usually be installed using:
+
+```
+sudo apt install 9base
+```
+
+Remember to add 9base to the **PATH** variable in order to find ```mk``` executable.
+
+# Project structure
+
+## data directory
+
+Here the user includes de fasta file that wants to process using the following considerations:
+
+```
+SAMPLE_LIBRARY_TREATMENT_PLATFORM_CENTER_L00[0-8]_R[12].fastq.gz
+```
+- SAMPLE ID
+- TREATMENT used 
+- PLATFORM used, i. e. ILLUMINA, etc.
+- CENTER, where it was taken
+- L00[0-8] lane used #
+- R[12] forward (1) or reverse (2)
+
+Illumina reads follow the convention:
+
+```
+@<instrument>:<run>:<flowcell>:<lane>:<tile>:<x>:<y> <single(1)|paired(2)>:<is-filtered (Y|N)>:<control (0)>:<sample-number>
+# Example:
+@M04474:29:000000000-ALA81:1:1101:15601:1728 1:N:0:4
+```
+
+## reference directory
+
+Here we will include *Mycobacterium* reference genome and SURPI database.
+
+# 1-PREPROCESSING
+
+## 001-fastqc: Quality Control reports of the sequences.
+
 
 
