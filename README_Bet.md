@@ -135,7 +135,7 @@ Usefull configurations:
 
 # 2) Microorganism identification and filtering by alignment with SURPI
 
-- Idea: use SURPI (Sequence-based Ultra-Rapid Pathogen Identification) to filter out reads that are not related to *Mycobacterium* from clinical samples: Remove Human, then Virus, after that organisms that are not the one desired. Finally, use *Mycobacterium* genome, H37RV, with a stringent Edit Distance (ED=3) in the alignment.
+- Idea: use SURPI (Sequence-based Ultra-Rapid Pathogen Identification) to filter out reads that are not related to Mycobacterium from clinical samples: Remove Human, then Virus, after that identify the undesired bacteria.  Performe the Mapping with Mycobacterium genome H37RV using a stringent Edit Distance (ED = 3) and veriffy the elimination of contaminant sequences.
 
 ## 004-human: Remove Human reads from the clinical sample
 
