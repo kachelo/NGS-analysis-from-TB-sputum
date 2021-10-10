@@ -1,0 +1,34 @@
+< config.mk
+# Load Global variables
+
+# snap fails if more than one snap process is active
+NPROC=1
+
+# SURPI for single end reads
+results/%.unpaired.sam:        data/%.unpaired.bam
+	set -x
+	mkdir -p `dirname $target`
+	snap-aligner \
+		single \
+		$SNAP_REFERENCEDIR \
+		$prereq \
+		$SNAP_OPTS \
+		-o -sam $target'.build' \
+	&& mv $target'.build' $target
+
+# SURPI for pair end reads
+results/%.paired.sam:        data/%.paired.bam
+	set -x
+	mkdir -p `dirname $target`
+	snap-aligner \
+		paired \
+		$SNAP_REFERENCEDIR \
+		$prereq \
+		$SNAP_OPTS \
+		-o -sam $target'.build' \
+	&& mv $target'.build' $target
+
+# Clean up generated files
+#
+clean:V:
+	bin/targets | xargs rm -f

@@ -136,3 +136,6 @@ Usefull configurations:
 
 **Note**: To filter out human reads SURPI uses [hg19 mitocondrial](hg19_rRNA_mito_Hsapiens_rna.snap). In this work we used as reference th complete hg38 genome.
 
+## 005-virus: REmove Virus reads from clinical sample
+
+

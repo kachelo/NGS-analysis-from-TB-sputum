@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Extract readgroups from a `fastq.gz` with the name
+#
+# `SAMPLE_LIBRARY_TREATMENT_PLATFORM_CENTER_L00[0-8]_R[12].fastq.gz`
+#
+# this name convention is used because this info cannot be extracted from reads.
+
+FILENAME="$1"
+
+zcat "$FILENAME" \
+| head -n 1 \
+| bin/assign-read-groups \
+	-v FILENAME="$FILENAME"
