@@ -1,0 +1,7 @@
+#!/bin/bash
+find -L data \
+	-type f \
+	-name '*hard_filtered.vcf' \
+| sed -r \
+	-e 's#^data/#results/#' \
+	-e 's#hard_filtered\.vcf$#PASS.vcf#'
