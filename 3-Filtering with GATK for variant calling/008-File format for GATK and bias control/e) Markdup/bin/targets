@@ -1,0 +1,6 @@
+#!/bin/bash
+
+find -L data/ \
+	-name "*.bam" \
+| sed \
+	-e 's#^data/#results/#g'

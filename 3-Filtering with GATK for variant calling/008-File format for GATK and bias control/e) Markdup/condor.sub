@@ -1,0 +1,2405 @@
+# Opciones generales de HTCondor.
+universe = vanilla
+#
+initialdir = /labs/lf/tb/2-variantes/007e-markdup
+should_transfer_files = NO
+getenv = True
+#
+# Recursos necesarios para ejecutar el trabajo.
+request_cpus = 1
+request_memory = 3GB
+request_disk = 1GB
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/12.bam
+output = results/MTC-D3-H37Rv-D12/12.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/12.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/29.bam
+output = results/MTC-D3-H37Rv-D12/29.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/29.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/55.bam
+output = results/MTC-D3-H37Rv-D12/55.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/55.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/52.bam
+output = results/MTC-D3-H37Rv-D12/52.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/52.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/27.bam
+output = results/MTC-D3-H37Rv-D12/27.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/27.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/36.bam
+output = results/MTC-D3-H37Rv-D12/36.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/36.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/31.bam
+output = results/MTC-D3-H37Rv-D12/31.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/31.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/43.bam
+output = results/MTC-D3-H37Rv-D12/43.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/43.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/26.bam
+output = results/MTC-D3-H37Rv-D12/26.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/26.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/21.bam
+output = results/MTC-D3-H37Rv-D12/21.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/21.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/53.bam
+output = results/MTC-D3-H37Rv-D12/53.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/53.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/28.bam
+output = results/MTC-D3-H37Rv-D12/28.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/28.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/54.bam
+output = results/MTC-D3-H37Rv-D12/54.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/54.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/13.bam
+output = results/MTC-D3-H37Rv-D12/13.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/13.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/02.bam
+output = results/MTC-D3-H37Rv-D12/02.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/02.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/05.bam
+output = results/MTC-D3-H37Rv-D12/05.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/05.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/39.bam
+output = results/MTC-D3-H37Rv-D12/39.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/39.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/45.bam
+output = results/MTC-D3-H37Rv-D12/45.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/45.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/42.bam
+output = results/MTC-D3-H37Rv-D12/42.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/42.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/30.bam
+output = results/MTC-D3-H37Rv-D12/30.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/30.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/41.bam
+output = results/MTC-D3-H37Rv-D12/41.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/41.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/46.bam
+output = results/MTC-D3-H37Rv-D12/46.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/46.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/34.bam
+output = results/MTC-D3-H37Rv-D12/34.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/34.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/48.bam
+output = results/MTC-D3-H37Rv-D12/48.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/48.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/33.bam
+output = results/MTC-D3-H37Rv-D12/33.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/33.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/22.bam
+output = results/MTC-D3-H37Rv-D12/22.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/22.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/25.bam
+output = results/MTC-D3-H37Rv-D12/25.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/25.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/57.bam
+output = results/MTC-D3-H37Rv-D12/57.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/57.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/50.bam
+output = results/MTC-D3-H37Rv-D12/50.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/50.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/32.bam
+output = results/MTC-D3-H37Rv-D12/32.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/32.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/35.bam
+output = results/MTC-D3-H37Rv-D12/35.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/35.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/49.bam
+output = results/MTC-D3-H37Rv-D12/49.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/49.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/47.bam
+output = results/MTC-D3-H37Rv-D12/47.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/47.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/51.bam
+output = results/MTC-D3-H37Rv-D12/51.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/51.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/56.bam
+output = results/MTC-D3-H37Rv-D12/56.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/56.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/56.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/24.bam
+output = results/MTC-D3-H37Rv-D12/24.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/24.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/58.bam
+output = results/MTC-D3-H37Rv-D12/58.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/58.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D12/23.bam
+output = results/MTC-D3-H37Rv-D12/23.bam.condor_out
+log = results/MTC-D3-H37Rv-D12/23.bam.condor_log
+error = results/MTC-D3-H37Rv-D12/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/21.bam
+output = results/MTC-D3-Panel-D12/21.bam.condor_out
+log = results/MTC-D3-Panel-D12/21.bam.condor_log
+error = results/MTC-D3-Panel-D12/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/26.bam
+output = results/MTC-D3-Panel-D12/26.bam.condor_out
+log = results/MTC-D3-Panel-D12/26.bam.condor_log
+error = results/MTC-D3-Panel-D12/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/54.bam
+output = results/MTC-D3-Panel-D12/54.bam.condor_out
+log = results/MTC-D3-Panel-D12/54.bam.condor_log
+error = results/MTC-D3-Panel-D12/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/28.bam
+output = results/MTC-D3-Panel-D12/28.bam.condor_out
+log = results/MTC-D3-Panel-D12/28.bam.condor_log
+error = results/MTC-D3-Panel-D12/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/53.bam
+output = results/MTC-D3-Panel-D12/53.bam.condor_out
+log = results/MTC-D3-Panel-D12/53.bam.condor_log
+error = results/MTC-D3-Panel-D12/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/13.bam
+output = results/MTC-D3-Panel-D12/13.bam.condor_out
+log = results/MTC-D3-Panel-D12/13.bam.condor_log
+error = results/MTC-D3-Panel-D12/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/05.bam
+output = results/MTC-D3-Panel-D12/05.bam.condor_out
+log = results/MTC-D3-Panel-D12/05.bam.condor_log
+error = results/MTC-D3-Panel-D12/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/02.bam
+output = results/MTC-D3-Panel-D12/02.bam.condor_out
+log = results/MTC-D3-Panel-D12/02.bam.condor_log
+error = results/MTC-D3-Panel-D12/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/42.bam
+output = results/MTC-D3-Panel-D12/42.bam.condor_out
+log = results/MTC-D3-Panel-D12/42.bam.condor_log
+error = results/MTC-D3-Panel-D12/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/45.bam
+output = results/MTC-D3-Panel-D12/45.bam.condor_out
+log = results/MTC-D3-Panel-D12/45.bam.condor_log
+error = results/MTC-D3-Panel-D12/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/39.bam
+output = results/MTC-D3-Panel-D12/39.bam.condor_out
+log = results/MTC-D3-Panel-D12/39.bam.condor_log
+error = results/MTC-D3-Panel-D12/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/30.bam
+output = results/MTC-D3-Panel-D12/30.bam.condor_out
+log = results/MTC-D3-Panel-D12/30.bam.condor_log
+error = results/MTC-D3-Panel-D12/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/12.bam
+output = results/MTC-D3-Panel-D12/12.bam.condor_out
+log = results/MTC-D3-Panel-D12/12.bam.condor_log
+error = results/MTC-D3-Panel-D12/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/52.bam
+output = results/MTC-D3-Panel-D12/52.bam.condor_out
+log = results/MTC-D3-Panel-D12/52.bam.condor_log
+error = results/MTC-D3-Panel-D12/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/55.bam
+output = results/MTC-D3-Panel-D12/55.bam.condor_out
+log = results/MTC-D3-Panel-D12/55.bam.condor_log
+error = results/MTC-D3-Panel-D12/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/29.bam
+output = results/MTC-D3-Panel-D12/29.bam.condor_out
+log = results/MTC-D3-Panel-D12/29.bam.condor_log
+error = results/MTC-D3-Panel-D12/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/27.bam
+output = results/MTC-D3-Panel-D12/27.bam.condor_out
+log = results/MTC-D3-Panel-D12/27.bam.condor_log
+error = results/MTC-D3-Panel-D12/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/31.bam
+output = results/MTC-D3-Panel-D12/31.bam.condor_out
+log = results/MTC-D3-Panel-D12/31.bam.condor_log
+error = results/MTC-D3-Panel-D12/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/36.bam
+output = results/MTC-D3-Panel-D12/36.bam.condor_out
+log = results/MTC-D3-Panel-D12/36.bam.condor_log
+error = results/MTC-D3-Panel-D12/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/43.bam
+output = results/MTC-D3-Panel-D12/43.bam.condor_out
+log = results/MTC-D3-Panel-D12/43.bam.condor_log
+error = results/MTC-D3-Panel-D12/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/49.bam
+output = results/MTC-D3-Panel-D12/49.bam.condor_out
+log = results/MTC-D3-Panel-D12/49.bam.condor_log
+error = results/MTC-D3-Panel-D12/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/35.bam
+output = results/MTC-D3-Panel-D12/35.bam.condor_out
+log = results/MTC-D3-Panel-D12/35.bam.condor_log
+error = results/MTC-D3-Panel-D12/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/32.bam
+output = results/MTC-D3-Panel-D12/32.bam.condor_out
+log = results/MTC-D3-Panel-D12/32.bam.condor_log
+error = results/MTC-D3-Panel-D12/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/47.bam
+output = results/MTC-D3-Panel-D12/47.bam.condor_out
+log = results/MTC-D3-Panel-D12/47.bam.condor_log
+error = results/MTC-D3-Panel-D12/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/56.bam
+output = results/MTC-D3-Panel-D12/56.bam.condor_out
+log = results/MTC-D3-Panel-D12/56.bam.condor_log
+error = results/MTC-D3-Panel-D12/56.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/51.bam
+output = results/MTC-D3-Panel-D12/51.bam.condor_out
+log = results/MTC-D3-Panel-D12/51.bam.condor_log
+error = results/MTC-D3-Panel-D12/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/23.bam
+output = results/MTC-D3-Panel-D12/23.bam.condor_out
+log = results/MTC-D3-Panel-D12/23.bam.condor_log
+error = results/MTC-D3-Panel-D12/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/58.bam
+output = results/MTC-D3-Panel-D12/58.bam.condor_out
+log = results/MTC-D3-Panel-D12/58.bam.condor_log
+error = results/MTC-D3-Panel-D12/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/24.bam
+output = results/MTC-D3-Panel-D12/24.bam.condor_out
+log = results/MTC-D3-Panel-D12/24.bam.condor_log
+error = results/MTC-D3-Panel-D12/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/46.bam
+output = results/MTC-D3-Panel-D12/46.bam.condor_out
+log = results/MTC-D3-Panel-D12/46.bam.condor_log
+error = results/MTC-D3-Panel-D12/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/41.bam
+output = results/MTC-D3-Panel-D12/41.bam.condor_out
+log = results/MTC-D3-Panel-D12/41.bam.condor_log
+error = results/MTC-D3-Panel-D12/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/33.bam
+output = results/MTC-D3-Panel-D12/33.bam.condor_out
+log = results/MTC-D3-Panel-D12/33.bam.condor_log
+error = results/MTC-D3-Panel-D12/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/48.bam
+output = results/MTC-D3-Panel-D12/48.bam.condor_out
+log = results/MTC-D3-Panel-D12/48.bam.condor_log
+error = results/MTC-D3-Panel-D12/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/34.bam
+output = results/MTC-D3-Panel-D12/34.bam.condor_out
+log = results/MTC-D3-Panel-D12/34.bam.condor_log
+error = results/MTC-D3-Panel-D12/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/25.bam
+output = results/MTC-D3-Panel-D12/25.bam.condor_out
+log = results/MTC-D3-Panel-D12/25.bam.condor_log
+error = results/MTC-D3-Panel-D12/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/22.bam
+output = results/MTC-D3-Panel-D12/22.bam.condor_out
+log = results/MTC-D3-Panel-D12/22.bam.condor_log
+error = results/MTC-D3-Panel-D12/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/50.bam
+output = results/MTC-D3-Panel-D12/50.bam.condor_out
+log = results/MTC-D3-Panel-D12/50.bam.condor_log
+error = results/MTC-D3-Panel-D12/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D12/57.bam
+output = results/MTC-D3-Panel-D12/57.bam.condor_out
+log = results/MTC-D3-Panel-D12/57.bam.condor_log
+error = results/MTC-D3-Panel-D12/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/50.bam
+output = results/Direct-H37Rv-D3/50.bam.condor_out
+log = results/Direct-H37Rv-D3/50.bam.condor_log
+error = results/Direct-H37Rv-D3/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/57.bam
+output = results/Direct-H37Rv-D3/57.bam.condor_out
+log = results/Direct-H37Rv-D3/57.bam.condor_log
+error = results/Direct-H37Rv-D3/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/25.bam
+output = results/Direct-H37Rv-D3/25.bam.condor_out
+log = results/Direct-H37Rv-D3/25.bam.condor_log
+error = results/Direct-H37Rv-D3/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/22.bam
+output = results/Direct-H37Rv-D3/22.bam.condor_out
+log = results/Direct-H37Rv-D3/22.bam.condor_log
+error = results/Direct-H37Rv-D3/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/33.bam
+output = results/Direct-H37Rv-D3/33.bam.condor_out
+log = results/Direct-H37Rv-D3/33.bam.condor_log
+error = results/Direct-H37Rv-D3/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/48.bam
+output = results/Direct-H37Rv-D3/48.bam.condor_out
+log = results/Direct-H37Rv-D3/48.bam.condor_log
+error = results/Direct-H37Rv-D3/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/34.bam
+output = results/Direct-H37Rv-D3/34.bam.condor_out
+log = results/Direct-H37Rv-D3/34.bam.condor_log
+error = results/Direct-H37Rv-D3/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/46.bam
+output = results/Direct-H37Rv-D3/46.bam.condor_out
+log = results/Direct-H37Rv-D3/46.bam.condor_log
+error = results/Direct-H37Rv-D3/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/41.bam
+output = results/Direct-H37Rv-D3/41.bam.condor_out
+log = results/Direct-H37Rv-D3/41.bam.condor_log
+error = results/Direct-H37Rv-D3/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/23.bam
+output = results/Direct-H37Rv-D3/23.bam.condor_out
+log = results/Direct-H37Rv-D3/23.bam.condor_log
+error = results/Direct-H37Rv-D3/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/58.bam
+output = results/Direct-H37Rv-D3/58.bam.condor_out
+log = results/Direct-H37Rv-D3/58.bam.condor_log
+error = results/Direct-H37Rv-D3/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/24.bam
+output = results/Direct-H37Rv-D3/24.bam.condor_out
+log = results/Direct-H37Rv-D3/24.bam.condor_log
+error = results/Direct-H37Rv-D3/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/56.bam
+output = results/Direct-H37Rv-D3/56.bam.condor_out
+log = results/Direct-H37Rv-D3/56.bam.condor_log
+error = results/Direct-H37Rv-D3/56.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/51.bam
+output = results/Direct-H37Rv-D3/51.bam.condor_out
+log = results/Direct-H37Rv-D3/51.bam.condor_log
+error = results/Direct-H37Rv-D3/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/47.bam
+output = results/Direct-H37Rv-D3/47.bam.condor_out
+log = results/Direct-H37Rv-D3/47.bam.condor_log
+error = results/Direct-H37Rv-D3/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/49.bam
+output = results/Direct-H37Rv-D3/49.bam.condor_out
+log = results/Direct-H37Rv-D3/49.bam.condor_log
+error = results/Direct-H37Rv-D3/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/35.bam
+output = results/Direct-H37Rv-D3/35.bam.condor_out
+log = results/Direct-H37Rv-D3/35.bam.condor_log
+error = results/Direct-H37Rv-D3/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/32.bam
+output = results/Direct-H37Rv-D3/32.bam.condor_out
+log = results/Direct-H37Rv-D3/32.bam.condor_log
+error = results/Direct-H37Rv-D3/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/43.bam
+output = results/Direct-H37Rv-D3/43.bam.condor_out
+log = results/Direct-H37Rv-D3/43.bam.condor_log
+error = results/Direct-H37Rv-D3/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/31.bam
+output = results/Direct-H37Rv-D3/31.bam.condor_out
+log = results/Direct-H37Rv-D3/31.bam.condor_log
+error = results/Direct-H37Rv-D3/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/36.bam
+output = results/Direct-H37Rv-D3/36.bam.condor_out
+log = results/Direct-H37Rv-D3/36.bam.condor_log
+error = results/Direct-H37Rv-D3/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/27.bam
+output = results/Direct-H37Rv-D3/27.bam.condor_out
+log = results/Direct-H37Rv-D3/27.bam.condor_log
+error = results/Direct-H37Rv-D3/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/52.bam
+output = results/Direct-H37Rv-D3/52.bam.condor_out
+log = results/Direct-H37Rv-D3/52.bam.condor_log
+error = results/Direct-H37Rv-D3/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/55.bam
+output = results/Direct-H37Rv-D3/55.bam.condor_out
+log = results/Direct-H37Rv-D3/55.bam.condor_log
+error = results/Direct-H37Rv-D3/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/29.bam
+output = results/Direct-H37Rv-D3/29.bam.condor_out
+log = results/Direct-H37Rv-D3/29.bam.condor_log
+error = results/Direct-H37Rv-D3/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/12.bam
+output = results/Direct-H37Rv-D3/12.bam.condor_out
+log = results/Direct-H37Rv-D3/12.bam.condor_log
+error = results/Direct-H37Rv-D3/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/30.bam
+output = results/Direct-H37Rv-D3/30.bam.condor_out
+log = results/Direct-H37Rv-D3/30.bam.condor_log
+error = results/Direct-H37Rv-D3/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/42.bam
+output = results/Direct-H37Rv-D3/42.bam.condor_out
+log = results/Direct-H37Rv-D3/42.bam.condor_log
+error = results/Direct-H37Rv-D3/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/45.bam
+output = results/Direct-H37Rv-D3/45.bam.condor_out
+log = results/Direct-H37Rv-D3/45.bam.condor_log
+error = results/Direct-H37Rv-D3/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/39.bam
+output = results/Direct-H37Rv-D3/39.bam.condor_out
+log = results/Direct-H37Rv-D3/39.bam.condor_log
+error = results/Direct-H37Rv-D3/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/05.bam
+output = results/Direct-H37Rv-D3/05.bam.condor_out
+log = results/Direct-H37Rv-D3/05.bam.condor_log
+error = results/Direct-H37Rv-D3/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/02.bam
+output = results/Direct-H37Rv-D3/02.bam.condor_out
+log = results/Direct-H37Rv-D3/02.bam.condor_log
+error = results/Direct-H37Rv-D3/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/13.bam
+output = results/Direct-H37Rv-D3/13.bam.condor_out
+log = results/Direct-H37Rv-D3/13.bam.condor_log
+error = results/Direct-H37Rv-D3/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/54.bam
+output = results/Direct-H37Rv-D3/54.bam.condor_out
+log = results/Direct-H37Rv-D3/54.bam.condor_log
+error = results/Direct-H37Rv-D3/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/28.bam
+output = results/Direct-H37Rv-D3/28.bam.condor_out
+log = results/Direct-H37Rv-D3/28.bam.condor_log
+error = results/Direct-H37Rv-D3/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/53.bam
+output = results/Direct-H37Rv-D3/53.bam.condor_out
+log = results/Direct-H37Rv-D3/53.bam.condor_log
+error = results/Direct-H37Rv-D3/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/21.bam
+output = results/Direct-H37Rv-D3/21.bam.condor_out
+log = results/Direct-H37Rv-D3/21.bam.condor_log
+error = results/Direct-H37Rv-D3/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D3/26.bam
+output = results/Direct-H37Rv-D3/26.bam.condor_out
+log = results/Direct-H37Rv-D3/26.bam.condor_log
+error = results/Direct-H37Rv-D3/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/13.bam
+output = results/Direct-Panel-D3/13.bam.condor_out
+log = results/Direct-Panel-D3/13.bam.condor_log
+error = results/Direct-Panel-D3/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/21.bam
+output = results/Direct-Panel-D3/21.bam.condor_out
+log = results/Direct-Panel-D3/21.bam.condor_log
+error = results/Direct-Panel-D3/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/26.bam
+output = results/Direct-Panel-D3/26.bam.condor_out
+log = results/Direct-Panel-D3/26.bam.condor_log
+error = results/Direct-Panel-D3/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/54.bam
+output = results/Direct-Panel-D3/54.bam.condor_out
+log = results/Direct-Panel-D3/54.bam.condor_log
+error = results/Direct-Panel-D3/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/28.bam
+output = results/Direct-Panel-D3/28.bam.condor_out
+log = results/Direct-Panel-D3/28.bam.condor_log
+error = results/Direct-Panel-D3/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/53.bam
+output = results/Direct-Panel-D3/53.bam.condor_out
+log = results/Direct-Panel-D3/53.bam.condor_log
+error = results/Direct-Panel-D3/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/42.bam
+output = results/Direct-Panel-D3/42.bam.condor_out
+log = results/Direct-Panel-D3/42.bam.condor_log
+error = results/Direct-Panel-D3/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/45.bam
+output = results/Direct-Panel-D3/45.bam.condor_out
+log = results/Direct-Panel-D3/45.bam.condor_log
+error = results/Direct-Panel-D3/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/39.bam
+output = results/Direct-Panel-D3/39.bam.condor_out
+log = results/Direct-Panel-D3/39.bam.condor_log
+error = results/Direct-Panel-D3/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/30.bam
+output = results/Direct-Panel-D3/30.bam.condor_out
+log = results/Direct-Panel-D3/30.bam.condor_log
+error = results/Direct-Panel-D3/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/05.bam
+output = results/Direct-Panel-D3/05.bam.condor_out
+log = results/Direct-Panel-D3/05.bam.condor_log
+error = results/Direct-Panel-D3/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/02.bam
+output = results/Direct-Panel-D3/02.bam.condor_out
+log = results/Direct-Panel-D3/02.bam.condor_log
+error = results/Direct-Panel-D3/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/52.bam
+output = results/Direct-Panel-D3/52.bam.condor_out
+log = results/Direct-Panel-D3/52.bam.condor_log
+error = results/Direct-Panel-D3/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/55.bam
+output = results/Direct-Panel-D3/55.bam.condor_out
+log = results/Direct-Panel-D3/55.bam.condor_log
+error = results/Direct-Panel-D3/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/29.bam
+output = results/Direct-Panel-D3/29.bam.condor_out
+log = results/Direct-Panel-D3/29.bam.condor_log
+error = results/Direct-Panel-D3/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/27.bam
+output = results/Direct-Panel-D3/27.bam.condor_out
+log = results/Direct-Panel-D3/27.bam.condor_log
+error = results/Direct-Panel-D3/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/12.bam
+output = results/Direct-Panel-D3/12.bam.condor_out
+log = results/Direct-Panel-D3/12.bam.condor_log
+error = results/Direct-Panel-D3/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/31.bam
+output = results/Direct-Panel-D3/31.bam.condor_out
+log = results/Direct-Panel-D3/31.bam.condor_log
+error = results/Direct-Panel-D3/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/36.bam
+output = results/Direct-Panel-D3/36.bam.condor_out
+log = results/Direct-Panel-D3/36.bam.condor_log
+error = results/Direct-Panel-D3/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/43.bam
+output = results/Direct-Panel-D3/43.bam.condor_out
+log = results/Direct-Panel-D3/43.bam.condor_log
+error = results/Direct-Panel-D3/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/49.bam
+output = results/Direct-Panel-D3/49.bam.condor_out
+log = results/Direct-Panel-D3/49.bam.condor_log
+error = results/Direct-Panel-D3/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/35.bam
+output = results/Direct-Panel-D3/35.bam.condor_out
+log = results/Direct-Panel-D3/35.bam.condor_log
+error = results/Direct-Panel-D3/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/32.bam
+output = results/Direct-Panel-D3/32.bam.condor_out
+log = results/Direct-Panel-D3/32.bam.condor_log
+error = results/Direct-Panel-D3/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/47.bam
+output = results/Direct-Panel-D3/47.bam.condor_out
+log = results/Direct-Panel-D3/47.bam.condor_log
+error = results/Direct-Panel-D3/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/56.bam
+output = results/Direct-Panel-D3/56.bam.condor_out
+log = results/Direct-Panel-D3/56.bam.condor_log
+error = results/Direct-Panel-D3/56.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/51.bam
+output = results/Direct-Panel-D3/51.bam.condor_out
+log = results/Direct-Panel-D3/51.bam.condor_log
+error = results/Direct-Panel-D3/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/23.bam
+output = results/Direct-Panel-D3/23.bam.condor_out
+log = results/Direct-Panel-D3/23.bam.condor_log
+error = results/Direct-Panel-D3/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/58.bam
+output = results/Direct-Panel-D3/58.bam.condor_out
+log = results/Direct-Panel-D3/58.bam.condor_log
+error = results/Direct-Panel-D3/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/24.bam
+output = results/Direct-Panel-D3/24.bam.condor_out
+log = results/Direct-Panel-D3/24.bam.condor_log
+error = results/Direct-Panel-D3/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/46.bam
+output = results/Direct-Panel-D3/46.bam.condor_out
+log = results/Direct-Panel-D3/46.bam.condor_log
+error = results/Direct-Panel-D3/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/41.bam
+output = results/Direct-Panel-D3/41.bam.condor_out
+log = results/Direct-Panel-D3/41.bam.condor_log
+error = results/Direct-Panel-D3/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/33.bam
+output = results/Direct-Panel-D3/33.bam.condor_out
+log = results/Direct-Panel-D3/33.bam.condor_log
+error = results/Direct-Panel-D3/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/48.bam
+output = results/Direct-Panel-D3/48.bam.condor_out
+log = results/Direct-Panel-D3/48.bam.condor_log
+error = results/Direct-Panel-D3/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/34.bam
+output = results/Direct-Panel-D3/34.bam.condor_out
+log = results/Direct-Panel-D3/34.bam.condor_log
+error = results/Direct-Panel-D3/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/25.bam
+output = results/Direct-Panel-D3/25.bam.condor_out
+log = results/Direct-Panel-D3/25.bam.condor_log
+error = results/Direct-Panel-D3/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/22.bam
+output = results/Direct-Panel-D3/22.bam.condor_out
+log = results/Direct-Panel-D3/22.bam.condor_log
+error = results/Direct-Panel-D3/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/50.bam
+output = results/Direct-Panel-D3/50.bam.condor_out
+log = results/Direct-Panel-D3/50.bam.condor_log
+error = results/Direct-Panel-D3/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D3/57.bam
+output = results/Direct-Panel-D3/57.bam.condor_out
+log = results/Direct-Panel-D3/57.bam.condor_log
+error = results/Direct-Panel-D3/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/22.bam
+output = results/Direct-H37Rv-D12/22.bam.condor_out
+log = results/Direct-H37Rv-D12/22.bam.condor_log
+error = results/Direct-H37Rv-D12/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/25.bam
+output = results/Direct-H37Rv-D12/25.bam.condor_out
+log = results/Direct-H37Rv-D12/25.bam.condor_log
+error = results/Direct-H37Rv-D12/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/57.bam
+output = results/Direct-H37Rv-D12/57.bam.condor_out
+log = results/Direct-H37Rv-D12/57.bam.condor_log
+error = results/Direct-H37Rv-D12/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/50.bam
+output = results/Direct-H37Rv-D12/50.bam.condor_out
+log = results/Direct-H37Rv-D12/50.bam.condor_log
+error = results/Direct-H37Rv-D12/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/41.bam
+output = results/Direct-H37Rv-D12/41.bam.condor_out
+log = results/Direct-H37Rv-D12/41.bam.condor_log
+error = results/Direct-H37Rv-D12/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/46.bam
+output = results/Direct-H37Rv-D12/46.bam.condor_out
+log = results/Direct-H37Rv-D12/46.bam.condor_log
+error = results/Direct-H37Rv-D12/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/34.bam
+output = results/Direct-H37Rv-D12/34.bam.condor_out
+log = results/Direct-H37Rv-D12/34.bam.condor_log
+error = results/Direct-H37Rv-D12/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/48.bam
+output = results/Direct-H37Rv-D12/48.bam.condor_out
+log = results/Direct-H37Rv-D12/48.bam.condor_log
+error = results/Direct-H37Rv-D12/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/33.bam
+output = results/Direct-H37Rv-D12/33.bam.condor_out
+log = results/Direct-H37Rv-D12/33.bam.condor_log
+error = results/Direct-H37Rv-D12/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/51.bam
+output = results/Direct-H37Rv-D12/51.bam.condor_out
+log = results/Direct-H37Rv-D12/51.bam.condor_log
+error = results/Direct-H37Rv-D12/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/56.bam
+output = results/Direct-H37Rv-D12/56.bam.condor_out
+log = results/Direct-H37Rv-D12/56.bam.condor_log
+error = results/Direct-H37Rv-D12/56.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/24.bam
+output = results/Direct-H37Rv-D12/24.bam.condor_out
+log = results/Direct-H37Rv-D12/24.bam.condor_log
+error = results/Direct-H37Rv-D12/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/58.bam
+output = results/Direct-H37Rv-D12/58.bam.condor_out
+log = results/Direct-H37Rv-D12/58.bam.condor_log
+error = results/Direct-H37Rv-D12/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/23.bam
+output = results/Direct-H37Rv-D12/23.bam.condor_out
+log = results/Direct-H37Rv-D12/23.bam.condor_log
+error = results/Direct-H37Rv-D12/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/32.bam
+output = results/Direct-H37Rv-D12/32.bam.condor_out
+log = results/Direct-H37Rv-D12/32.bam.condor_log
+error = results/Direct-H37Rv-D12/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/35.bam
+output = results/Direct-H37Rv-D12/35.bam.condor_out
+log = results/Direct-H37Rv-D12/35.bam.condor_log
+error = results/Direct-H37Rv-D12/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/49.bam
+output = results/Direct-H37Rv-D12/49.bam.condor_out
+log = results/Direct-H37Rv-D12/49.bam.condor_log
+error = results/Direct-H37Rv-D12/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/47.bam
+output = results/Direct-H37Rv-D12/47.bam.condor_out
+log = results/Direct-H37Rv-D12/47.bam.condor_log
+error = results/Direct-H37Rv-D12/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/36.bam
+output = results/Direct-H37Rv-D12/36.bam.condor_out
+log = results/Direct-H37Rv-D12/36.bam.condor_log
+error = results/Direct-H37Rv-D12/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/31.bam
+output = results/Direct-H37Rv-D12/31.bam.condor_out
+log = results/Direct-H37Rv-D12/31.bam.condor_log
+error = results/Direct-H37Rv-D12/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/43.bam
+output = results/Direct-H37Rv-D12/43.bam.condor_out
+log = results/Direct-H37Rv-D12/43.bam.condor_log
+error = results/Direct-H37Rv-D12/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/29.bam
+output = results/Direct-H37Rv-D12/29.bam.condor_out
+log = results/Direct-H37Rv-D12/29.bam.condor_log
+error = results/Direct-H37Rv-D12/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/55.bam
+output = results/Direct-H37Rv-D12/55.bam.condor_out
+log = results/Direct-H37Rv-D12/55.bam.condor_log
+error = results/Direct-H37Rv-D12/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/52.bam
+output = results/Direct-H37Rv-D12/52.bam.condor_out
+log = results/Direct-H37Rv-D12/52.bam.condor_log
+error = results/Direct-H37Rv-D12/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/27.bam
+output = results/Direct-H37Rv-D12/27.bam.condor_out
+log = results/Direct-H37Rv-D12/27.bam.condor_log
+error = results/Direct-H37Rv-D12/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/12.bam
+output = results/Direct-H37Rv-D12/12.bam.condor_out
+log = results/Direct-H37Rv-D12/12.bam.condor_log
+error = results/Direct-H37Rv-D12/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/39.bam
+output = results/Direct-H37Rv-D12/39.bam.condor_out
+log = results/Direct-H37Rv-D12/39.bam.condor_log
+error = results/Direct-H37Rv-D12/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/45.bam
+output = results/Direct-H37Rv-D12/45.bam.condor_out
+log = results/Direct-H37Rv-D12/45.bam.condor_log
+error = results/Direct-H37Rv-D12/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/42.bam
+output = results/Direct-H37Rv-D12/42.bam.condor_out
+log = results/Direct-H37Rv-D12/42.bam.condor_log
+error = results/Direct-H37Rv-D12/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/30.bam
+output = results/Direct-H37Rv-D12/30.bam.condor_out
+log = results/Direct-H37Rv-D12/30.bam.condor_log
+error = results/Direct-H37Rv-D12/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/02.bam
+output = results/Direct-H37Rv-D12/02.bam.condor_out
+log = results/Direct-H37Rv-D12/02.bam.condor_log
+error = results/Direct-H37Rv-D12/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/05.bam
+output = results/Direct-H37Rv-D12/05.bam.condor_out
+log = results/Direct-H37Rv-D12/05.bam.condor_log
+error = results/Direct-H37Rv-D12/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/13.bam
+output = results/Direct-H37Rv-D12/13.bam.condor_out
+log = results/Direct-H37Rv-D12/13.bam.condor_log
+error = results/Direct-H37Rv-D12/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/26.bam
+output = results/Direct-H37Rv-D12/26.bam.condor_out
+log = results/Direct-H37Rv-D12/26.bam.condor_log
+error = results/Direct-H37Rv-D12/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/21.bam
+output = results/Direct-H37Rv-D12/21.bam.condor_out
+log = results/Direct-H37Rv-D12/21.bam.condor_log
+error = results/Direct-H37Rv-D12/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/53.bam
+output = results/Direct-H37Rv-D12/53.bam.condor_out
+log = results/Direct-H37Rv-D12/53.bam.condor_log
+error = results/Direct-H37Rv-D12/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/28.bam
+output = results/Direct-H37Rv-D12/28.bam.condor_out
+log = results/Direct-H37Rv-D12/28.bam.condor_log
+error = results/Direct-H37Rv-D12/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-H37Rv-D12/54.bam
+output = results/Direct-H37Rv-D12/54.bam.condor_out
+log = results/Direct-H37Rv-D12/54.bam.condor_log
+error = results/Direct-H37Rv-D12/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/56.bam
+output = results/MTC-D3-Panel-D3/56.bam.condor_out
+log = results/MTC-D3-Panel-D3/56.bam.condor_log
+error = results/MTC-D3-Panel-D3/56.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/51.bam
+output = results/MTC-D3-Panel-D3/51.bam.condor_out
+log = results/MTC-D3-Panel-D3/51.bam.condor_log
+error = results/MTC-D3-Panel-D3/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/23.bam
+output = results/MTC-D3-Panel-D3/23.bam.condor_out
+log = results/MTC-D3-Panel-D3/23.bam.condor_log
+error = results/MTC-D3-Panel-D3/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/24.bam
+output = results/MTC-D3-Panel-D3/24.bam.condor_out
+log = results/MTC-D3-Panel-D3/24.bam.condor_log
+error = results/MTC-D3-Panel-D3/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/58.bam
+output = results/MTC-D3-Panel-D3/58.bam.condor_out
+log = results/MTC-D3-Panel-D3/58.bam.condor_log
+error = results/MTC-D3-Panel-D3/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/35.bam
+output = results/MTC-D3-Panel-D3/35.bam.condor_out
+log = results/MTC-D3-Panel-D3/35.bam.condor_log
+error = results/MTC-D3-Panel-D3/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/49.bam
+output = results/MTC-D3-Panel-D3/49.bam.condor_out
+log = results/MTC-D3-Panel-D3/49.bam.condor_log
+error = results/MTC-D3-Panel-D3/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/32.bam
+output = results/MTC-D3-Panel-D3/32.bam.condor_out
+log = results/MTC-D3-Panel-D3/32.bam.condor_log
+error = results/MTC-D3-Panel-D3/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/47.bam
+output = results/MTC-D3-Panel-D3/47.bam.condor_out
+log = results/MTC-D3-Panel-D3/47.bam.condor_log
+error = results/MTC-D3-Panel-D3/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/25.bam
+output = results/MTC-D3-Panel-D3/25.bam.condor_out
+log = results/MTC-D3-Panel-D3/25.bam.condor_log
+error = results/MTC-D3-Panel-D3/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/22.bam
+output = results/MTC-D3-Panel-D3/22.bam.condor_out
+log = results/MTC-D3-Panel-D3/22.bam.condor_log
+error = results/MTC-D3-Panel-D3/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/50.bam
+output = results/MTC-D3-Panel-D3/50.bam.condor_out
+log = results/MTC-D3-Panel-D3/50.bam.condor_log
+error = results/MTC-D3-Panel-D3/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/57.bam
+output = results/MTC-D3-Panel-D3/57.bam.condor_out
+log = results/MTC-D3-Panel-D3/57.bam.condor_log
+error = results/MTC-D3-Panel-D3/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/46.bam
+output = results/MTC-D3-Panel-D3/46.bam.condor_out
+log = results/MTC-D3-Panel-D3/46.bam.condor_log
+error = results/MTC-D3-Panel-D3/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/41.bam
+output = results/MTC-D3-Panel-D3/41.bam.condor_out
+log = results/MTC-D3-Panel-D3/41.bam.condor_log
+error = results/MTC-D3-Panel-D3/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/33.bam
+output = results/MTC-D3-Panel-D3/33.bam.condor_out
+log = results/MTC-D3-Panel-D3/33.bam.condor_log
+error = results/MTC-D3-Panel-D3/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/34.bam
+output = results/MTC-D3-Panel-D3/34.bam.condor_out
+log = results/MTC-D3-Panel-D3/34.bam.condor_log
+error = results/MTC-D3-Panel-D3/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/48.bam
+output = results/MTC-D3-Panel-D3/48.bam.condor_out
+log = results/MTC-D3-Panel-D3/48.bam.condor_log
+error = results/MTC-D3-Panel-D3/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/05.bam
+output = results/MTC-D3-Panel-D3/05.bam.condor_out
+log = results/MTC-D3-Panel-D3/05.bam.condor_log
+error = results/MTC-D3-Panel-D3/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/02.bam
+output = results/MTC-D3-Panel-D3/02.bam.condor_out
+log = results/MTC-D3-Panel-D3/02.bam.condor_log
+error = results/MTC-D3-Panel-D3/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/42.bam
+output = results/MTC-D3-Panel-D3/42.bam.condor_out
+log = results/MTC-D3-Panel-D3/42.bam.condor_log
+error = results/MTC-D3-Panel-D3/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/39.bam
+output = results/MTC-D3-Panel-D3/39.bam.condor_out
+log = results/MTC-D3-Panel-D3/39.bam.condor_log
+error = results/MTC-D3-Panel-D3/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/45.bam
+output = results/MTC-D3-Panel-D3/45.bam.condor_out
+log = results/MTC-D3-Panel-D3/45.bam.condor_log
+error = results/MTC-D3-Panel-D3/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/30.bam
+output = results/MTC-D3-Panel-D3/30.bam.condor_out
+log = results/MTC-D3-Panel-D3/30.bam.condor_log
+error = results/MTC-D3-Panel-D3/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/21.bam
+output = results/MTC-D3-Panel-D3/21.bam.condor_out
+log = results/MTC-D3-Panel-D3/21.bam.condor_log
+error = results/MTC-D3-Panel-D3/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/26.bam
+output = results/MTC-D3-Panel-D3/26.bam.condor_out
+log = results/MTC-D3-Panel-D3/26.bam.condor_log
+error = results/MTC-D3-Panel-D3/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/28.bam
+output = results/MTC-D3-Panel-D3/28.bam.condor_out
+log = results/MTC-D3-Panel-D3/28.bam.condor_log
+error = results/MTC-D3-Panel-D3/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/54.bam
+output = results/MTC-D3-Panel-D3/54.bam.condor_out
+log = results/MTC-D3-Panel-D3/54.bam.condor_log
+error = results/MTC-D3-Panel-D3/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/53.bam
+output = results/MTC-D3-Panel-D3/53.bam.condor_out
+log = results/MTC-D3-Panel-D3/53.bam.condor_log
+error = results/MTC-D3-Panel-D3/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/13.bam
+output = results/MTC-D3-Panel-D3/13.bam.condor_out
+log = results/MTC-D3-Panel-D3/13.bam.condor_log
+error = results/MTC-D3-Panel-D3/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/31.bam
+output = results/MTC-D3-Panel-D3/31.bam.condor_out
+log = results/MTC-D3-Panel-D3/31.bam.condor_log
+error = results/MTC-D3-Panel-D3/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/36.bam
+output = results/MTC-D3-Panel-D3/36.bam.condor_out
+log = results/MTC-D3-Panel-D3/36.bam.condor_log
+error = results/MTC-D3-Panel-D3/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/43.bam
+output = results/MTC-D3-Panel-D3/43.bam.condor_out
+log = results/MTC-D3-Panel-D3/43.bam.condor_log
+error = results/MTC-D3-Panel-D3/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/12.bam
+output = results/MTC-D3-Panel-D3/12.bam.condor_out
+log = results/MTC-D3-Panel-D3/12.bam.condor_log
+error = results/MTC-D3-Panel-D3/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/52.bam
+output = results/MTC-D3-Panel-D3/52.bam.condor_out
+log = results/MTC-D3-Panel-D3/52.bam.condor_log
+error = results/MTC-D3-Panel-D3/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/29.bam
+output = results/MTC-D3-Panel-D3/29.bam.condor_out
+log = results/MTC-D3-Panel-D3/29.bam.condor_log
+error = results/MTC-D3-Panel-D3/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/55.bam
+output = results/MTC-D3-Panel-D3/55.bam.condor_out
+log = results/MTC-D3-Panel-D3/55.bam.condor_log
+error = results/MTC-D3-Panel-D3/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-Panel-D3/27.bam
+output = results/MTC-D3-Panel-D3/27.bam.condor_out
+log = results/MTC-D3-Panel-D3/27.bam.condor_log
+error = results/MTC-D3-Panel-D3/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/52.bam
+output = results/MTC-D3-H37Rv-D3/52.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/52.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/29.bam
+output = results/MTC-D3-H37Rv-D3/29.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/29.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/55.bam
+output = results/MTC-D3-H37Rv-D3/55.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/55.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/27.bam
+output = results/MTC-D3-H37Rv-D3/27.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/27.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/12.bam
+output = results/MTC-D3-H37Rv-D3/12.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/12.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/31.bam
+output = results/MTC-D3-H37Rv-D3/31.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/31.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/36.bam
+output = results/MTC-D3-H37Rv-D3/36.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/36.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/43.bam
+output = results/MTC-D3-H37Rv-D3/43.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/43.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/13.bam
+output = results/MTC-D3-H37Rv-D3/13.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/13.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/21.bam
+output = results/MTC-D3-H37Rv-D3/21.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/21.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/26.bam
+output = results/MTC-D3-H37Rv-D3/26.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/26.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/28.bam
+output = results/MTC-D3-H37Rv-D3/28.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/28.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/54.bam
+output = results/MTC-D3-H37Rv-D3/54.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/54.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/53.bam
+output = results/MTC-D3-H37Rv-D3/53.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/53.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/42.bam
+output = results/MTC-D3-H37Rv-D3/42.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/42.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/39.bam
+output = results/MTC-D3-H37Rv-D3/39.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/39.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/45.bam
+output = results/MTC-D3-H37Rv-D3/45.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/45.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/30.bam
+output = results/MTC-D3-H37Rv-D3/30.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/30.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/05.bam
+output = results/MTC-D3-H37Rv-D3/05.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/05.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/02.bam
+output = results/MTC-D3-H37Rv-D3/02.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/02.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/46.bam
+output = results/MTC-D3-H37Rv-D3/46.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/46.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/41.bam
+output = results/MTC-D3-H37Rv-D3/41.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/41.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/33.bam
+output = results/MTC-D3-H37Rv-D3/33.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/33.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/34.bam
+output = results/MTC-D3-H37Rv-D3/34.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/34.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/48.bam
+output = results/MTC-D3-H37Rv-D3/48.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/48.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/25.bam
+output = results/MTC-D3-H37Rv-D3/25.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/25.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/22.bam
+output = results/MTC-D3-H37Rv-D3/22.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/22.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/50.bam
+output = results/MTC-D3-H37Rv-D3/50.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/50.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/57.bam
+output = results/MTC-D3-H37Rv-D3/57.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/57.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/35.bam
+output = results/MTC-D3-H37Rv-D3/35.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/35.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/49.bam
+output = results/MTC-D3-H37Rv-D3/49.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/49.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/32.bam
+output = results/MTC-D3-H37Rv-D3/32.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/32.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/47.bam
+output = results/MTC-D3-H37Rv-D3/47.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/47.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/56.bam
+output = results/MTC-D3-H37Rv-D3/56.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/56.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/56.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/51.bam
+output = results/MTC-D3-H37Rv-D3/51.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/51.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/23.bam
+output = results/MTC-D3-H37Rv-D3/23.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/23.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/24.bam
+output = results/MTC-D3-H37Rv-D3/24.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/24.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3-H37Rv-D3/58.bam
+output = results/MTC-D3-H37Rv-D3/58.bam.condor_out
+log = results/MTC-D3-H37Rv-D3/58.bam.condor_log
+error = results/MTC-D3-H37Rv-D3/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/24.bam
+output = results/Direct-Panel-D12/24.bam.condor_out
+log = results/Direct-Panel-D12/24.bam.condor_log
+error = results/Direct-Panel-D12/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/58.bam
+output = results/Direct-Panel-D12/58.bam.condor_out
+log = results/Direct-Panel-D12/58.bam.condor_log
+error = results/Direct-Panel-D12/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/23.bam
+output = results/Direct-Panel-D12/23.bam.condor_out
+log = results/Direct-Panel-D12/23.bam.condor_log
+error = results/Direct-Panel-D12/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/51.bam
+output = results/Direct-Panel-D12/51.bam.condor_out
+log = results/Direct-Panel-D12/51.bam.condor_log
+error = results/Direct-Panel-D12/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/56.bam
+output = results/Direct-Panel-D12/56.bam.condor_out
+log = results/Direct-Panel-D12/56.bam.condor_log
+error = results/Direct-Panel-D12/56.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/47.bam
+output = results/Direct-Panel-D12/47.bam.condor_out
+log = results/Direct-Panel-D12/47.bam.condor_log
+error = results/Direct-Panel-D12/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/32.bam
+output = results/Direct-Panel-D12/32.bam.condor_out
+log = results/Direct-Panel-D12/32.bam.condor_log
+error = results/Direct-Panel-D12/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/35.bam
+output = results/Direct-Panel-D12/35.bam.condor_out
+log = results/Direct-Panel-D12/35.bam.condor_log
+error = results/Direct-Panel-D12/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/49.bam
+output = results/Direct-Panel-D12/49.bam.condor_out
+log = results/Direct-Panel-D12/49.bam.condor_log
+error = results/Direct-Panel-D12/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/57.bam
+output = results/Direct-Panel-D12/57.bam.condor_out
+log = results/Direct-Panel-D12/57.bam.condor_log
+error = results/Direct-Panel-D12/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/50.bam
+output = results/Direct-Panel-D12/50.bam.condor_out
+log = results/Direct-Panel-D12/50.bam.condor_log
+error = results/Direct-Panel-D12/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/22.bam
+output = results/Direct-Panel-D12/22.bam.condor_out
+log = results/Direct-Panel-D12/22.bam.condor_log
+error = results/Direct-Panel-D12/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/25.bam
+output = results/Direct-Panel-D12/25.bam.condor_out
+log = results/Direct-Panel-D12/25.bam.condor_log
+error = results/Direct-Panel-D12/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/34.bam
+output = results/Direct-Panel-D12/34.bam.condor_out
+log = results/Direct-Panel-D12/34.bam.condor_log
+error = results/Direct-Panel-D12/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/48.bam
+output = results/Direct-Panel-D12/48.bam.condor_out
+log = results/Direct-Panel-D12/48.bam.condor_log
+error = results/Direct-Panel-D12/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/33.bam
+output = results/Direct-Panel-D12/33.bam.condor_out
+log = results/Direct-Panel-D12/33.bam.condor_log
+error = results/Direct-Panel-D12/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/41.bam
+output = results/Direct-Panel-D12/41.bam.condor_out
+log = results/Direct-Panel-D12/41.bam.condor_log
+error = results/Direct-Panel-D12/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/46.bam
+output = results/Direct-Panel-D12/46.bam.condor_out
+log = results/Direct-Panel-D12/46.bam.condor_log
+error = results/Direct-Panel-D12/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/02.bam
+output = results/Direct-Panel-D12/02.bam.condor_out
+log = results/Direct-Panel-D12/02.bam.condor_log
+error = results/Direct-Panel-D12/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/05.bam
+output = results/Direct-Panel-D12/05.bam.condor_out
+log = results/Direct-Panel-D12/05.bam.condor_log
+error = results/Direct-Panel-D12/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/30.bam
+output = results/Direct-Panel-D12/30.bam.condor_out
+log = results/Direct-Panel-D12/30.bam.condor_log
+error = results/Direct-Panel-D12/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/39.bam
+output = results/Direct-Panel-D12/39.bam.condor_out
+log = results/Direct-Panel-D12/39.bam.condor_log
+error = results/Direct-Panel-D12/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/45.bam
+output = results/Direct-Panel-D12/45.bam.condor_out
+log = results/Direct-Panel-D12/45.bam.condor_log
+error = results/Direct-Panel-D12/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/42.bam
+output = results/Direct-Panel-D12/42.bam.condor_out
+log = results/Direct-Panel-D12/42.bam.condor_log
+error = results/Direct-Panel-D12/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/53.bam
+output = results/Direct-Panel-D12/53.bam.condor_out
+log = results/Direct-Panel-D12/53.bam.condor_log
+error = results/Direct-Panel-D12/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/28.bam
+output = results/Direct-Panel-D12/28.bam.condor_out
+log = results/Direct-Panel-D12/28.bam.condor_log
+error = results/Direct-Panel-D12/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/54.bam
+output = results/Direct-Panel-D12/54.bam.condor_out
+log = results/Direct-Panel-D12/54.bam.condor_log
+error = results/Direct-Panel-D12/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/26.bam
+output = results/Direct-Panel-D12/26.bam.condor_out
+log = results/Direct-Panel-D12/26.bam.condor_log
+error = results/Direct-Panel-D12/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/21.bam
+output = results/Direct-Panel-D12/21.bam.condor_out
+log = results/Direct-Panel-D12/21.bam.condor_log
+error = results/Direct-Panel-D12/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/13.bam
+output = results/Direct-Panel-D12/13.bam.condor_out
+log = results/Direct-Panel-D12/13.bam.condor_log
+error = results/Direct-Panel-D12/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/43.bam
+output = results/Direct-Panel-D12/43.bam.condor_out
+log = results/Direct-Panel-D12/43.bam.condor_log
+error = results/Direct-Panel-D12/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/36.bam
+output = results/Direct-Panel-D12/36.bam.condor_out
+log = results/Direct-Panel-D12/36.bam.condor_log
+error = results/Direct-Panel-D12/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/31.bam
+output = results/Direct-Panel-D12/31.bam.condor_out
+log = results/Direct-Panel-D12/31.bam.condor_log
+error = results/Direct-Panel-D12/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/12.bam
+output = results/Direct-Panel-D12/12.bam.condor_out
+log = results/Direct-Panel-D12/12.bam.condor_log
+error = results/Direct-Panel-D12/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/27.bam
+output = results/Direct-Panel-D12/27.bam.condor_out
+log = results/Direct-Panel-D12/27.bam.condor_log
+error = results/Direct-Panel-D12/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/29.bam
+output = results/Direct-Panel-D12/29.bam.condor_out
+log = results/Direct-Panel-D12/29.bam.condor_log
+error = results/Direct-Panel-D12/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/55.bam
+output = results/Direct-Panel-D12/55.bam.condor_out
+log = results/Direct-Panel-D12/55.bam.condor_log
+error = results/Direct-Panel-D12/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/Direct-Panel-D12/52.bam
+output = results/Direct-Panel-D12/52.bam.condor_out
+log = results/Direct-Panel-D12/52.bam.condor_log
+error = results/Direct-Panel-D12/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/12.bam
+output = results/MTC-D3/12.bam.condor_out
+log = results/MTC-D3/12.bam.condor_log
+error = results/MTC-D3/12.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/27.bam
+output = results/MTC-D3/27.bam.condor_out
+log = results/MTC-D3/27.bam.condor_log
+error = results/MTC-D3/27.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/29.bam
+output = results/MTC-D3/29.bam.condor_out
+log = results/MTC-D3/29.bam.condor_log
+error = results/MTC-D3/29.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/55.bam
+output = results/MTC-D3/55.bam.condor_out
+log = results/MTC-D3/55.bam.condor_log
+error = results/MTC-D3/55.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/52.bam
+output = results/MTC-D3/52.bam.condor_out
+log = results/MTC-D3/52.bam.condor_log
+error = results/MTC-D3/52.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/43.bam
+output = results/MTC-D3/43.bam.condor_out
+log = results/MTC-D3/43.bam.condor_log
+error = results/MTC-D3/43.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/36.bam
+output = results/MTC-D3/36.bam.condor_out
+log = results/MTC-D3/36.bam.condor_log
+error = results/MTC-D3/36.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/31.bam
+output = results/MTC-D3/31.bam.condor_out
+log = results/MTC-D3/31.bam.condor_log
+error = results/MTC-D3/31.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/53.bam
+output = results/MTC-D3/53.bam.condor_out
+log = results/MTC-D3/53.bam.condor_log
+error = results/MTC-D3/53.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/28.bam
+output = results/MTC-D3/28.bam.condor_out
+log = results/MTC-D3/28.bam.condor_log
+error = results/MTC-D3/28.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/54.bam
+output = results/MTC-D3/54.bam.condor_out
+log = results/MTC-D3/54.bam.condor_log
+error = results/MTC-D3/54.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/26.bam
+output = results/MTC-D3/26.bam.condor_out
+log = results/MTC-D3/26.bam.condor_log
+error = results/MTC-D3/26.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/21.bam
+output = results/MTC-D3/21.bam.condor_out
+log = results/MTC-D3/21.bam.condor_log
+error = results/MTC-D3/21.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/13.bam
+output = results/MTC-D3/13.bam.condor_out
+log = results/MTC-D3/13.bam.condor_log
+error = results/MTC-D3/13.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/02.bam
+output = results/MTC-D3/02.bam.condor_out
+log = results/MTC-D3/02.bam.condor_log
+error = results/MTC-D3/02.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/05.bam
+output = results/MTC-D3/05.bam.condor_out
+log = results/MTC-D3/05.bam.condor_log
+error = results/MTC-D3/05.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/30.bam
+output = results/MTC-D3/30.bam.condor_out
+log = results/MTC-D3/30.bam.condor_log
+error = results/MTC-D3/30.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/39.bam
+output = results/MTC-D3/39.bam.condor_out
+log = results/MTC-D3/39.bam.condor_log
+error = results/MTC-D3/39.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/45.bam
+output = results/MTC-D3/45.bam.condor_out
+log = results/MTC-D3/45.bam.condor_log
+error = results/MTC-D3/45.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/42.bam
+output = results/MTC-D3/42.bam.condor_out
+log = results/MTC-D3/42.bam.condor_log
+error = results/MTC-D3/42.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/34.bam
+output = results/MTC-D3/34.bam.condor_out
+log = results/MTC-D3/34.bam.condor_log
+error = results/MTC-D3/34.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/48.bam
+output = results/MTC-D3/48.bam.condor_out
+log = results/MTC-D3/48.bam.condor_log
+error = results/MTC-D3/48.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/33.bam
+output = results/MTC-D3/33.bam.condor_out
+log = results/MTC-D3/33.bam.condor_log
+error = results/MTC-D3/33.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/41.bam
+output = results/MTC-D3/41.bam.condor_out
+log = results/MTC-D3/41.bam.condor_log
+error = results/MTC-D3/41.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/46.bam
+output = results/MTC-D3/46.bam.condor_out
+log = results/MTC-D3/46.bam.condor_log
+error = results/MTC-D3/46.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/57.bam
+output = results/MTC-D3/57.bam.condor_out
+log = results/MTC-D3/57.bam.condor_log
+error = results/MTC-D3/57.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/50.bam
+output = results/MTC-D3/50.bam.condor_out
+log = results/MTC-D3/50.bam.condor_log
+error = results/MTC-D3/50.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/22.bam
+output = results/MTC-D3/22.bam.condor_out
+log = results/MTC-D3/22.bam.condor_log
+error = results/MTC-D3/22.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/25.bam
+output = results/MTC-D3/25.bam.condor_out
+log = results/MTC-D3/25.bam.condor_log
+error = results/MTC-D3/25.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/47.bam
+output = results/MTC-D3/47.bam.condor_out
+log = results/MTC-D3/47.bam.condor_log
+error = results/MTC-D3/47.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/32.bam
+output = results/MTC-D3/32.bam.condor_out
+log = results/MTC-D3/32.bam.condor_log
+error = results/MTC-D3/32.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/35.bam
+output = results/MTC-D3/35.bam.condor_out
+log = results/MTC-D3/35.bam.condor_log
+error = results/MTC-D3/35.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/49.bam
+output = results/MTC-D3/49.bam.condor_out
+log = results/MTC-D3/49.bam.condor_log
+error = results/MTC-D3/49.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/24.bam
+output = results/MTC-D3/24.bam.condor_out
+log = results/MTC-D3/24.bam.condor_log
+error = results/MTC-D3/24.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/58.bam
+output = results/MTC-D3/58.bam.condor_out
+log = results/MTC-D3/58.bam.condor_log
+error = results/MTC-D3/58.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/23.bam
+output = results/MTC-D3/23.bam.condor_out
+log = results/MTC-D3/23.bam.condor_log
+error = results/MTC-D3/23.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/51.bam
+output = results/MTC-D3/51.bam.condor_out
+log = results/MTC-D3/51.bam.condor_log
+error = results/MTC-D3/51.bam.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/MTC-D3/56.bam
+output = results/MTC-D3/56.bam.condor_out
+log = results/MTC-D3/56.bam.condor_log
+error = results/MTC-D3/56.bam.condor_err
+queue

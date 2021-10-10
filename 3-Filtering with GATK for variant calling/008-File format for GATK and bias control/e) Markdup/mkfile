@@ -1,0 +1,51 @@
+# Mark Duplicated Reads
+# =====================
+#
+# Detect wether the input files are amplicons.
+# If they are, pass them unchanged to results,
+# if they are not, Mark duplicated reads using Picard.
+#
+results/%.bam:	data/%.bam
+	mkdir -p `dirname $target`
+	TMPFILE="results/${stem}.build.bam"
+	bin/is-amplicon $prereq \
+	&& ln -s ${prereq} ${target} \
+	|| bin/sambamba_v0.6.6 markdup \
+		${prereq} \
+		${TMPFILE} \
+	&& {
+		mv ${TMPFILE} ${target}
+		mv ${TMPFILE}.bai ${target}.bai
+	}
+
+data/%.bam: data/%.sam
+	mkdir -p "$(dirname "$target")"
+	samtools view -Sb $prereq > "$target"'.build' \
+	&& mv "$target"'.build' "$target"
+
+
+# Quality Control
+# ===============
+#
+# Here you should describe why you choose this qc.
+#
+qc:V:
+	cd qc
+	bin/targets | xargs mk
+
+# Unit tests
+# ==========
+#
+# Verify everything works correctly.
+#
+test	tests:QV:
+	cd test
+	rm -f tests.log
+	./run_tests \
+	|| less tests.log
+
+# Clean up generated files
+# ========================
+#
+clean:V:
+	bin/targets | xargs rm -f
