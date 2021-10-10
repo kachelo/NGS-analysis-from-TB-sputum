@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+find -L ../results/ \
+	-type f \
+	-name "*.vcf" \
+| sed -e "s#../results/#Log/#" \
+	-e "s#.vcf#.CHECK#"

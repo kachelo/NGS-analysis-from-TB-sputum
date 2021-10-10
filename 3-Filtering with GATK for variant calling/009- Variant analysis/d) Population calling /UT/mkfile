@@ -1,0 +1,55 @@
+##Read general config.mk from GATK pipeline
+< ../../config.mk
+##Read local config.mk for reference vcf comparisson
+< config.mk
+
+TEST:V:
+	set -x
+	bin/targets | xargs mk
+
+Log/%.CHECK:V: Log/%.vcf_validator.log Log/%.GATK_ValidateVariants.log Log/%.GATK_VariantEval.log
+	set -x
+	echo "Unitary test completed"
+
+#First unit test checking general format
+Log/%.vcf_validator.log: ../results/%.vcf
+	set -x
+	mkdir -p `dirname $target`
+	echo "[UT1-results] vcf_validator warnings log" > $target.build
+	{
+	bin/vcf_validator \
+		-i $prereq \
+		-l warning \
+	|| true
+	} >> $target.build \
+	&& mv $target.build $target
+
+#Second unit test checking strict GATK format
+Log/%.GATK_ValidateVariants.log: ../results/%.vcf
+	set -x
+	mkdir -p `dirname $target`
+	echo "[UT2-results] GATK ValidateVariants warnings log" > $target.build
+	java -jar $GATK \
+		-T ValidateVariants \
+		-R $REF \
+		-V $prereq \
+		--warnOnErrors \
+	>> $target.build \
+	&& mv $target.build $target
+
+#Third unit test checkin sensitivity and specificity against a reference VCF
+
+Log/%.GATK_VariantEval.log: ../results/%.vcf $VCF_REF
+	set -x
+	mkdir -p `dirname $target`
+	echo "[UT3-results] GATK VariantEval warnings log" > $target.build
+	java -jar $GATK \
+		-T VariantEval \
+		-R $REF \
+		-eval ../results/$stem.vcf \
+		-comp $VCF_REF \
+		-o $target".build" \
+		-nt $NT \
+		-noEV \
+		-EV ValidationReport \
+		&& mv $target.build $target

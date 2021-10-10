@@ -1,0 +1,360 @@
+INFO  17:32:01,575 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:32:01,579 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  17:32:01,579 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  17:32:01,579 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  17:32:01,579 HelpFormatter - [Fri Dec 07 17:32:01 CST 2018] Executing on Linux 4.4.0-62-generic amd64 
+INFO  17:32:01,579 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12 
+INFO  17:32:01,584 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/filtrado/Direct-H37Rv-D12/58.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/54.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/42.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/36.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/43.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/39.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/02.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/23.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/34.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/57.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/41.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/50.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/12.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/29.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/46.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/25.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/51.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/13.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/32.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/28.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/24.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/05.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/52.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/31.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/48.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/30.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/49.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/26.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/filtrado/Direct-H37Rv-D12/Llamado-conjunto_raw.vcf.build 
+INFO  17:32:01,586 HelpFormatter - Executing as cfresno@castillo on Linux 4.4.0-62-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12. 
+INFO  17:32:01,587 HelpFormatter - Date/Time: 2018/12/07 17:32:01 
+INFO  17:32:01,587 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:32:01,587 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  17:32:01,771 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  17:32:01,771 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  17:32:01,772 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:32:01,957 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  17:32:02,083 IntervalUtils - Processing 312611 bp from intervals 
+INFO  17:32:02,093 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 8 processors available on this machine 
+INFO  17:32:02,154 GenomeAnalysisEngine - Preparing for traversal 
+INFO  17:32:02,155 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:32:02,155 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:32:02,155 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:32:02,156 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  17:32:02,371 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:02,372 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  17:32:02,373 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  17:32:02,882 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  17:32:08,826 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1472677 has 10 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+INFO  17:32:18,257 ProgressMeter -            done    312611.0    16.0 s      51.0 s      100.0%    16.0 s       0.0 s 
+INFO  17:32:18,257 ProgressMeter - Total runtime 16.10 secs, 0.27 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were 4 WARN messages, the first 4 are repeated below.
+WARN  17:32:02,371 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:02,372 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:02,882 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  17:32:08,826 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1472677 has 10 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+------------------------------------------------------------------------------------------
+INFO  17:32:22,516 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:32:22,519 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  17:32:22,519 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  17:32:22,519 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  17:32:22,519 HelpFormatter - [Fri Dec 07 17:32:22 CST 2018] Executing on Linux 4.4.0-62-generic amd64 
+INFO  17:32:22,520 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12 
+INFO  17:32:22,524 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/30.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/26.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/49.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/31.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/52.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/48.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/13.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/32.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/51.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/24.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/05.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/28.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/12.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/50.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/25.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/46.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/29.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/57.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/34.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/41.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/39.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/02.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/23.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/36.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/43.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/54.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/58.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D3/42.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/filtrado/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.vcf.build 
+INFO  17:32:22,526 HelpFormatter - Executing as cfresno@castillo on Linux 4.4.0-62-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12. 
+INFO  17:32:22,526 HelpFormatter - Date/Time: 2018/12/07 17:32:22 
+INFO  17:32:22,527 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:32:22,527 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  17:32:22,661 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  17:32:22,661 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  17:32:22,662 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:32:22,832 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  17:32:22,977 IntervalUtils - Processing 312611 bp from intervals 
+INFO  17:32:22,987 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 8 processors available on this machine 
+INFO  17:32:23,054 GenomeAnalysisEngine - Preparing for traversal 
+INFO  17:32:23,056 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:32:23,056 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:32:23,057 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:32:23,057 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  17:32:23,259 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:23,260 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  17:32:23,260 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  17:32:23,781 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+INFO  17:32:38,508 ProgressMeter -            done    312611.0    15.0 s      49.0 s      100.0%    15.0 s       0.0 s 
+INFO  17:32:38,509 ProgressMeter - Total runtime 15.45 secs, 0.26 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were 3 WARN messages, the first 3 are repeated below.
+WARN  17:32:23,259 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:23,260 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:23,781 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+------------------------------------------------------------------------------------------
+INFO  17:32:40,754 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:32:40,756 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  17:32:40,756 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  17:32:40,757 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  17:32:40,757 HelpFormatter - [Fri Dec 07 17:32:40 CST 2018] Executing on Linux 4.4.0-62-generic amd64 
+INFO  17:32:40,757 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12 
+INFO  17:32:40,762 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/filtrado/Direct-H37Rv-D3/29.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/46.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/25.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/50.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/12.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/28.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/24.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/05.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/51.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/13.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/32.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/48.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/52.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/31.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/49.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/26.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/30.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/42.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/58.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/54.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/43.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/36.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/02.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/23.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/39.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/41.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/34.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D3/57.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/filtrado/Direct-H37Rv-D3/Llamado-conjunto_raw.vcf.build 
+INFO  17:32:40,764 HelpFormatter - Executing as cfresno@castillo on Linux 4.4.0-62-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12. 
+INFO  17:32:40,764 HelpFormatter - Date/Time: 2018/12/07 17:32:40 
+INFO  17:32:40,764 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:32:40,764 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  17:32:40,898 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  17:32:40,899 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  17:32:40,899 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:32:41,049 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  17:32:41,176 IntervalUtils - Processing 312611 bp from intervals 
+INFO  17:32:41,186 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 8 processors available on this machine 
+INFO  17:32:41,246 GenomeAnalysisEngine - Preparing for traversal 
+INFO  17:32:41,247 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:32:41,247 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:32:41,247 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:32:41,248 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  17:32:41,447 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:41,448 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  17:32:41,448 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  17:32:41,825 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+INFO  17:32:54,553 ProgressMeter -            done    312611.0    13.0 s      42.0 s      100.0%    13.0 s       0.0 s 
+INFO  17:32:54,554 ProgressMeter - Total runtime 13.31 secs, 0.22 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were 3 WARN messages, the first 3 are repeated below.
+WARN  17:32:41,447 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:41,448 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:41,825 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+------------------------------------------------------------------------------------------
+INFO  17:32:56,747 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:32:56,749 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  17:32:56,750 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  17:32:56,750 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  17:32:56,750 HelpFormatter - [Fri Dec 07 17:32:56 CST 2018] Executing on Linux 4.4.0-62-generic amd64 
+INFO  17:32:56,751 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12 
+INFO  17:32:56,756 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/58.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/54.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/42.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/36.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/43.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/39.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/23.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/02.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/34.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/57.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/41.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/50.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/12.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/46.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/29.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/25.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/51.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/32.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/13.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/28.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/05.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/24.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/52.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/31.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/48.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/30.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/26.g.vcf --variant data/diploide/filtrado/MTC-D3-H37Rv-D12/49.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/filtrado/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.vcf.build 
+INFO  17:32:56,757 HelpFormatter - Executing as cfresno@castillo on Linux 4.4.0-62-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12. 
+INFO  17:32:56,758 HelpFormatter - Date/Time: 2018/12/07 17:32:56 
+INFO  17:32:56,760 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:32:56,760 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  17:32:56,896 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  17:32:56,896 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  17:32:56,897 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:32:57,042 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  17:32:57,179 IntervalUtils - Processing 312611 bp from intervals 
+INFO  17:32:57,189 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 8 processors available on this machine 
+INFO  17:32:57,247 GenomeAnalysisEngine - Preparing for traversal 
+INFO  17:32:57,248 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:32:57,249 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:32:57,249 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:32:57,249 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  17:32:57,446 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:57,447 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  17:32:57,448 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  17:32:57,896 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  17:33:03,589 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1473288 has 8 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+INFO  17:33:11,756 ProgressMeter -            done    312611.0    14.0 s      46.0 s      100.0%    14.0 s       0.0 s 
+INFO  17:33:11,757 ProgressMeter - Total runtime 14.51 secs, 0.24 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were 4 WARN messages, the first 4 are repeated below.
+WARN  17:32:57,446 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:57,447 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:32:57,896 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  17:33:03,589 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1473288 has 8 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+------------------------------------------------------------------------------------------
+INFO  17:33:13,958 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:33:13,961 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  17:33:13,961 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  17:33:13,961 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  17:33:13,961 HelpFormatter - [Fri Dec 07 17:33:13 CST 2018] Executing on Linux 4.4.0-62-generic amd64 
+INFO  17:33:13,962 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12 
+INFO  17:33:13,967 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/completo/Direct-H37Rv-D3/54.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/58.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/42.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/21.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/55.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/36.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/43.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/56.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/39.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/35.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/23.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/02.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/57.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/34.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/41.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/22.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/33.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/12.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/50.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/25.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/46.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/29.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/32.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/13.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/51.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/05.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/24.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/47.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/28.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/31.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/52.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/27.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/48.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/30.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/53.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/26.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/49.g.vcf --variant data/diploide/completo/Direct-H37Rv-D3/45.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/completo/Direct-H37Rv-D3/Llamado-conjunto_raw.vcf.build 
+INFO  17:33:13,968 HelpFormatter - Executing as cfresno@castillo on Linux 4.4.0-62-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12. 
+INFO  17:33:13,969 HelpFormatter - Date/Time: 2018/12/07 17:33:13 
+INFO  17:33:13,969 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:33:13,970 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  17:33:14,134 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  17:33:14,135 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  17:33:14,135 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:33:14,289 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  17:33:14,434 IntervalUtils - Processing 312611 bp from intervals 
+INFO  17:33:14,446 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 8 processors available on this machine 
+INFO  17:33:14,514 GenomeAnalysisEngine - Preparing for traversal 
+INFO  17:33:14,516 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:33:14,516 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:33:14,516 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:33:14,517 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  17:33:14,742 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:14,743 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  17:33:14,743 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  17:33:15,178 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+INFO  17:33:31,009 ProgressMeter -            done    312611.0    16.0 s      52.0 s      100.0%    16.0 s       0.0 s 
+INFO  17:33:31,010 ProgressMeter - Total runtime 16.49 secs, 0.27 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were 3 WARN messages, the first 3 are repeated below.
+WARN  17:33:14,742 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:14,743 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:15,178 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+------------------------------------------------------------------------------------------
+INFO  17:33:33,392 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:33:33,394 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  17:33:33,395 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  17:33:33,395 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  17:33:33,395 HelpFormatter - [Fri Dec 07 17:33:33 CST 2018] Executing on Linux 4.4.0-62-generic amd64 
+INFO  17:33:33,395 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12 
+INFO  17:33:33,400 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/completo/MTC-D3-H37Rv-D3/29.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/46.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/25.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/50.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/33.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/12.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/28.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/47.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/05.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/24.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/51.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/32.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/13.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/48.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/27.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/52.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/31.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/45.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/49.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/26.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/53.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/30.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/21.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/42.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/58.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/54.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/43.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/36.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/55.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/23.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/02.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/35.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/39.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/56.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/22.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/41.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/34.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D3/57.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/completo/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.vcf.build 
+INFO  17:33:33,402 HelpFormatter - Executing as cfresno@castillo on Linux 4.4.0-62-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12. 
+INFO  17:33:33,402 HelpFormatter - Date/Time: 2018/12/07 17:33:33 
+INFO  17:33:33,402 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:33:33,402 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  17:33:33,634 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  17:33:33,634 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  17:33:33,635 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:33:33,721 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  17:33:33,884 IntervalUtils - Processing 312611 bp from intervals 
+INFO  17:33:33,894 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 8 processors available on this machine 
+INFO  17:33:33,954 GenomeAnalysisEngine - Preparing for traversal 
+INFO  17:33:33,955 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:33:33,955 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:33:33,956 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:33:33,956 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  17:33:34,188 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:34,190 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  17:33:34,190 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  17:33:34,594 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+INFO  17:33:49,059 ProgressMeter -            done    312611.0    15.0 s      48.0 s      100.0%    15.0 s       0.0 s 
+INFO  17:33:49,059 ProgressMeter - Total runtime 15.10 secs, 0.25 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were 3 WARN messages, the first 3 are repeated below.
+WARN  17:33:34,188 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:34,190 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:34,594 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+------------------------------------------------------------------------------------------
+INFO  17:33:51,345 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:33:51,348 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  17:33:51,349 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  17:33:51,349 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  17:33:51,349 HelpFormatter - [Fri Dec 07 17:33:51 CST 2018] Executing on Linux 4.4.0-62-generic amd64 
+INFO  17:33:51,349 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12 
+INFO  17:33:51,354 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/completo/Direct-H37Rv-D12/43.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/55.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/36.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/42.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/21.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/54.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/58.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/41.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/22.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/57.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/34.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/23.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/02.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/39.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/56.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/35.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/05.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/24.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/28.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/47.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/32.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/13.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/51.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/25.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/29.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/46.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/33.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/12.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/50.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/49.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/26.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/45.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/30.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/53.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/48.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/27.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/31.g.vcf --variant data/diploide/completo/Direct-H37Rv-D12/52.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/completo/Direct-H37Rv-D12/Llamado-conjunto_raw.vcf.build 
+INFO  17:33:51,356 HelpFormatter - Executing as cfresno@castillo on Linux 4.4.0-62-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12. 
+INFO  17:33:51,356 HelpFormatter - Date/Time: 2018/12/07 17:33:51 
+INFO  17:33:51,356 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:33:51,356 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  17:33:51,514 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  17:33:51,514 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  17:33:51,515 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:33:51,676 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  17:33:51,823 IntervalUtils - Processing 312611 bp from intervals 
+INFO  17:33:51,834 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 8 processors available on this machine 
+INFO  17:33:51,895 GenomeAnalysisEngine - Preparing for traversal 
+INFO  17:33:51,896 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:33:51,896 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:33:51,896 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:33:51,897 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  17:33:52,127 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:52,128 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  17:33:52,128 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  17:33:52,569 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  17:33:59,549 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1472677 has 10 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+INFO  17:34:14,665 ProgressMeter -            done    312611.0    22.0 s      72.0 s      100.0%    22.0 s       0.0 s 
+INFO  17:34:14,666 ProgressMeter - Total runtime 22.77 secs, 0.38 min, 0.01 hours 
+------------------------------------------------------------------------------------------
+Done. There were 4 WARN messages, the first 4 are repeated below.
+WARN  17:33:52,127 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:52,128 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:33:52,569 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  17:33:59,549 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1472677 has 10 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+------------------------------------------------------------------------------------------
+INFO  17:34:17,175 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:34:17,179 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  17:34:17,179 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  17:34:17,179 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  17:34:17,179 HelpFormatter - [Fri Dec 07 17:34:17 CST 2018] Executing on Linux 4.4.0-62-generic amd64 
+INFO  17:34:17,180 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12 
+INFO  17:34:17,185 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/completo/MTC-D3-H37Rv-D12/41.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/22.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/57.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/34.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/23.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/02.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/39.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/56.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/35.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/43.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/55.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/36.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/42.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/21.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/54.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/58.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/49.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/26.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/45.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/30.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/53.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/48.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/27.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/31.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/52.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/05.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/24.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/28.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/47.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/32.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/13.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/51.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/25.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/29.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/46.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/33.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/12.g.vcf --variant data/diploide/completo/MTC-D3-H37Rv-D12/50.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/completo/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.vcf.build 
+INFO  17:34:17,186 HelpFormatter - Executing as cfresno@castillo on Linux 4.4.0-62-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_161-b12. 
+INFO  17:34:17,187 HelpFormatter - Date/Time: 2018/12/07 17:34:17 
+INFO  17:34:17,187 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  17:34:17,187 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  17:34:17,421 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  17:34:17,421 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  17:34:17,422 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:34:17,516 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  17:34:17,653 IntervalUtils - Processing 312611 bp from intervals 
+INFO  17:34:17,663 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 8 processors available on this machine 
+INFO  17:34:17,725 GenomeAnalysisEngine - Preparing for traversal 
+INFO  17:34:17,726 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:34:17,727 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:34:17,727 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:34:17,727 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  17:34:17,971 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:34:17,972 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  17:34:17,973 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  17:34:18,372 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  17:34:25,477 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1473288 has 8 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+INFO  17:34:34,141 ProgressMeter -            done    312611.0    16.0 s      52.0 s      100.0%    16.0 s       0.0 s 
+INFO  17:34:34,141 ProgressMeter - Total runtime 16.41 secs, 0.27 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were 4 WARN messages, the first 4 are repeated below.
+WARN  17:34:17,971 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:34:17,972 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  17:34:18,372 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  17:34:25,477 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1473288 has 8 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+------------------------------------------------------------------------------------------
+INFO  18:07:17,805 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  18:07:17,811 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-0-ge9d806836, Compiled 2017/07/28 21:26:50 
+INFO  18:07:17,811 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  18:07:17,811 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  18:07:17,812 HelpFormatter - [Fri Dec 07 18:07:17 CST 2018] Executing on Linux 4.4.0-134-generic amd64 
+INFO  18:07:17,812 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_181-b13 
+INFO  18:07:17,821 HelpFormatter - Program Args: -T GenotypeGVCFs -ploidy 2 -R /labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.fna --variant data/diploide/filtrado/Direct-H37Rv-D12/58.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/54.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/42.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/36.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/43.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/39.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/02.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/23.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/34.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/57.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/41.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/50.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/12.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/29.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/46.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/25.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/51.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/13.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/32.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/28.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/24.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/05.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/52.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/31.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/48.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/30.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/49.g.vcf --variant data/diploide/filtrado/Direct-H37Rv-D12/26.g.vcf --disable_auto_index_creation_and_locking_when_reading_rods -nt 3 -L ../../known-variants/Bed-IGV+100_NC_000962.3.bed -o results/diploide/filtrado/Direct-H37Rv-D12/Llamado-conjunto_raw.vcf.build 
+INFO  18:07:17,824 HelpFormatter - Executing as bcuevas@ibm-f-30 on Linux 4.4.0-134-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_181-b13. 
+INFO  18:07:17,825 HelpFormatter - Date/Time: 2018/12/07 18:07:17 
+INFO  18:07:17,825 HelpFormatter - ---------------------------------------------------------------------------------- 
+INFO  18:07:17,826 HelpFormatter - ---------------------------------------------------------------------------------- 
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/usr/share/java/GenomeAnalysisTK3.8.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+INFO  18:07:18,761 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  18:07:18,762 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  18:07:18,763 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  18:07:18,962 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  18:07:21,498 IntervalUtils - Processing 312611 bp from intervals 
+INFO  18:07:21,519 MicroScheduler - Running the GATK in parallel mode with 3 total threads, 1 CPU thread(s) for each of 3 data thread(s), of 4 processors available on this machine 
+INFO  18:07:21,643 GenomeAnalysisEngine - Preparing for traversal 
+INFO  18:07:21,645 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  18:07:21,646 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  18:07:21,647 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  18:07:21,647 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  18:07:22,004 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:22,009 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  18:07:22,010 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  18:07:23,049 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  18:07:33,243 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1473288 has 8 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+WARN  18:07:36,136 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1472677 has 10 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+INFO  18:07:42,182 ProgressMeter -            done    312611.0    20.0 s      66.0 s      100.0%    20.0 s       0.0 s 
+INFO  18:07:42,183 ProgressMeter - Total runtime 20.73 secs, 0.35 min, 0.01 hours 
+------------------------------------------------------------------------------------------
+Done. There were 3 WARN messages, the first 3 are repeated below.
+WARN  18:07:21,936 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:21,939 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:22,882 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+------------------------------------------------------------------------------------------
+INFO  18:07:43,071 ProgressMeter -            done    312611.0    21.0 s      69.0 s      100.0%    21.0 s       0.0 s 
+INFO  18:07:43,072 ProgressMeter - Total runtime 21.75 secs, 0.36 min, 0.01 hours 
+------------------------------------------------------------------------------------------
+Done. There were 4 WARN messages, the first 4 are repeated below.
+WARN  18:07:21,736 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:21,738 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:22,849 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  18:07:33,243 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1473288 has 8 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+------------------------------------------------------------------------------------------
+INFO  18:07:44,281 ProgressMeter -            done    312611.0    23.0 s      73.0 s      100.0%    23.0 s       0.0 s 
+INFO  18:07:44,283 ProgressMeter - Total runtime 23.06 secs, 0.38 min, 0.01 hours 
+------------------------------------------------------------------------------------------
+Done. There were 3 WARN messages, the first 3 are repeated below.
+WARN  18:07:21,598 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:21,600 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:22,808 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+------------------------------------------------------------------------------------------
+INFO  18:07:50,548 ProgressMeter -            done    312611.0    28.0 s      92.0 s      100.0%    28.0 s       0.0 s 
+INFO  18:07:50,549 ProgressMeter - Total runtime 28.90 secs, 0.48 min, 0.01 hours 
+------------------------------------------------------------------------------------------
+Done. There were 4 WARN messages, the first 4 are repeated below.
+WARN  18:07:22,004 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:22,009 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  18:07:23,049 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  18:07:36,136 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome: 1472677 has 10 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+------------------------------------------------------------------------------------------

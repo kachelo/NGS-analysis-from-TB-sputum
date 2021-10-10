@@ -1,0 +1,22 @@
+< ../config.mk
+
+# Joint genotyping step ing *g.vcf from data/% directory
+results/%/Llamado-conjunto_raw.vcf: 
+        set -x
+        mkdir -p $(dirname $target)
+	echo "$_JAVA_OPTIONS"
+	OPEN=`ulimit -n`
+	echo "ulimit -n:" $OPEN
+	DATOS=`find -L "data/"$stem -name '*.vcf' | sed "s/^/--variant /"`
+        java -jar $GATK \
+                -T GenotypeGVCFs \
+		-ploidy 2 \
+                -R $REF \
+                $DATOS \
+                --disable_auto_index_creation_and_locking_when_reading_rods \
+                -nt $NT \
+		-L $coordenadas \
+                -o $target".build" >> log.out 2>&1  \
+        && mv $target".build" $target \
+	&& mv $target.build.idx $target.idx
+
