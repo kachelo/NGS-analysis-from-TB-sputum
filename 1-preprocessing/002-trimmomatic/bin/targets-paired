@@ -1,0 +1,6 @@
+#!/bin/sh
+find -L data/ \
+	-name '*_R1_001.fastq.gz' \
+| sed -r \
+	-e 's#^data/#results/#g' \
+	-e 's#_R1_001\.#_R1.paired.#g'

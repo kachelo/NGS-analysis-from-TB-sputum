@@ -1,0 +1,42 @@
+<config.mk
+# read trimmomatic config variables
+
+#TRIMMOMATIC FOR PAIR-END READS
+'results/%_R1.paired.fastq.gz' \
+'results/%_R1.unpaired.fastq.gz' \
+'results/%_R2.paired.fastq.gz' \
+'results/%_R2.unpaired.fastq.gz' \
+: 'data/%_R1_001.fastq.gz' 'data/%_R2_001.fastq.gz'
+	mkdir -p $(dirname $target)
+	set -x
+	java -jar /usr/share/java/trimmomatic.jar \
+		PE \
+		$TRIMMOMATIC_OPTARGS \
+		$prereq \
+		'results/'$stem'_R1.paired.build.fastq.gz' \
+		'results/'$stem'_R1.unpaired.build.fastq.gz' \
+		'results/'$stem'_R2.paired.build.fastq.gz' \
+		'results/'$stem'_R2.unpaired.build.fastq.gz' \
+		$TRIMMOMATIC_ANALYSIS \
+	&& {
+		mv 'results/'$stem'_R1.paired.build.fastq.gz' 'results/'$stem'_R1.paired.fastq.gz' 
+		mv 'results/'$stem'_R1.unpaired.build.fastq.gz' 'results/'$stem'_R1.unpaired.fastq.gz' 
+		mv 'results/'$stem'_R2.paired.build.fastq.gz' 'results/'$stem'_R2.paired.fastq.gz' 
+		mv 'results/'$stem'_R2.unpaired.build.fastq.gz' 'results/'$stem'_R2.unpaired.fastq.gz' 
+	}
+
+#TRIMMOMATIC FOR SINGLE ENDS READS
+'results/%.fastq.gz':	'data/%.fastq.gz'
+	mkdir -p $(dirname $target)
+	set -x
+	java -jar /usr/share/java/trimmomatic.jar \
+		SE \
+		$TRIMMOMATIC_OPTARGS \
+		$prereq \
+		'results/'$stem'.build.fastq.gz' \
+		$TRIMMOMATIC_ANALYSIS \
+	&& mv 'results/'$stem'.build.fastq.gz' 'results/'$stem'.fastq.gz'
+
+#Clean results directory
+clean:VE:
+	rm -rf results/

@@ -57,6 +57,29 @@ Here we will include *Mycobacterium* reference genome and SURPI database.
 # 1-PREPROCESSING
 
 ## 001-fastqc: Quality Control reports of the sequences.
+## 002-trimmomatic: Clean sequence artifacts using the QC reports
+
+- Include/modify the **adapters.fa** file from previous QC report
+
+Usefull configurations:
+
+- Remove adapters
+  `TRIMMOMATIC_ANALYSIS=$TRIMMOMATIC_ANALYSIS' ILLUMINACLIP:adapters.fa:2:30:10'`
+
+- Remove reads with mean score quality < 18
+  `TRIMMOMATIC_ANALYSIS=$TRIMMOMATIC_ANALYSIS' AVGQUAL:18'`
+
+- Crop the reads from position 134
+  `TRIMMOMATIC_ANALYSIS=$TRIMMOMATIC_ANALYSIS' CROP:134’`
+
+- Remove initial bases if they have qc < 28
+  `TRIMMOMATIC_ANALYSIS=$TRIMMOMATIC_ANALYSIS' LEADING:28'`
+
+- 5 bases moving window with at least 28 score in qc
+  `TRIMMOMATIC_ANALYSIS=$TRIMMOMATIC_ANALYSIS' SLIDINGWINDOW:5:28'`
+
+- Minimun Lenght of 70 bases per read
+  `TRIMMOMATIC_ANALYSIS=$TRIMMOMATIC_ANALYSIS' MINLEN:70'`
 
 
 
