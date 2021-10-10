@@ -1,0 +1,37 @@
+##Read general config.mk from GATK pipeline
+< ../../config.mk
+
+TEST:V:
+	set -x
+	bin/targets | xargs mk
+
+Log/%.CHECK:V: Log/%.vcf_validator.log Log/%.GATK_ValidateVariants.log
+	set -x
+	echo "Unitary test completed"
+
+#First unit test checking general format
+Log/%.vcf_validator.log: ../results/%.g.vcf
+	set -x
+	mkdir -p `dirname $target`
+	echo "[UT1-results] vcf_validator warnings log" > $target.build
+	{
+	bin/vcf_validator \
+		-i $prereq \
+		-l warning \
+	|| true
+	} >> $target.build \
+	&& mv $target.build $target
+
+#Second unit test checking strict GATK format
+Log/%.GATK_ValidateVariants.log: ../results/%.g.vcf
+	set -x
+	mkdir -p `dirname $target`
+	echo "[UT2-results] GATK ValidateVariants warnings log" > $target.build
+	java -jar $GATK \
+		-T ValidateVariants \
+		-R $REF \
+		-V $prereq \
+		--warnOnErrors \
+		--validateGVCF \
+	>> $target.build \
+	&& mv $target.build $target
