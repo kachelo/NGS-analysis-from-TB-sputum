@@ -310,9 +310,8 @@ alternate allele is only seen near the ends of reads; this is indicative of erro
 
 ### f) Missing subjects
 
-### g) vcf-qc
-
 - **CHR-name**: This module modifies the long chromosome name that was obtained from previous steps to leave only NC_000962.3 in the .vcf files
+- **NO PASS**: This module selects only the samples that did not pass the filter (NO PASS)
 - **PASS**: This module selects only the samples that passed the filter (PASS)
 - **missing-subject**: In this module, a table is generated with variants in the columns and subjects in the rows to identify those samples or subjects that have a large number of unnamed variants (./.) And, if necessary, eliminate them. If this happens, you should return to module 09- Variant analysis (from the population analysis onwards).
 
@@ -320,7 +319,15 @@ alternate allele is only seen near the ends of reads; this is indicative of erro
 
 ### Post-filter
 
-A post-filter tapplied to the variants that passed the hard-filtering generate a more accurate and reliable result. This step considering only variants with SNPs or INDELs, ie, those with alternate homozygous genotype 1/1 for complete resistance and heterozygous 0/1 or 1/0 for heterorresistance, in the case of subpopulations Then, we included only reads with a variant depth (DP) ≥10 and genotype quality (GQ) ≥30. The rrs gene has conserved regions showing similarity between microorganisms, and therefore we decided to quantify the percentage of this gene's variants to measure the potential contamination by other bacteria 
+A post-filter  was applied to the variants that passed the hard-filtering generate a more accurate and reliable result. This step considering:
+
+- only variants with SNPs or INDELs, ie, those with 
+  - alternate homozygous genotype 1/1 for complete resistance and 
+  - heterozygous 0/1 or 1/0 for heterorresistance, in the case of subpopulations 
+- only reads with 
+  - a variant depth (DP) ≥10 and 
+  - genotype quality (GQ) ≥30. 
+- The rrs gene has conserved regions showing similarity between microorganisms, and therefore we decided to quantify the percentage of this gene's variants to measure the potential contamination by other bacteria 
 
 
 
