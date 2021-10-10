@@ -28,6 +28,8 @@ Remember to add 9base to the **PATH** variable in order to find ```mk``` executa
 
 # Project structure
 
+![A pipeline to remove contaminant NGS reads from TB-sputum samples](plos_one_github1.pdf)
+
 ## data directory
 
 Here the user includes de fasta file that wants to process using the following considerations:
