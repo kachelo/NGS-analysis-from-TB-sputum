@@ -26,6 +26,8 @@ sudo apt install 9base
 
 Remember to add 9base to the **PATH** variable in order to find ```mk``` executable.
 
+- Check software directory for a quick system start up for the pipeline
+ 
 # Project structure
 
 <img src="plos_one_github1.png" alt="A pipeline to remove contaminant NGS reads from TB-sputum samples"/>
@@ -51,6 +53,14 @@ Illumina reads follow the convention:
 # Example:
 @M04474:29:000000000-ALA81:1:1101:15601:1728 1:N:0:4
 ```
+
+## software directory
+
+Require software installation to make the pipeline work
+
+- apt package software
+- source code installation
+- executable downloads
 
 ## reference directory
 
