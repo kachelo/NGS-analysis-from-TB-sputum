@@ -5,4 +5,8 @@
 results/%_fastqc.html:	data/%.fastq.gz
 	DIR="`dirname $target`"
 	mkdir -p "$DIR"
-	fastqc $prereq -o "$DIR"
+	$FASTQC $prereq -o "$DIR"
+
+# Remove previous output
+clean:V:
+	rm -r results/*
