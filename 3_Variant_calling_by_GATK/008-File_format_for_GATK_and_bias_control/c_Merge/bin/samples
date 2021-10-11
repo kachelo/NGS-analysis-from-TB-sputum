@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Find all files in the form:
+#
+# ```
+# SAMPLE_LIBRARY_TREATMENT_PLATFORM_CENTER_L00[0-8]_R[12].bam
+# ```
+#
+# Library contains two parts: PANEL-WORKTABLE
+#
+# This pipe preserves only `SAMPLE_PANEL` for downstream analysis.
+
+find -L data \
+	-type f \
+	-name '*.bam' \
+| sed -r \
+	-e 's#^.*/##' \
+	-e 's#([A-Za-z0-9.-]+)_([A-Za-z0-9.]+)(-[A-Za-z0-9.]+)?_.*\.bam$#\1#' \
+| sort -u

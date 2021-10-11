@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Get the required sorted.bam files for posterior merge
+FILE=`basename $@`
+DIRECTORY=`dirname $@ \
+| sed -r \
+	-e 's#results/##'`
+SAMPLE=`echo $FILE \
+| sed -r \
+	-e 's#\.merged\.(ok)?(bam)?##'`
+
+find -L "data/"$DIRECTORY \
+        -type f \
+        -name $SAMPLE"_*.bam" \
+| sed -r \
+        -e 's#data/#results/#g' \
+        -e 's#\.bam$#\.sorted\.bam#g' \
+| sort -u
+

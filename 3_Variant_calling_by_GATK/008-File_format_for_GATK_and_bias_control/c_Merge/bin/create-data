@@ -1,0 +1,45 @@
+#!/bin/bash
+#Create the required data folder to make a merge
+#1-H37RV : the aligned + unaligned in the same folder
+mkdir -p data/1-H37RV
+cd data/1-H37RV
+#Create the links of the unaligned files
+find -L ../../../006b-bam-to-sam/results/1-H37RV/unalig-bact \
+	-type f \
+| xargs -I @ ln -s @ 
+#Create the links of the extraction files
+find -L ../../../006b-bam-to-sam/results/1-H37RV/extraction-mycobac \
+	-type f > FILES
+find -L ../../../006b-bam-to-sam/results/1-H37RV/extraction-mycobac \
+    -type f \
+| xargs basename -a \
+| sed -r \
+	-e 's#\.sam$#\.2.sam#' > LINK
+echo "#!/bin/bash" > links
+paste -d" " FILES LINK | xargs -I @ echo "ln -s @" >> links
+chmod +x links
+./links 
+rm FILES LINK links
+cd ../..
+
+#extraction-mycobac
+#0-BED : the aligned + unaligned in the same folder 
+mkdir -p data/0-Bed
+cd data/0-Bed
+find -L ../../../006b-bam-to-sam/results/0-Bed/unalig-bact \
+	-type f \
+| xargs -I @ ln -s @
+#Create the link of the extraction files
+find -L ../../../006b-bam-to-sam/results/0-Bed/extraction-mycobac \
+	-type f > FILES
+find -L ../../../006b-bam-to-sam/results/0-Bed/extraction-mycobac \
+	-type f \
+| xargs basename -a \
+| sed -r \
+	-e 's#\.sam$#\.2.sam#' > LINK
+echo "#!/bin/bash" > links
+paste -d" " FILES LINK | xargs -I @ echo "ln -s @" >> links 
+chmod +x links
+./links
+rm FILES LINK links
+cd ../../

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+find -L data \
+	-type f \
+	-ipath "*${@}*.sam" 
+

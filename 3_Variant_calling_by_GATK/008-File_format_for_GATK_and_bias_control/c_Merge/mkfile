@@ -1,0 +1,31 @@
+< config.mk
+# Load global variables
+
+# Merge Files with same sample and library
+# ========================================
+#
+# This target dinamically checks what files are required
+# for creating a merged bam.
+#
+<|bin/prereqs
+results/%.sam:
+	set -x
+	mkdir -p "$(dirname "${target}")"
+	TMPFILE="results/${stem}.build.sam"
+	samtools merge \
+		"${TMPFILE}" \
+		$(bin/which-bam-belong-to-sample "$stem") \
+	&& mv "${TMPFILE}" "${target}"
+
+#Conver sam into bam format
+results/%.bam:	results/%.sam
+	mkdir -p "$(dirname "$target")"
+	samtools view -Sb $prereq > "$target"'.build' \
+	&& mv "$target"'.build' "$target" \
+	&& rm $prereq
+
+# Clean up generated files
+# ========================
+#
+clean:V:
+	bin/targets | xargs rm -f
