@@ -1,4 +1,5 @@
 <config.mk
+# Load global variables
 
 #Filter reads with low mapping quality
 results/%.bam : data/%.bam
@@ -10,5 +11,6 @@ results/%.bam : data/%.bam
 		-b $prereq > $target'.build' \
 	&& mv $target'.build' $target
 
+# Remove previous output
 clean:V:
 	rm -r results\

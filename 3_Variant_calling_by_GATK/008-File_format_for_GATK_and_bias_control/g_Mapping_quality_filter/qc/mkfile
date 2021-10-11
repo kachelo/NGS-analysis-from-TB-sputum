@@ -25,6 +25,7 @@ results/%.stats: data/original/%.bam data/results/%.bam
 	echo $target	$IN	$OUT	$((IN-OUT)) > $target'.build' \
 	&& mv $target'.build' $target
 
+#Remove previous output
 clean:V:
 	rm -r results/
 	
