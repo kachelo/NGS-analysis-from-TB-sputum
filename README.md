@@ -95,9 +95,6 @@ Mycobacterium tuberculosis     ref seq   NC_000962.3
 
 - Mycobacterium: reference/Mycobacterium
 
-
-
-
 # 1) Filtering input sequences with high-quality base calls
 
 ## 001-fastqc: Quality Control reports of the sequences
@@ -132,11 +129,6 @@ Usefull configurations:
 
 - Posterior reads Quality Control
 
-
-
-
-
-
 # 2) Microorganism identification and filtering by alignment with SURPI
 
 - Idea: use SURPI (Sequence-based Ultra-Rapid Pathogen Identification) to filter out reads that are not related to Mycobacterium from clinical samples: Remove Human, then Virus, after that identify the undesired bacteria.  Performe the Mapping with Mycobacterium genome H37RV using a stringent Edit Distance (ED = 3) and veriffy the elimination of contaminant sequences.
@@ -153,6 +145,8 @@ Usefull configurations:
 
 ## 006-Bacteria: Taxonomic classification of the sequenced microbiota
 
+First we align the reads that do not include Human or Virus organism against the SURPI bacterial database. Then in `006a-annotation` we can inspect to which bacteria the non-Mycobacterium reads align to.
+
 **Note**: The BAM files were aligned with the SURPI bacterial reference database to obtain the taxonomic classification of the sequenced microbiota . 
 
 
@@ -163,7 +157,7 @@ Usefull configurations:
 a) The directory where the reference is used
 
 ```
-SNAP_REFERENCEDIR='/labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.snap'
+SNAP_REFERENCEDIR='../../reference/Mycobacterium_tuberculosis_H37Rv.snap'
 ```
 
 b) To filter unmatched regions:
@@ -174,7 +168,6 @@ SNAP_OPTS=$SNAP_OPTS' -F a '
 
 c) Choose genomic edit distance value
 
-config.mk 
 `- SNAP_OPTS=$SNAP_OPTS' -d 3'`
 
 d) Lots of memory:
@@ -182,9 +175,6 @@ d) Lots of memory:
 ```
 SNAP_OPTS=$SNAP_OPTS' -map'
 ```
-
- e) condor.header  
-  `-initialdir = /labs/lf/tb/2-variantes/006b-Direct-H37Rv-D3`
 
 Note: The reads obtained under these mapping conditions were re-aligned with the bacterial reference SURPI database (006-Bacteria) to quantify the number of sequences classified as *Mycobacterium*, other non-*Mycobacterium* bacteria, and unassigned bacteria
 
