@@ -1,5 +1,10 @@
 Use trimmomatic to clean reads from high troughput sequencing.
 
+# Important!!!!
+
+- Explore 001-fastqc results report in order to set de appropiate parameters in `config.mk` file. This step is human dependable!!!
+- **WARNING: paper values are included and, may or not, be suitable for you data.**
+
 # Requirements
 
 - [`mk`](http://doc.cat-v.org/bell_labs/mk/mk.pdf "A successor for `make`.")
