@@ -1,10 +1,12 @@
-<snap.mk
+<config.mk
+#load config variables
+
 # snap fails if more than one snap process is active
 NPROC=1
 
 # snap can filter a set of files and it's more efficient to align them all on the same run
 # rather than running surpi once for each file
-
+# For Single end reads
 results/%.unpaired.sam:	data/%.unpaired.bam
 	set -x
 	mkdir -p `dirname $target`
@@ -16,6 +18,7 @@ results/%.unpaired.sam:	data/%.unpaired.bam
 		-o -sam $target'.build' \
 	&& mv $target'.build' $target
 
+# For Paired End reads
 results/%.paired.sam:	data/%.paired.bam
 	set -x
 	mkdir -p `dirname $target`
@@ -26,3 +29,7 @@ results/%.paired.sam:	data/%.paired.bam
 		$SNAP_OPTS \
 		-o -sam $target'.build' \
 	&& mv $target'.build' $target
+
+# Clean up generated files
+clean:V:
+        bin/targets | xargs rm -f
