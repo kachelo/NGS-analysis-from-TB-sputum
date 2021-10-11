@@ -1,4 +1,6 @@
 <config.mk
+#Load global variables
+#
 ##Generate index for bam
 results/%.bam.bai: data/%.bam
         set -x
@@ -8,6 +10,7 @@ results/%.bam.bai: data/%.bam
         && mv $target.build $target \
 	&& ln -s "$(realpath $prereq)" "$(echo $target | sed -r -e 's#\.bai$##')"
 
+# Remove previous output
 clean:V:
         rm -r results
 
