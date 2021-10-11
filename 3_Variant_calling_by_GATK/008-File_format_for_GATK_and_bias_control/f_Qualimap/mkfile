@@ -1,5 +1,6 @@
 <config.mk
-
+# Load global variables
+#
 #Compute the classical qualimap report for a single bam file
 results/%/qualimap_report.html:	data/%.bam
 	DIR=`dirname $target`
