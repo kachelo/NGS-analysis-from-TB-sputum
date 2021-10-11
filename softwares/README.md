@@ -1,5 +1,14 @@
 # Installations instructions for dependencies
 
+## Requirements
+
+- [mk](http://doc.cat-v.org/bell_labs/mk/mk.pdf "mk: A successor for `make`.")
+
+- [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FASTQC: A quality control tool for high throughput sequence data.")
+
+- [trimmomatic](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4103590/ "Trimmomatic: a flexible trimmer for Illumina sequence data")
+
+
 ## APT PACKAGES
 
 In most linux distros, you can use the `apt` strategy to get you system up and running: 
@@ -7,7 +16,7 @@ In most linux distros, you can use the `apt` strategy to get you system up and r
 - Complete first try
 
 ```
-sudo apt install 9base fastqc unzip
+sudo apt install 9base fastqc unzip trimmomatic
 ```
 
 ## FASTQC
