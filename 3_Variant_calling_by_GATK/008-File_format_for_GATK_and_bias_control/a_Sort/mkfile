@@ -14,25 +14,6 @@ results/%.bam:	data/%.bam
 		mv "${BAM}.bai" "${target}.bai"
 	}
 
-# Quality Control
-# ===============
-#
-# Here you should describe why you choose this qc.
-#
-qc:V:
-	cd qc
-	bin/targets | xargs mk
-
-# Unit tests
-# ==========
-#
-# Verify everything works correctly.
-#
-test	tests:QV:
-	cd test
-	rm -f tests.log
-	./run_tests \
-	|| less tests.log
 
 # Clean up generated files
 # ========================
