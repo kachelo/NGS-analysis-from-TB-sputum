@@ -1,5 +1,7 @@
 < ../config.mk
+# Load global variables for Variant Calling
 
+# Get de SNP vcf file
 results/%.snp.vcf:Q: data/%.vcf
 	echo "[DEBUGGING] extracting SNP for $target"
 	set -x
@@ -14,6 +16,7 @@ results/%.snp.vcf:Q: data/%.vcf
 	&& mv $target.build $target \
 	&& mv $target.build.idx $target.idx
 
+# Filter results 
 results/%.filtered_snp.vcf:Q: results/%.snp.vcf
 	echo "[DEBUGGING_HERE] filtering SNP for $target"
 	java -jar $GATK \
@@ -26,6 +29,7 @@ results/%.filtered_snp.vcf:Q: results/%.snp.vcf
 	&& mv $target.build $target \
 	&& mv $target.build.idx $target.idx
 
+# Get INDEL vcf file 
 results/%.indel.vcf:Q: data/%.vcf
 	echo "[DEBUGGING] extracting INDEL for $target"
 	set -x
@@ -40,6 +44,7 @@ results/%.indel.vcf:Q: data/%.vcf
         && mv $target.build $target \
         && mv $target.build.idx $target.idx
 
+# Filter INDELs
 results/%.filtered_indel.vcf:Q: results/%.indel.vcf
 	echo "[DEBUGGING] filtering INDEL for $target"
 	java -jar $GATK \
@@ -52,6 +57,7 @@ results/%.filtered_indel.vcf:Q: results/%.indel.vcf
 	&& mv $target.build $target \
         && mv $target.build.idx $target.idx
 
+# Merge filtered INDELs and SNPs
 results/%.filtered.vcf:Q: results/%.filtered_snp.vcf results/%.filtered_indel.vcf
 	echo "[DEBUGGING] creating $target"
 	java -jar $GATK \
@@ -65,6 +71,7 @@ results/%.filtered.vcf:Q: results/%.filtered_snp.vcf results/%.filtered_indel.vc
 	&& mv $target.build $target \
         && mv $target.build.idx $target.idx
 
+# Finally the HARD FILTERED VCF file
 results/%.hard_filtered.vcf:Q: results/%.filtered.vcf
 	echo "[DEBUGGING] removing variants that did not pass hard filter"
 	grep -v "100MX_hard_filter" $prereq > $target.build \
