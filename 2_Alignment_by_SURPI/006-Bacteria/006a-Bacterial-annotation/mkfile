@@ -1,7 +1,7 @@
 < config.mk
+#Load global variables
 
 # Do not fail when no target is given
-#
 no-target:QV:
 	echo "$(pwd): nothing to be done."
 
@@ -36,28 +36,9 @@ tmp/%.sam:Q:	data/%.sam
 	> "${TMPFILE}" \
 	&& mv "${TMPFILE}" "${target}"
 
+#Is the reference database present?
 check-db:V:
 	bin/validate-taxonomy-db-dir
-
-# Quality Control
-# ===============
-#
-# Here you should describe why you choose this qc.
-#
-qc:VQ:
-	cd qc
-	bin/targets | xargs mk
-
-# Unit tests
-# ==========
-#
-# Verify everything works correctly.
-#
-test	tests:QV:
-	cd test
-	rm -f tests.log
-	./run_tests \
-	|| less tests.log
 
 # Clean up generated files
 # ========================
