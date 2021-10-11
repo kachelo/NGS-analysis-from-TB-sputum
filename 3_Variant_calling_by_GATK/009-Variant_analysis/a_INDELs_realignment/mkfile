@@ -1,5 +1,7 @@
 < ../config.mk
+# Load global variables for Variant Calling with GATK
 
+# Generate BAM using the calculated intervals
 results/%.ir.rtc.bam:	data/%.bam results/%.intervals
 	set -x
 	java -jar $GATK \
@@ -12,6 +14,7 @@ results/%.ir.rtc.bam:	data/%.bam results/%.intervals
 	&& mv $target".build" $target \
 	&& mv $target".build.bai" $target".bai"
 
+# Calculare intervals from the original BAM files
 results/%.intervals: data/%.bam 
 	set -x
 	mkdir -p `dirname $target`
