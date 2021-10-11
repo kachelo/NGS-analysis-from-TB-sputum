@@ -7,7 +7,7 @@ results/%_fastqc.html \
 results/%_fastqc.zip:	data/%.fastq.gz
 	DIR="`dirname $target | sort -u`"
 	mkdir -p "$DIR"
-	fastqc $prereq -o "$DIR" \
+	$FASTQC $prereq -o "$DIR" \
 		--adapters config/adapter_list.txt \
 		--limits config/limits.txt \
 		-contaminants config/contaminant_list.txt
@@ -43,3 +43,7 @@ results/%_fastqc_data.txt: results/%_fastqc.zip
 	| xargs -0 bin/fastq-reads \
 	> $target'.build' \
 	&& mv $target'.build' $target
+
+# Remove previous output
+clean:V:
+	rm -r results/*
