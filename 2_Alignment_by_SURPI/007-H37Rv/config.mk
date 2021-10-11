@@ -1,5 +1,5 @@
 # The directory where the reference is used
-SNAP_REFERENCEDIR='/labs/lf/tb/reference/Mycobacterium_tuberculosis_H37Rv.snap'
+SNAP_REFERENCEDIR='../../references/Mycobacterium_tuberculosis_H37Rv.snap'
 
 ##Number of threads
 NT='4'

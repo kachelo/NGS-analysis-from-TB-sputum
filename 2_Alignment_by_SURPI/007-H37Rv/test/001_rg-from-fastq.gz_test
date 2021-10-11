@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# set -x
-
-bin/rg-from-fastq.gz \
-	'data/35_20170216_default_ILLUMINA_unknown_L001_R1_001.fastq.gz' \
-| grep -F 'ID:35.20170216.default\tPU:000000000-ABT22.1\tSM:35\tLB:20170216\tPL:ILLUMINA\tCN:unknown'
