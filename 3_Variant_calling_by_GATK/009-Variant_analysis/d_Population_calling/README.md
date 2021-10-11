@@ -4,7 +4,7 @@ This module takes many gVCFs produced in step 3 are used to perform multi-sample
 This tool will combine all spanning records (samples), produce correct genotype likelihoods and re-genotype the newly merged record.
 
 ## WARNING: In this step many temporary files are requiered. In order to obtain a successful run, consider the following:
-1. Change the JAVA tmp directory: export _JAVA_OPTIONS=-Djava.io.tmpdir=/100g/analysis/007a/004/tmp
+1. Change the JAVA tmp directory: export _JAVA_OPTIONS=-Djava.io.tmpdir=/tmp
 2. Extend the limit of open files: ulimit -n 32768
 
 ### GATK - parameters
