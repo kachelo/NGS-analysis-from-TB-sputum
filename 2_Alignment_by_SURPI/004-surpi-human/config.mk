@@ -1,5 +1,6 @@
 # The directory where the reference is used
 SNAP_REFERENCEDIR=`{printf "${SNAP_REFERENCEDIR:-reference}"}
+SNAP="../../softwares/snap/snap-aligner"	
 
 ## Here you should set aditional options for snap
 ##

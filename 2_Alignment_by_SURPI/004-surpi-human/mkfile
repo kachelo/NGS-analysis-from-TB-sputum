@@ -9,7 +9,7 @@ NPROC=1
 results/%.unpaired.bam:        data/%_R1.unpaired.fastq.gz     data/%_R2.unpaired.fastq.gz
 	set -x
 	mkdir -p `dirname $target`
-	snap-aligner \
+	$SNAP \
 		single \
 		$SNAP_REFERENCEDIR \
 		$prereq \
@@ -22,7 +22,7 @@ results/%.unpaired.bam:        data/%_R1.unpaired.fastq.gz     data/%_R2.unpaire
 results/%.paired.bam:        data/%_R1.paired.fastq.gz     data/%_R2.paired.fastq.gz
 	set -x
 	mkdir -p `dirname $target`
-	snap-aligner \
+	$SNAP \
 		paired \
 		$SNAP_REFERENCEDIR \
 		$prereq \
