@@ -16,7 +16,7 @@ In most linux distros, you can use the `apt` strategy to get you system up and r
 - Complete first try
 
 ```
-sudo apt install 9base fastqc unzip trimmomatic
+sudo apt install 9base fastqc unzip trimmomatic g++ zlib1g
 ```
 
 ## FASTQC
@@ -24,7 +24,7 @@ sudo apt install 9base fastqc unzip trimmomatic
 If need to use a upper version, than the one installed by system repository
 
 ```
-cd software
+cd softwares
 wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip
 unzip -q fastqc_v0.11.7.zip
 cd FastQC/
@@ -32,4 +32,13 @@ chmod +x fastqc
 ```
 
 **Note**: Remember to include the executable in the `config.mk` file
+
+## SNAP
+
+cd softwares
+git clone https://github.com/amplab/snap.git
+cd snap
+make
+**NOTE** It is recommended to use the last available release from github
+
 
