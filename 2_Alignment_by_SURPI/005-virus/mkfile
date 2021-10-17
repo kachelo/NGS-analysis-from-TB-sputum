@@ -8,7 +8,7 @@ NPROC=1
 results/%.unpaired.sam:        data/%.unpaired.bam
 	set -x
 	mkdir -p `dirname $target`
-	snap-aligner \
+	$SNAP \
 		single \
 		$SNAP_REFERENCEDIR \
 		$prereq \
@@ -20,7 +20,7 @@ results/%.unpaired.sam:        data/%.unpaired.bam
 results/%.paired.sam:        data/%.paired.bam
 	set -x
 	mkdir -p `dirname $target`
-	snap-aligner \
+	$SNAP \
 		paired \
 		$SNAP_REFERENCEDIR \
 		$prereq \

@@ -1,5 +1,6 @@
 # The directory where the reference is used
 SNAP_REFERENCEDIR='../../references/chiulab.ucsf.edu/SURPI/databases/viruses-5-2012_trimmedgi-MOD_addedgi.snap/'
+SNAP="../../softwares/snap/snap-aligner"
 
 ##Number of threads
 NT='3'
