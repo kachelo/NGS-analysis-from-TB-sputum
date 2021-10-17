@@ -1,12 +1,12 @@
 < config.mk
 # Load Global Variables
 
-# Transform BAM into SAM format
+# Transform SAM into BAM format
 #
-results/%.sam:     data/%.bam
+results/%.bam:     data/%.sam
 	set -x
 	mkdir -p `dirname $target`
-	samtools view -h $prereq > $target'.build' \
+	samtools view -S -b -h $prereq > $target'.build' \
 	&& mv $target'.build' $target
 
 # Clean up generated files

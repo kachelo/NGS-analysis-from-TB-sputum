@@ -1,7 +1,7 @@
 #!/bin/bash
 find -L data \
 	-type f \
-	-name '*bam' \
+	-name '*sam' \
 | sed -r \
 	-e 's#^data/#results/#' \
-	-e 's#\.bam$#.sam#'
+	-e 's#\.sam$#.bam#'
