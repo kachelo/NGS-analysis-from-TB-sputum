@@ -1,3 +1,5 @@
+< config.mk
+
 # Sort BAM files
 # ==============
 #
@@ -5,7 +7,7 @@ results/%.bam:	data/%.bam
 	set -x
 	mkdir -p "$(dirname "$target")"
 	BAM="results/${stem}.build.bam"
-	bin/sambamba_v0.6.6 \
+	$SAMBAMBA \
 		sort \
 		"$prereq" \
 		-o "$BAM" \
