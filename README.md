@@ -64,6 +64,19 @@ Require software installation to make the pipeline work
 
 ## reference directory
 
+### references/000-make-index
+
+This module helps to create the snap index for posterior steps
+
+**Human Reference**
+
+The Broad Institute from 2021 uses Google Cloud Bucket [here]('https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0/'), where you can accesss and download hg38.
+
+- Homo_sapiens_assembly38.fasta
+- Homo_sapiens_assembly38.fasta.fai
+
+**SURPI Databases**
+
 Here we will include *Mycobacterium* reference genome and SURPI database.
 
 **Data bases for taxonomic annotation**
