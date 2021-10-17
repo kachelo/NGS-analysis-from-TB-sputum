@@ -94,6 +94,11 @@ Here we will include *Mycobacterium* reference genome and SURPI database.
 
 **Curated references by CHIULAB for SURPI**
 
+- Used:
+http://chiulab.ucsf.edu/SURPI/databases/viruses-5-2012_trimmedgi-MOD_addedgi.fa.gz
+http://chiulab.ucsf.edu/SURPI/databases/Bacterial_Refseq_05172012.CLEAN.LenFiltered.uniq.fa.gz
+
+- Complete:
 http://chiulab.ucsf.edu/SURPI/databases/hg19_rRNA_mito_Hsapiens_rna.fa.gz
 http://chiulab.ucsf.edu/SURPI/databases/Bacterial_Refseq_05172012.CLEAN.LenFiltered.uniq.fa.gz
 http://chiulab.ucsf.edu/SURPI/databases/rapsearch_viral_aa_130628_db_v2.12.fasta.gz

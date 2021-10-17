@@ -13,5 +13,15 @@ NGS-analysis-from-TB-sputum/references/resources-broad-hg38-v0-Homo_sapiens_asse
 
 Using curated virus database from:
 http://chiulab.ucsf.edu/SURPI/databases/viruses-5-2012_trimmedgi-MOD_addedgi.fa
+http://chiulab.ucsf.edu/SURPI/databases/Bacterial_Refseq_05172012.CLEAN.LenFiltered.uniq.fa
+
+
+## Mycobacterium Tuberculosis
+
+Mycobacterium tuberculosis     ref seq   NC_000962.3 Mycobacterium_tuberculosis_H37Rv
+
+https://www.ncbi.nlm.nih.gov/nuccore/NC_000962.3
+
+It is necesary to manually download it and name it **Mycobacterium_tuberculosis_H37Rv**
 
 
