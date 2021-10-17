@@ -1,1 +1,1 @@
-TAXONOMY_DB_DIR=`{echo "${TAXONOMY_DB_DIR:-reference}"}
+TAXONOMY_DB_DIR="./../../references/ftp.ncbi.nih.gov/pub/taxonomy"
