@@ -20,8 +20,9 @@ results/%.sam:	tmp/%.sam
 		"$cores" \
 		"$TAXONOMY_DB_DIR" \
 	&& bin/sort-by-organism 'tmp/'"$stem"'.all.annotated' > "${TMPFILE}" \
-	&& mv "${TMPFILE}" $target ;
-	rm 'tmp/'"$stem"'.all.annotated'
+	&& mv "${TMPFILE}" $target \
+	&& rm 'tmp/'"$stem"'.all.annotated' \
+	&& rm 'tmp/'"$stem"'.sam' 
 
 # Extract the temporary file
 # ==========================
