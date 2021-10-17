@@ -1,0 +1,5 @@
+find -L data \
+	-name '*.fa' \
+| sed -r \
+	-e 's#\.fa#.snap#' \
+	-e 's#data#results#g'

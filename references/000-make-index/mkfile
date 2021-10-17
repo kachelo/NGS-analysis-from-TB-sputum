@@ -1,0 +1,23 @@
+< config.mk
+# Load global variables
+
+# generate index for snap aligner
+results/%.snap:	data/%.fa
+	DIR="`dirname $target | sort -u`"
+        mkdir -p "$DIR" 
+	$SNAP \
+		index \
+		$prereq \
+		$target'.build' \
+		-exact \
+		-locationSize 5 \
+	&& mv $target'.build' $target
+
+# uncompress reference in case it's needed
+data/%.fa:	data/%.fa.gz
+	gzip \
+		-d \
+		-c \
+		$prereq \
+	> $target'.build' \
+	&& mv $target'.build' $target
