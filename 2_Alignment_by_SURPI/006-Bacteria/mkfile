@@ -7,10 +7,10 @@ NPROC=1
 # snap can filter a set of files and it's more efficient to align them all on the same run
 # rather than running surpi once for each file
 # For Single end reads
-results/%.unpaired.sam:	data/%.unpaired.bam
+results/%.unpaired.sam:	data/%.unpaired.sam
 	set -x
 	mkdir -p `dirname $target`
-	snap-aligner \
+	$SNAP \
 		single \
 		$SNAP_REFERENCEDIR \
 		$prereq \
@@ -19,10 +19,10 @@ results/%.unpaired.sam:	data/%.unpaired.bam
 	&& mv $target'.build' $target
 
 # For Paired End reads
-results/%.paired.sam:	data/%.paired.bam
+results/%.paired.sam:	data/%.paired.sam
 	set -x
 	mkdir -p `dirname $target`
-	snap-aligner \
+	$SNAP \
 		paired \
 		$SNAP_REFERENCEDIR \
 		$prereq \
