@@ -1,5 +1,5 @@
 ## The directory where the reference is used
-SNAP_REFERENCEDIR='../../../reference/reference/chiulab.ucsf.edu/SURPI/databases/Bacterial_Refseq_05172012.CLEAN.LenFiltered.uniq.snap/'
+SNAP_REFERENCEDIR=" ../../references/chiulab.ucsf.edu/SURPI/databases/Bacterial_Refseq_05172012.CLEAN.LenFiltered.uniq.snap"
 
 ## Here you should set aditional options for snap
 ##
