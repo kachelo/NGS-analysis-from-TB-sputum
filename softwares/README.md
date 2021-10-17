@@ -17,6 +17,7 @@ In most linux distros, you can use the `apt` strategy to get you system up and r
 
 ```
 sudo apt install 9base fastqc unzip trimmomatic g++ zlib1g
+sudo apt install make csh htop python-dev gcc unzip g++ cpanminus ghostscript blast2 python-matplotlib git pigz parallel ncbi-blast+
 ```
 
 ## FASTQC
@@ -41,4 +42,10 @@ cd snap
 make
 **NOTE** It is recommended to use the last available release from github
 
+## SURPI
 
+```
+git clone https://github.com/chiulab/surpi.git
+```
+
+Then we use the ```download_SURPI_data.sh``` scripts in the reference directory to download all the data, to be indexed
