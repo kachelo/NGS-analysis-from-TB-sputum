@@ -1,5 +1,6 @@
 # The directory where the reference is used
-SNAP_REFERENCEDIR='../../references/Mycobacterium_tuberculosis_H37Rv.snap'
+SNAP_REFERENCEDIR="../../references/www.ncbi.nlm.nih.gov/nuccore/NC_000962.3/Mycobacterium_tuberculosis_H37Rv.snap"
+SNAP="../../softwares/snap/snap-aligner"
 
 ##Number of threads
 NT='4'

@@ -3,8 +3,6 @@
 #Remove @RG and insert \t in the spaces
 
 echo $@ \
-| sed -r \
-	-e 's#sam$#bam#'\
 | xargs samtools view -H \
 | grep @RG \
 | sed -r \

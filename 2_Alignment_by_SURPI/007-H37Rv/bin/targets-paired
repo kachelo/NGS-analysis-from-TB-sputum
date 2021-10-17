@@ -1,6 +1,6 @@
 #!/bin/sh
-find -L data/ -name '*.paired.bam' \
+find -L data/ -name '*.paired.sam' \
 | sed -r \
 	-e 's#^data/#results/#g' \
-	-e 's#_R[12]\.paired\.fastq\.gz$#.paired.bam#g' \
+	-e 's#_R[12]\.paired\.fastq\.gz$#.paired.sam#g' \
 | sort -Vu

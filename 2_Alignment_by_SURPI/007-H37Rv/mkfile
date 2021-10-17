@@ -12,36 +12,38 @@ data/%.sam:	data/%.bam
 	&& mv $target'.build' $target
 
 #Align Single End reads
-results/%.unpaired.bam:        data/%.unpaired.sam
+results/%.unpaired.sam:        data/%.unpaired.sam
 	set -x
 	mkdir -p `dirname $target`
+	bin/delete_empty_sam
+	bin/cleanup-without-data
 	RG=`bin/get_rg $prereq`
 	echo $RG
-	snap-aligner \
+	$SNAP \
 		single \
 		$SNAP_REFERENCEDIR \
 		-R $RG \
 		$prereq \
 		$SNAP_OPTS \
-		-o $target'.build.bam' \
-	&& mv $target'.build.bam' $target \
-	&& rm $prereq
+		-o $target'.build.sam' \
+	&& mv $target'.build.sam' $target 
 
 #Align Pair End reads
-results/%.paired.bam:        data/%.paired.sam
+results/%.paired.sam:        data/%.paired.sam
 	set -x
 	mkdir -p `dirname $target`
+	bin/delete_empty_sam
+	bin/cleanup-without-data
 	RG=`bin/get_rg $prereq`
         echo $RG
-	snap-aligner \
+	$SNAP \
 		paired \
 		$SNAP_REFERENCEDIR \
 		-R $RG \
 		$prereq \
 		$SNAP_OPTS \
-		-o $target'.build.bam' \
-	&& mv $target'.build.bam' $target \
-	&& rm $prereq
+		-o $target'.build.sam' \
+	&& mv $target'.build.sam' $target 
 
 # Clean up generated files
 #
