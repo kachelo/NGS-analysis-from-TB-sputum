@@ -3,4 +3,4 @@
 # Set up a dynamic mkfile for correctly updating merge targets.
 
 bin/samples \
-| xargs -I @ sh -c 'echo "results/@.sam:	$(bin/which-bam-belong-to-sample @ | tr "\n" "\t" )"'
+| xargs -I @ sh -c 'echo "results/@.bam:	$(bin/which-bam-belong-to-sample @ | tr "\n" "\t" )"'

@@ -3,7 +3,7 @@
 # Find all files in the form:
 #
 # ```
-# SAMPLE_LIBRARY_TREATMENT_PLATFORM_CENTER_L00[0-8]_R[12].bam
+# SAMPLE_LIBRARY_TREATMENT_PLATFORM_CENTER_L00[0-8]_[un]paired.bam
 # ```
 #
 # Library contains two parts: PANEL-WORKTABLE
@@ -12,8 +12,8 @@
 
 find -L data \
 	-type f \
-	-name '*.sam' \
+	-name '*.bam' \
 | sed -r \
 	-e 's#^data/#results/#' \
-	-e 's#/([A-Za-z0-9.-]+)_([A-Za-z0-9.]+)(-[A-Za-z0-9.]+)?_.*\.sam$#/\1.bam#' \
+	-e 's#_L([0-9])*\.(un)?paired##' \
 | sort -u

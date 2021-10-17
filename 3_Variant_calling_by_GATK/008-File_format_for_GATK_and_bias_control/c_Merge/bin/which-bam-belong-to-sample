@@ -2,5 +2,5 @@
 
 find -L data \
 	-type f \
-	-ipath "*${@}*.sam" 
+	-ipath "*${@}*.bam" 
 

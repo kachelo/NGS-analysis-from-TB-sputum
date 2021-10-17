@@ -7,13 +7,7 @@ This module merges the content of a directory
 Usage
 =====
 
-First create the `data/` directory running
-
-```
-$ bin/create-data
-```
-
-Then, run the merge objective by calling:
+Run the merge objective by calling:
 
 ```
 $ bin/targets | xargs mk
@@ -38,7 +32,7 @@ but some information pertaining to the experimental design cannot.
 The naming convention is:
 
 ```
-SAMPLE_LIBRARY_TREATMENT_PLATFORM_CENTER_L00[0-8]_R[12].fastq.gz
+SAMPLE_LIBRARY_TREATMENT_PLATFORM_CENTER_L00[0-8]_[un]paired.bam
 ```
 
 These field cannot contain `_` , `()` or ` ` (underscore parentheses or spaces).
@@ -57,8 +51,7 @@ Design considerations
 
 On downstream analyses, it is convenient to have one sample per file.
 
-On LDG, there may be samples processed by different panels
-and they should be treated by their own.
+There may be samples processed by different panels and they should be treated by their own.
 
 
 Requirements
@@ -70,6 +63,4 @@ Requirements
 
 - [`mk`](http://doc.cat-v.org/bell_labs/mk/mk.pdf "A successor for `make`.")
 
-- [`Picard`](https://broadinstitute.github.io/picard/ "Command line tools for manipulating HTS data and formats such as SAM/BAM/CRAM and VCF.")
-
-
+- [`samtools`](https://www.htslib.org "Samtools. Reading/writing/editing/indexing/viewing SAM/BAM/CRAM format")

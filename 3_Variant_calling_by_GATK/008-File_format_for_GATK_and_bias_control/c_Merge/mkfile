@@ -8,21 +8,14 @@
 # for creating a merged bam.
 #
 <|bin/prereqs
-results/%.sam:
+results/%.bam:
 	set -x
 	mkdir -p "$(dirname "${target}")"
-	TMPFILE="results/${stem}.build.sam"
+	TMPFILE="results/${stem}.build.bam"
 	samtools merge \
 		"${TMPFILE}" \
 		$(bin/which-bam-belong-to-sample "$stem") \
 	&& mv "${TMPFILE}" "${target}"
-
-#Conver sam into bam format
-results/%.bam:	results/%.sam
-	mkdir -p "$(dirname "$target")"
-	samtools view -Sb $prereq > "$target"'.build' \
-	&& mv "$target"'.build' "$target" \
-	&& rm $prereq
 
 # Clean up generated files
 # ========================
