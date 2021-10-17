@@ -16,8 +16,7 @@ In most linux distros, you can use the `apt` strategy to get you system up and r
 - Complete first try
 
 ```
-sudo apt install 9base fastqc unzip trimmomatic g++ zlib1g
-sudo apt install make csh htop python-dev gcc unzip g++ cpanminus ghostscript blast2 python-matplotlib git pigz parallel ncbi-blast+
+sudo apt install 9base fastqc unzip trimmomatic g++ zlib1g samtools
 ```
 
 ## FASTQC

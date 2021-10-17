@@ -214,17 +214,17 @@ Note: The reads obtained under these mapping conditions were re-aligned with the
 
 ## 008- File format for GATK and bias control
 
-### a) Sort
+### a) SAM to BAM files converter
+
+This module converts sam files to bam to do posterior steps.
+
+### b) Sort
 
 This module uses SAMBAMBA to sort (sort) the bam files that come from the previous module.
 
-### b) BAM to SAM files converter
-
-This module converts bam files to sam to do the merge. 
-
 ### c) Merge
 
-This module uses samtools to merge sam files with the same name or folio. That is, it groups all the lines of each sample and converts those sam files to bam to continue the process.
+This module uses samtools to merge sam files with the same name or folio, i. e., it groups all the lines of each sample to continue the process.
 
 ### d) BAI files
 
