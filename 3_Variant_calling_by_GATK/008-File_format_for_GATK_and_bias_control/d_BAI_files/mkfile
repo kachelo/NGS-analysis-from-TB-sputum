@@ -4,7 +4,7 @@
 ##Generate index for bam
 results/%.bam.bai: data/%.bam
         set -x
-        bin/sambamba_v0.6.6 index \
+        $SAMBAMBA index \
                 --nthreads=$SAMBAMBA_THREADS \
                 $prereq $target.build \
         && mv $target.build $target \
