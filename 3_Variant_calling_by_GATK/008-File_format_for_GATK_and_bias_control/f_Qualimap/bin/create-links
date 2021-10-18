@@ -3,10 +3,12 @@
 # Then, generate a symbolic links to the *.bam and *.bai files
 
 #Get the directory to create
-DATA_DIRECTORY=`basename $@`
-
-#Create the directory
-mkdir -p "results/"$DATA_DIRECTORY
+DATA_DIRECTORY=`basename $@ \
+| sed -r \
+	-e 's#\.bam##'
+`
+#Create directory
+mkdir -p "results/$DATA_DIRECTORY"
 
 #Create the symbolic links
 find -L $@ \

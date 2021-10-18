@@ -1,7 +1,9 @@
 #!/bin/sh
-find -L results \
+find -L data \
     -mindepth 1 \
+    -maxdepth 1 \
     -type d \
 | sed -r \
-    -e 's#$#/multi-bamqc/complete_report.pdf#'
+    -e 's#$#/multi-bamqc/complete_report.pdf#' \
+    -e 's#^data#results#'
 

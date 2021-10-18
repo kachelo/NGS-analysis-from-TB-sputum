@@ -35,19 +35,30 @@ chmod +x fastqc
 
 ## SNAP
 
+```
 cd softwares
 git clone https://github.com/amplab/snap.git
 cd snap
 make
+```
 **NOTE** It is recommended to use the last available release from github
 
 ## SAMBAMBA
 
+```
 wget https://github.com/biod/sambamba/releases/download/v0.8.1/sambamba-0.8.1-linux-amd64-static.gz
 gunzip sambamba-0.8.1-linux-amd64-static
 chmod +x sambamba-0.8.1-linux-amd64-static
 ln -s sambamba-0.8.1-linux-amd64-static sambamba
+```
 
+## Qualimap
+
+```
+wget https://bitbucket.org/kokonech/qualimap/downloads/qualimap_v2.2.1.zip
+unzip qualimap_v2.2.1.zip
+ln -s qualimap_v2.2.1/qualimap 
+```
 
 ## SURPI
 

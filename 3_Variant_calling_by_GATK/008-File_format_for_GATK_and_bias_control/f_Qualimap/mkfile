@@ -1,20 +1,37 @@
-<config.mk
+< config.mk
 # Load global variables
 #
+#Create the necesary symbolic links
+results/%/links: data/%
+	set -x
+        DIR=`dirname $target`
+        mkdir -p "$DIR"
+        bin/create-links $prereq
+	touch $target
+
 #Compute the classical qualimap report for a single bam file
-results/%/qualimap_report.html:	data/%.bam
+results/(.*)/(.*)/qualimapReport.html:R:	'data/\1/\2.bam' 'results/\1/links'
+	set -x
 	DIR=`dirname $target`
 	mkdir -p "$DIR"
-	qualimap bamqc \
-		-bam $prereq \
-		-outdir "$DIR"
+	$QUALIMAP bamqc \
+		-bam results/"$stem1"/"$stem2".bam \
+		-outdir "$DIR" \
+		--java-mem-size=$RAM
+
+#Create the necesary design.tab file 
+results/%_design.tab:	results/%/links 
+        set -x
+	bin/targets-sample-table results/"$stem" > "$target"".build" \
+	&& mv "$target"".build" "$target" 
 
 #Generate the individul reports from bam files and make the multibam-qc
-results/%/multi-bamqc/complete_report.pdf : %_design.tab
+results/%/multi-bamqc/complete_report.pdf : results/%_design.tab
+	set -x
 	OUTDIR=`dirname $target`
 	mkdir -p $OUTDIR
 	FILE=`basename $target`
-	qualimap multi-bamqc \
+	$QUALIMAP multi-bamqc \
 		-d $prereq \
 		-r \
 		-outformat PDF:HTML \
@@ -28,7 +45,7 @@ results/%/multi-bamqc/report.pdf : %_qc.tab
 	OUTDIR=`dirname $target`
 	mkdir -p $OUTDIR
 	FILE=`basename $target`
-	qualimap multi-bamqc \
+	$QUALIMAP multi-bamqc \
 	    -d $prereq \
 	    -outformat PDF:HTML \
 	    -outfile $FILE".build" \
@@ -36,3 +53,6 @@ results/%/multi-bamqc/report.pdf : %_qc.tab
 	    --java-mem-size=$RAM \
 	&& mv $target".build.pdf" $target
 
+#Clean results
+clean:V:
+	rm -r results/*
