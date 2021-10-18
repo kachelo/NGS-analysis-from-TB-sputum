@@ -1,28 +1,25 @@
+< config.mk
+#Load global variables
+
 # Mark Duplicated Reads
 # =====================
 #
 # Detect wether the input files are amplicons.
 # If they are, pass them unchanged to results,
-# if they are not, Mark duplicated reads using Picard.
+# if they are not, Mark duplicated reads using sambamba
 #
 results/%.bam:	data/%.bam
 	mkdir -p `dirname $target`
 	TMPFILE="results/${stem}.build.bam"
 	bin/is-amplicon $prereq \
 	&& ln -s ${prereq} ${target} \
-	|| bin/sambamba_v0.6.6 markdup \
+	|| $SAMBAMBA markdup \
 		${prereq} \
 		${TMPFILE} \
 	&& {
 		mv ${TMPFILE} ${target}
 		mv ${TMPFILE}.bai ${target}.bai
 	}
-
-# Convert sam into bam format
-data/%.bam: data/%.sam
-	mkdir -p "$(dirname "$target")"
-	samtools view -Sb $prereq > "$target"'.build' \
-	&& mv "$target"'.build' "$target"
 
 # Clean up generated files
 # ========================
