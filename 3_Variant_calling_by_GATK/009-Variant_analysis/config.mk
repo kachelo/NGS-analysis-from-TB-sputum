@@ -5,7 +5,7 @@ GATK="../../../softwares/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.ja
 
 ############Reference Genome fasta file
 ##Para 1-H37RV
-REF="../../../references/www.ncbi.nlm.nih.gov/nuccore/NC_000962.3/Mycobacterium_tuberculosis_H37Rv.fa"
+REF="../../../references/www.ncbi.nlm.nih.gov/nuccore/NC_000962.3/Mycobacterium_tuberculosis_H37Rv"
 
 ############dbSNP
 ##Para 1-H37RV

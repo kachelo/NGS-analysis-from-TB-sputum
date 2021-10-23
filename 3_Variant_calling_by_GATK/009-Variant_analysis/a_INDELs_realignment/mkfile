@@ -2,11 +2,11 @@
 # Load global variables for Variant Calling with GATK
 
 # Generate BAM using the calculated intervals
-results/%.ir.rtc.bam:	data/%.bam results/%.intervals
+results/%.ir.rtc.bam:	data/%.bam results/%.intervals $REF".fa" $coordenadas
 	set -x
 	java -jar $GATK \
 		-T IndelRealigner \
-		-R $REF \
+		-R $REF".fa" \
 		-I "data/"$stem".bam" \
 		-L $coordenadas \
 		-targetIntervals "results/"$stem".intervals" \
@@ -15,14 +15,26 @@ results/%.ir.rtc.bam:	data/%.bam results/%.intervals
 	&& mv $target".build.bai" $target".bai"
 
 # Calculare intervals from the original BAM files
-results/%.intervals: data/%.bam 
+results/%.intervals: data/%.bam $REF".fa" $REF".fa.fai" $REF".dict" $coordenadas
 	set -x
 	mkdir -p `dirname $target`
 	java -jar $GATK \
 		-T RealignerTargetCreator \
-		-R $REF \
+		-R $REF".fa" \
 		-I "data/"$stem".bam" \
 		-o $target".build" \
 		-nt $NT \
 		-L $coordenadas \
 	&& mv $target".build" $target
+
+#Create reference index file if not present
+$REF"fa.fai": $REF".fa"
+	set -x
+	samtools faidx $REF".fa"
+
+#Create reference dict file if not present
+$REF".dict": $REF".fa"
+        set -x
+        samtools dict $REF".fa" > $target".build" \
+	&& mv $target".build" $target 
+	
