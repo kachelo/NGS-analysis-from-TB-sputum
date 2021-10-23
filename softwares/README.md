@@ -60,6 +60,15 @@ unzip qualimap_v2.2.1.zip
 ln -s qualimap_v2.2.1/qualimap 
 ```
 
+## GATK
+
+Using version 3.8 you can download it from 
+```
+https://console.cloud.google.com/storage/browser/gatk-software/package-archive/gatk;tab=objects?prefix=&forceOnObjectsSortingFiltering=false 
+wget https://storage.googleapis.com/gatk-software/package-archive/gatk/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
+bunzip2 GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2 
+tar -xvf GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar 
+```
 ## SURPI
 
 ```
