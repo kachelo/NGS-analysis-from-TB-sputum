@@ -1,7 +1,7 @@
 #PATH to executables. Should include java and other dependencies as directed by README.md of the pipeline.
 
 #PATH to call GATK jar file
-GATK="/usr/share/java/GenomeAnalysisTK3.8.jar"
+GATK="../../softwares/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar"
 
 ############Reference Genome fasta file
 ##Para 1-H37RV
