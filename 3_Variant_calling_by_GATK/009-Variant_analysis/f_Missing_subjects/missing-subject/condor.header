@@ -1,9 +1,0 @@
-# Opciones generales de HTCondor.
-universe = vanilla
-#
-initialdir = /labs/lf/tb/2-variantes/013-vcf-qc/analysis/001-missing-subject
-should_transfer_files = NO
-getenv = True
-#
-# Recursos necesarios para ejecutar el trabajo.
-request_cpus = 1
