@@ -8,7 +8,7 @@ results/%.snp.vcf:Q: data/%.vcf
         mkdir -p $(dirname $target)
         java -jar $GATK \
 		-T SelectVariants \
-		-R $REF \
+		-R $REF".fa" \
 		-V $prereq \
 		-selectType SNP \
 		-nt $NT \
@@ -21,7 +21,7 @@ results/%.filtered_snp.vcf:Q: results/%.snp.vcf
 	echo "[DEBUGGING_HERE] filtering SNP for $target"
 	java -jar $GATK \
 		-T VariantFiltration \
-		-R $REF \
+		-R $REF".fa" \
 		-V $prereq \
 		--filterExpression "QD < 2.0 || FS > 60.0 || MQ < 30.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
 		--filterName "hard_filter" \
@@ -36,7 +36,7 @@ results/%.indel.vcf:Q: data/%.vcf
         mkdir -p $(dirname $target)
         java -jar $GATK \
                 -T SelectVariants \
-                -R $REF \
+                -R $REF".fa" \
                 -V $prereq \
                 -selectType INDEL \
                 -nt $NT \
@@ -49,7 +49,7 @@ results/%.filtered_indel.vcf:Q: results/%.indel.vcf
 	echo "[DEBUGGING] filtering INDEL for $target"
 	java -jar $GATK \
 		-T VariantFiltration \
-		-R $REF \
+		-R $REF".fa" \
 		-V $prereq \
 		--filterExpression "QD < 2.0 || FS > 200.0 || ReadPosRankSum < -20.0" \
 		--filterName "hard_filter" \
@@ -62,7 +62,7 @@ results/%.filtered.vcf:Q: results/%.filtered_snp.vcf results/%.filtered_indel.vc
 	echo "[DEBUGGING] creating $target"
 	java -jar $GATK \
 		-T CombineVariants \
-		-R $REF \
+		-R $REF".fa" \
 		-V results/$stem.filtered_snp.vcf \
 		-V results/$stem.filtered_indel.vcf \
 		-nt $NT \
@@ -74,6 +74,6 @@ results/%.filtered.vcf:Q: results/%.filtered_snp.vcf results/%.filtered_indel.vc
 # Finally the HARD FILTERED VCF file
 results/%.hard_filtered.vcf:Q: results/%.filtered.vcf
 	echo "[DEBUGGING] removing variants that did not pass hard filter"
-	grep -v "100MX_hard_filter" $prereq > $target.build \
+	grep -v "hard_filter" $prereq > $target.build \
 	&& mv $target.build $target
 	
