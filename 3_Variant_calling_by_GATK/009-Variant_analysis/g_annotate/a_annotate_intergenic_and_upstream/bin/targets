@@ -1,0 +1,8 @@
+#!/bin/bash
+find -L data \
+	-type f \
+	-name '*vcf' \
+| sed -r \
+	-e 's#^data/#results/#' \
+	-e 's#\.vcf$#-ANN-TBDream-NotANN-Upstream.vcf#' \
+| grep -v known
