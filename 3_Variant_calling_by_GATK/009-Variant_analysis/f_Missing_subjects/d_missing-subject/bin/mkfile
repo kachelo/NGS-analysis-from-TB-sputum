@@ -1,0 +1,48 @@
+< config.mk
+
+# Get Allele Count (AC) and individual Genotype (GT) to make descriptive statistics
+# about the samples' variant calling performance
+#
+results/%.tab:	data/%.vcf
+	mkdir -p "$(dirname "$target")"
+	bcftools view \
+		-h \
+		$prereq \
+	| tail -n 1 \
+	| sed -r \
+		-e 's#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFORMAT#POS\tREF\tALT\tAN#' \
+	> "$target"'.build' 
+	bcftools norm \
+		-m -any \
+		$prereq \
+	| bcftools query \
+		-f '%POS\t%REF\t%ALT\t%AN\t[%GT\t]\n' >> "$target"'.build' \
+	&& mv "$target"'.build' "$target"
+
+# Quality Control
+# ===============
+#
+# Generate QC from the extracted .tab data. Basically a VCF presence figure of panels.
+#
+qc:V:
+	cd qc
+	bin/targets | xargs mk
+
+# Unit tests
+# ==========
+#
+# Verify everything works correctly.
+#
+test	tests:QV:
+	cd test
+	rm -f tests.log
+	./run_tests \
+	|| less tests.log
+
+# Clean up generated files
+#
+# **Cuidado: puede ocasionar pérdida de datos.**
+# (todos deberían poderse regenerar, pero asegúrate de que ya no se usan).
+#
+clean:V:
+	bin/targets | xargs rm -f
