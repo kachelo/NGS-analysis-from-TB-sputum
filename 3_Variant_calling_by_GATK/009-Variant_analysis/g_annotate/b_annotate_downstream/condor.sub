@@ -1,0 +1,123 @@
+# Opciones generales de HTCondor.
+universe = vanilla
+#
+initialdir = /labs/lf/tb/2-variantes/013-vcf-qc/analysis/003-annotate
+should_transfer_files = NO
+getenv = True
+#
+# Recursos necesarios para ejecutar el trabajo.
+request_cpus = 1
+request_memory = 6GB
+request_disk = 1GB
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/diploide/filtrado/NO-PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/diploide/filtrado/NO-PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/diploide/filtrado/NO-PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/diploide/filtrado/NO-PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/diploide/filtrado/NO-PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/diploide/filtrado/NO-PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/diploide/filtrado/NO-PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/diploide/filtrado/NO-PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/diploide/filtrado/NO-PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/diploide/filtrado/NO-PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/diploide/filtrado/NO-PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/diploide/filtrado/NO-PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/diploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/diploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/diploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/diploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/diploide/filtrado/PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/diploide/filtrado/PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/diploide/filtrado/PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/diploide/filtrado/PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/diploide/filtrado/PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/diploide/filtrado/PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/diploide/filtrado/PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/diploide/filtrado/PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/diploide/filtrado/PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/diploide/filtrado/PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/diploide/filtrado/PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/diploide/filtrado/PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/NO-PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/NO-PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/NO-PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/NO-PASS/Direct-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/NO-PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/NO-PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/NO-PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/NO-PASS/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/NO-PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/NO-PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/NO-PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/NO-PASS/Direct-H37Rv-D3/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/1-H37Rv/haploide/filtrado/NO-PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf
+output = results/1-H37Rv/haploide/filtrado/NO-PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_out
+log = results/1-H37Rv/haploide/filtrado/NO-PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_log
+error = results/1-H37Rv/haploide/filtrado/NO-PASS/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.NO-PASS-ANN-TBDream-NotANN-Upstream-NotANN-Downstream.vcf.condor_err
+queue

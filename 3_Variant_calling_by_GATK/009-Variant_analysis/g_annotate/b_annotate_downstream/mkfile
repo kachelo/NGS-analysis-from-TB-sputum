@@ -1,0 +1,88 @@
+< config.mk
+
+#Adapt known variants chromosome name
+data/known_final_NC.vcf:	data/known_final.vcf
+	mkdir -p "$(dirname "$target")"
+	cat $prereq \
+	| sed -r \
+		-e 's#NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome#NC_000962#g' \
+	> "$target"'.build' \
+	&& mv "$target"'.build' "$target"
+
+#Compress vcf and index
+results/%.vcf.gz:	data/%.vcf
+	mkdir -p "$(dirname "$target")"
+	bgzip -c $prereq \
+	> "$target"'.build' \
+	&& mv "$target"'.build' "$target" \
+	&& tabix -p vcf $target
+
+#Split into ANN
+results/%-Upstream-ANN.vcf:	results/%-Upstream.vcf.gz
+	mkdir -p "$(dirname "$target")"
+	bcftools view -h $prereq \
+	> "$target"'.build' \
+	&& bcftools view -H $prereq \
+	| grep ANN \
+	>> "$target"'.build' \
+	&& mv "$target"'.build' "$target"
+
+#Split into Not ANN
+results/%-Upstream-NotANN.vcf:  results/%-Upstream.vcf.gz
+	mkdir -p "$(dirname "$target")"
+	bcftools view -h $prereq \
+	> "$target"'.build' \
+	&& bcftools view -H $prereq \
+	| grep -v ANN \
+	>> "$target"'.build' \
+	&& mv "$target"'.build' "$target"
+
+# Generate an annotated VCF file using gff data.
+results/%-Upstream-NotANN-Downstream.vcf \
+results/%-Upstream-NotANN-Downstream.html:	results/%-Upstream-NotANN.vcf results/%-Upstream-ANN.vcf
+	mkdir -p "$(dirname "$target")"
+	java -Xmx5g -jar \
+		bin/snpEff.jar \
+		NC_000962.3 \
+		"results/"$stem"-Upstream-NotANN.vcf" \
+		-v \
+		-hgvs1LetterAa \
+		-no-upstream \
+		-no-intergenic \
+		-ud 100 \
+		-no-intron \
+		-noLof \
+		-stats "results/${stem}-Upstream-NotANN-Downstream.html" \
+	> "results/${stem}-Upstream-NotANN-Downstream.vcf.build" \
+	&& mv "$target"'.build' "$target" \
+	&& rm "results/"$stem"-Upstream-NotANN.vcf" \
+	&& rm "results/"$stem"-Upstream.vcf.gz" \
+	&& rm "results/"$stem"-Upstream.vcf.gz.tbi"
+
+# Quality Control
+# ===============
+#
+# Here you should describe why you choose this qc.
+#
+qc:V:
+	cd qc
+	bin/targets | xargs mk
+
+# Unit tests
+# ==========
+#
+# Verify everything works correctly.
+#
+test	tests:QV:
+	cd test
+	rm -f tests.log
+	./run_tests \
+	|| less tests.log
+
+# Clean up generated files
+#
+# **Cuidado: puede ocasionar pérdida de datos.**
+# (todos deberían poderse regenerar, pero asegúrate de que ya no se usan).
+#
+clean:V:
+	bin/targets | xargs rm -f
