@@ -1,4 +1,5 @@
 < ../config.mk
+#Load Global variables
 
 #-ploidy 1 for haploide
 # remove for diploide
@@ -7,7 +8,7 @@ results/%.g.vcf:	data/%.recal2.bam
 	mkdir -p `dirname $target`
 	java -jar $GATK \
 		-T HaplotypeCaller \
-		-R $REF \
+		-R $REF".fa" \
 		-I "data/"$stem".recal2.bam" \
 		-ploidy 2 \
 		--minPruning 3 \

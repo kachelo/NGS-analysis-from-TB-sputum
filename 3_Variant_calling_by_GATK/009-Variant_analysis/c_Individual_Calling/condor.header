@@ -1,9 +1,0 @@
-# Opciones generales de HTCondor.
-universe = vanilla
-#
-initialdir = /labs/lf/tb/2-variantes/012-mk-gatk/1-H37Rv-analysis/003
-should_transfer_files = NO
-getenv = True
-#
-# Recursos necesarios para ejecutar el trabajo.
-request_cpus = 3
