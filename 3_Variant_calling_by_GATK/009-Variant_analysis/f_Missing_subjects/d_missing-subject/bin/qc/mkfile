@@ -1,0 +1,24 @@
+< config.mk
+
+# Quality Control
+# ===============
+#
+# Generate a Rmd report for the corresponding input file
+# - Variants across the population using AN
+# - Sample accesibility measured by the Genotype precense 
+
+results/%/panel.pdf \
+results/%/AN_summary.tab \
+results/%/missing_variants_summary.tab \
+results/%/sample_summary.tab:	data/%/Llamado-conjunto_raw.PASS.tab
+	mkdir -p "$(dirname "$target")"
+	Rscript bin/panel.R \
+		-f $prereq\
+		-o `dirname 'results/'"$stem"'/panel.pdf'` \
+	&& {
+		mv 'results/'"$stem"'/panel.build.pdf' 'results/'"$stem"'/panel.pdf' 
+		mv 'results/'"$stem"'/AN_summary.build.tab' 'results/'"$stem"'/AN_summary.tab'
+		mv 'results/'"$stem"'/missing_variants_summary.build.tab' 'results/'"$stem"'/missing_variants_summary.tab'
+		mv 'results/'"$stem"'/sample_summary.build.tab' 'results/'"$stem"'/sample_summary.tab'
+	}
+

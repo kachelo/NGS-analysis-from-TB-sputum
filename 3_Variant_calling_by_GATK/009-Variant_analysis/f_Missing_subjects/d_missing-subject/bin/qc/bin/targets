@@ -1,0 +1,7 @@
+#!/bin/bash
+find -L data \
+	-type f \
+	-name 'Llamado-conjunto_raw.PASS.tab' \
+| sed -r \
+	-e 's#^data/#results/#' \
+	-e 's#Llamado-conjunto_raw.PASS.tab$#panel.pdf#'
