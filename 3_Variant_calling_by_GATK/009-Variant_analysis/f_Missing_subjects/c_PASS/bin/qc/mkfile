@@ -1,0 +1,18 @@
+< config.mk
+
+# Quality Control
+# ===============
+#
+# Get the DP 
+#
+results/%.tab:	data/%.vcf
+	mkdir -p "$(dirname "$target")"
+	echo "CHROM\tPOS\tREF\tALT\tQUAL\tAC\tAF\tAN\tDP\tMQ" \
+	> "$target"'.build' \
+	&& bcftools norm \
+		-m -any \
+		"$prereq" \
+	| bcftools query \
+		-f '%CHROM\t%POS\t%REF\t%ALT\t%QUAL\t%INFO/AC\t%INFO/AF\t%INFO/AN\t%INFO/DP\t%INFO/MQ\n' \
+	>> "$target"'.build' \
+	&& mv "$target"'.build' "$target"
