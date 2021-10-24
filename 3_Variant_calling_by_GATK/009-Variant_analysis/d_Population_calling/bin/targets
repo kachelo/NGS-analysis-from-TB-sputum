@@ -1,6 +1,6 @@
 #!/bin/bash
 find -L data/ \
-	-mindepth 3\
+	-mindepth 1 \
 	-type d \
 | sed -r \
 	-e "s#^data#results#" \

@@ -11,7 +11,7 @@ results/%/Llamado-conjunto_raw.vcf:
         java -jar $GATK \
                 -T GenotypeGVCFs \
 		-ploidy 2 \
-                -R $REF \
+                -R $REF".fa" \
                 $DATOS \
                 --disable_auto_index_creation_and_locking_when_reading_rods \
                 -nt $NT \
