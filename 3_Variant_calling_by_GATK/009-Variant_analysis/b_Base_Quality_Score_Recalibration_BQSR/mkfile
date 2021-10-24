@@ -7,7 +7,7 @@ results/%.recal-tab1:	data/%.ir.rtc.bam
 	mkdir -p `dirname $target`
 	java -jar $GATK \
 		-T BaseRecalibrator \
-		-R $REF \
+		-R $REF".fa" \
 		-I "data/"$stem".ir.rtc.bam" \
 		-knownSites $dbSNP \
 		-nct $NT \
@@ -20,7 +20,7 @@ results/%.recal1.bam: data/%.ir.rtc.bam results/%.recal-tab1
 	set -x
 	java -jar $GATK \
 		-T PrintReads \
-		-R $REF \
+		-R $REF".fa" \
 		-I "data/"$stem".ir.rtc.bam" \
 		-o $target".build" \
                 -BQSR "results/"$stem".recal-tab1" \
@@ -34,7 +34,7 @@ results/%.recal-tab2:        results/%.recal1.bam
         set -x
         java -jar $GATK \
 		-T BaseRecalibrator \
-		-R $REF \
+		-R $REF".fa" \
 		-I "results/"$stem".recal1.bam" \
 		-knownSites $dbSNP \
 		-nct $NT \
@@ -48,7 +48,7 @@ results/%.BQSR_plot.pdf:  results/%.recal-tab2 results/%.recal-tab1
 	java -jar $GATK \
 		-T AnalyzeCovariates \
 		-l DEBUG \
-		-R $REF \
+		-R $REF".fa" \
 		-before "results/"$stem".recal-tab1" \
 		-after "results/"$stem".recal-tab2" \
 		-csv "results/"$stem".BQSR_plot.csv.build" \
@@ -63,7 +63,7 @@ results/%.recal2.bam: results/%.recal1.bam results/%.recal-tab2  results/%.BQSR_
 	mkdir -p `dirname $target`
         java -jar $GATK \
                 -T PrintReads \
-                -R $REF \
+                -R $REF".fa" \
                 -I "results/"$stem".recal1.bam" \
                 -o $target".build" \
                 -nct $NT \
