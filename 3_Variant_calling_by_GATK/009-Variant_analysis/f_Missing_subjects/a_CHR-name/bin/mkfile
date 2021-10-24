@@ -1,0 +1,40 @@
+< config.mk
+
+# Replace long to short CHR name.
+#
+results/%.hard_filtered.vcf:	data/%.hard_filtered.vcf
+	mkdir -p "$(dirname "$target")"
+	cat $prereq \
+	| sed -r \
+		-e 's#NC_000962.3_Mycobacterium_tuberculosis_H37Rv,_complete_genome#NC_000962.3#g' \
+		-e 's#"NC_000962.3"#NC_000962.3#g' \
+	> "$target"'.build' \
+	&& mv "$target"'.build' "$target"
+
+# Quality Control
+# ===============
+#
+# Here you should describe why you choose this qc.
+#
+qc:V:
+	cd qc
+	bin/targets | xargs mk
+
+# Unit tests
+# ==========
+#
+# Verify everything works correctly.
+#
+test	tests:QV:
+	cd test
+	rm -f tests.log
+	./run_tests \
+	|| less tests.log
+
+# Clean up generated files
+#
+# **Cuidado: puede ocasionar pérdida de datos.**
+# (todos deberían poderse regenerar, pero asegúrate de que ya no se usan).
+#
+clean:V:
+	bin/targets | xargs rm -f

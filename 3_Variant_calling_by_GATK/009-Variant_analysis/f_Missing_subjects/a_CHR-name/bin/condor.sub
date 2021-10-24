@@ -1,0 +1,37 @@
+# Opciones generales de HTCondor.
+universe = vanilla
+#
+initialdir = /labs/lf/tb/2-variantes/013-vcf-qc/analysis/000a-CHR-name
+should_transfer_files = NO
+getenv = True
+#
+# Recursos necesarios para ejecutar el trabajo.
+request_cpus = 1
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/diploide/filtrado/Direct-H37Rv-D12/Llamado-conjunto_raw.hard_filtered.vcf
+output = results/diploide/filtrado/Direct-H37Rv-D12/Llamado-conjunto_raw.hard_filtered.vcf.condor_out
+log = results/diploide/filtrado/Direct-H37Rv-D12/Llamado-conjunto_raw.hard_filtered.vcf.condor_log
+error = results/diploide/filtrado/Direct-H37Rv-D12/Llamado-conjunto_raw.hard_filtered.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/diploide/filtrado/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.hard_filtered.vcf
+output = results/diploide/filtrado/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.hard_filtered.vcf.condor_out
+log = results/diploide/filtrado/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.hard_filtered.vcf.condor_log
+error = results/diploide/filtrado/MTC-D3-H37Rv-D3/Llamado-conjunto_raw.hard_filtered.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/diploide/filtrado/Direct-H37Rv-D3/Llamado-conjunto_raw.hard_filtered.vcf
+output = results/diploide/filtrado/Direct-H37Rv-D3/Llamado-conjunto_raw.hard_filtered.vcf.condor_out
+log = results/diploide/filtrado/Direct-H37Rv-D3/Llamado-conjunto_raw.hard_filtered.vcf.condor_log
+error = results/diploide/filtrado/Direct-H37Rv-D3/Llamado-conjunto_raw.hard_filtered.vcf.condor_err
+queue
+
+executable = /usr/bin/time
+arguments = /usr/lib/plan9/bin/mk results/diploide/filtrado/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.hard_filtered.vcf
+output = results/diploide/filtrado/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.hard_filtered.vcf.condor_out
+log = results/diploide/filtrado/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.hard_filtered.vcf.condor_log
+error = results/diploide/filtrado/MTC-D3-H37Rv-D12/Llamado-conjunto_raw.hard_filtered.vcf.condor_err
+queue
