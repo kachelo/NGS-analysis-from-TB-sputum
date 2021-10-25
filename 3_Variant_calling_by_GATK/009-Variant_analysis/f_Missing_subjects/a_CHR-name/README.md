@@ -1,25 +1,18 @@
-@@Module Name@@
+CHR-name
 ===============
 
-@@Module description and objectives@@
+Change long to short chr name in vcf file
 
 # Usage
 
-@@What format and consideration must be used for input files.@@
+It is require the population vcf file
 
 ```
 $ bin/targets | xargs mk
 ```
 
-Your @@kind@@ files will be on `results/` when the process ends.
+The new vcf file only changes the chr name
 
-# Options
-
-@@How can you customize the analysis using environment vars or config.mk@@
-
-# Design considerations
-
-@@What was taken into account to build this project?@@
 
 # Requirements
 
@@ -31,8 +24,3 @@ Your @@kind@@ files will be on `results/` when the process ends.
 
 - [@@aditional software@@](@@software URL@@ "@@Description@@")
 
-# References
-
-@@What documents did you used for making this module?@@
-
-@@Where is the documentation for the software used?@@

@@ -1,5 +1,6 @@
 < config.mk
-
+# Load global variables if any
+#
 # Replace long to short CHR name.
 #
 results/%.hard_filtered.vcf:	data/%.hard_filtered.vcf
@@ -11,30 +12,6 @@ results/%.hard_filtered.vcf:	data/%.hard_filtered.vcf
 	> "$target"'.build' \
 	&& mv "$target"'.build' "$target"
 
-# Quality Control
-# ===============
-#
-# Here you should describe why you choose this qc.
-#
-qc:V:
-	cd qc
-	bin/targets | xargs mk
-
-# Unit tests
-# ==========
-#
-# Verify everything works correctly.
-#
-test	tests:QV:
-	cd test
-	rm -f tests.log
-	./run_tests \
-	|| less tests.log
-
-# Clean up generated files
-#
-# **Cuidado: puede ocasionar pérdida de datos.**
-# (todos deberían poderse regenerar, pero asegúrate de que ya no se usan).
-#
+# Clean previous files
 clean:V:
 	bin/targets | xargs rm -f
