@@ -1,0 +1,47 @@
+< config.mk
+
+# Transform the ANN vcf file into a tsv ready for R use.
+
+#Get the TSV file form the VCF file
+results/%.tsv:	data/%.vcf
+	mkdir -p "$(dirname "$target")"
+	bin/vcf2tsv.sh $prereq \
+	> "$target"'.build' \
+	&& mv "$target"'.build' "$target"
+
+#Get the GENO file for the genotypes from the VCF file
+'results/(.*)/(ha|di)ploide/(.*).geno':R:	'results/\1/\2ploide/\3.tsv'
+	mkdir -p "$(dirname "$target")"
+	"bin/vcf2geno"$stem2"ploide.sh" "data/"$stem1"/"$stem2"ploide/"$stem3".vcf" \
+	> "$target"'.build' \
+	&& mv "$target"'.build' "$target"
+
+
+
+# Quality Control
+# ===============
+#
+# Here you should describe why you choose this qc.
+#
+qc:V:
+	cd qc
+	bin/targets | xargs mk
+
+# Unit tests
+# ==========
+#
+# Verify everything works correctly.
+#
+test	tests:QV:
+	cd test
+	rm -f tests.log
+	./run_tests \
+	|| less tests.log
+
+# Clean up generated files
+#
+# **Cuidado: puede ocasionar pérdida de datos.**
+# (todos deberían poderse regenerar, pero asegúrate de que ya no se usan).
+#
+clean:V:
+	bin/targets | xargs rm -f

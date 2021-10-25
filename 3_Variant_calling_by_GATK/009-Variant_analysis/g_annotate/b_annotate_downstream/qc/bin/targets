@@ -1,0 +1,7 @@
+#!/bin/bash
+find -L data/after \
+	-type f \
+	-name '*vcf' \
+| sed -r \
+	-e 's#^data/after#results/#' \
+	-e 's#\.vcf$#.count#' 
