@@ -1,5 +1,6 @@
 < config.mk
-
+# Load global variables if any
+#
 # Módule to keep VSQR PASS variants
 # Avoid using not properly called variants
 results/%PASS.vcf:	data/%hard_filtered.vcf
@@ -10,7 +11,7 @@ results/%PASS.vcf:	data/%hard_filtered.vcf
 	> "$target"'.build' \
 	&& mv "$target"'.build' "$target"
 
- Quality Control
+# Quality Control
 # ===============
 #
 # Here you should describe why you choose this qc.
